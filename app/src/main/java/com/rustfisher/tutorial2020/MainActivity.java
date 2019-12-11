@@ -12,8 +12,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView tv1 = findViewById(R.id.tv1); // 拿到textView的对象
-        tv1.setText("Today is a good day.");   // 改变文字
-
     }
 }
