@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020.recyler;
+package com.rustfisher.tutorial2020.recycler;
 
 public interface OnItemClickListener {
 

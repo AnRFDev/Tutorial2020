@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/RePage2Header"
+        android:layout_marginEnd="@dimen/re_2_half_gap" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/RePage2Header"
+        android:layout_marginStart="@dimen/re_2_half_gap"
+        android:layout_marginEnd="@dimen/re_2_half_gap" />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/RePage2Header"
+        android:layout_marginStart="@dimen/re_2_half_gap"
+        android:layout_marginEnd="@dimen/re_2_half_gap" />
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/RePage2Header"
+        android:layout_marginStart="@dimen/re_2_half_gap" />
+
+</LinearLayout>

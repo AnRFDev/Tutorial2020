@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.rustfisher.tutorial2020.animation.AnimationDemoActivity;
-import com.rustfisher.tutorial2020.recyler.RecyclerViewDemoActivity;
+import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 
 public class MainActivity extends AbsActivity implements View.OnClickListener {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.re_btn:
-                startActivity(new Intent(getApplicationContext(), RecyclerViewDemoActivity.class));
+                startActivity(new Intent(getApplicationContext(), ReGuideAct.class));
                 break;
             case R.id.animation_demo_btn:
                 startActivity(new Intent(getApplicationContext(), AnimationDemoActivity.class));
