@@ -25,7 +25,8 @@ public class RecyclerViewDemo2Act extends AbsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_recy_2);
+        setContentView(R.layout.act_recy_2_include);
+        initHeader();
         RecyclerView recyclerView = findViewById(R.id.re_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(mAdapter);
@@ -37,6 +38,19 @@ public class RecyclerViewDemo2Act extends AbsActivity {
                 outRect.top = getResources().getDimensionPixelOffset(R.dimen.re_2_gap);
             }
         });
+
+    }
+
+    private void initHeader() {
+        View header = findViewById(R.id.header);
+        TextView tv1 = header.findViewById(R.id.tv1);
+        tv1.setText("时区");
+        TextView tv2 = header.findViewById(R.id.tv2);
+        tv2.setText("序号");
+        TextView tv3 = header.findViewById(R.id.tv3);
+        tv3.setText("人员");
+        TextView tv4 = header.findViewById(R.id.tv4);
+        tv4.setText("数量");
     }
 
     private List<DataTest> genDataTestList() {
