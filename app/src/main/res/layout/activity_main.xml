@@ -17,6 +17,12 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/linear_layout_btn"
+                android:text="LinearLayout demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
                 android:id="@+id/re_btn"
                 android:text="RecyclerView demo"
                 android:layout_width="match_parent"

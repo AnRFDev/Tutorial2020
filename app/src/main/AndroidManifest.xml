@@ -20,6 +20,8 @@
         <activity android:name=".animation.AnimationDemoActivity" />
         <activity android:name=".recycler.ReGuideAct" />
         <activity android:name=".recycler.RecyclerViewDemo2Act" />
+        <activity android:name=".linear.LinearGuideAct" />
+        <activity android:name=".linear.LinearLayoutChildGravityDemo" />
     </application>
 
 </manifest>
