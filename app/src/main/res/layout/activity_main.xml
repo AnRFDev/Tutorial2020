@@ -12,28 +12,40 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/linear_layout_btn"
-                android:text="LinearLayout demo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="LinearLayout demo" />
 
             <Button
                 android:id="@+id/re_btn"
-                android:text="RecyclerView demo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RecyclerView demo" />
 
             <Button
                 android:id="@+id/animation_demo_btn"
-                android:text="Animation demo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Animation demo" />
 
+            <Button
+                android:id="@+id/xml_shape_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XML shape 示例"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/color_list_demo_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="颜色样式" />
         </LinearLayout>
 
     </ScrollView>

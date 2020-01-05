@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_1"
+        android:text="RFDev btn 1"
+        android:textColor="@color/color_list_1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_1"
+        android:enabled="false"
+        android:text="RFDev btn 2"
+        android:textColor="@color/color_list_1" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_1"
+        android:gravity="center"
+        android:text="RFDev text view 1"
+        android:textColor="@color/color_list_1" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_1"
+        android:gravity="center"
+        android:text="RFDev text view 2"
+        android:textColor="@color/color_list_1" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_2"
+        android:gravity="center"
+        android:text="RFDev text view 3"
+        android:textColor="@color/color_list_1" />
+
+</LinearLayout>

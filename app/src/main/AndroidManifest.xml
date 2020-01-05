@@ -22,6 +22,8 @@
         <activity android:name=".recycler.RecyclerViewDemo2Act" />
         <activity android:name=".linear.LinearGuideAct" />
         <activity android:name=".linear.LinearLayoutChildGravityDemo" />
+        <activity android:name=".style.LayoutBackgroundDemo" />
+        <activity android:name=".style.XMLShapeDemo" />
     </application>
 
 </manifest>
