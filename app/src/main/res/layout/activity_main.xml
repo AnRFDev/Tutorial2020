@@ -46,6 +46,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="颜色样式" />
+
+            <Button
+                android:id="@+id/iv_demo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ImageView 示例1"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
     </ScrollView>

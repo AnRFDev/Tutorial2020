@@ -24,6 +24,7 @@
         <activity android:name=".linear.LinearLayoutChildGravityDemo" />
         <activity android:name=".style.LayoutBackgroundDemo" />
         <activity android:name=".style.XMLShapeDemo" />
+        <activity android:name=".image.ImageViewDemo1" />
     </application>
 
 </manifest>
