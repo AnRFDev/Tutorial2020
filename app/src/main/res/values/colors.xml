@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="rePage2Item">#082941</color>
+    <color name="secondPageItemPressed">#0277BD</color>
+    <color name="secondPageItemNormal">#2196F3</color>
 </resources>

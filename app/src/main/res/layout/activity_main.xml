@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,42 +16,39 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/relative_layout_btn"
+                style="@style/MainOptionBtn"
+                android:text="Relative Layout demo" />
+
+            <Button
                 android:id="@+id/linear_layout_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/MainOptionBtn"
                 android:text="LinearLayout demo" />
 
             <Button
                 android:id="@+id/re_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/MainOptionBtn"
                 android:text="RecyclerView demo" />
 
             <Button
                 android:id="@+id/animation_demo_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/MainOptionBtn"
                 android:text="Animation demo" />
 
             <Button
                 android:id="@+id/xml_shape_demo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="XML shape 示例"
-                android:textAllCaps="false" />
+                style="@style/MainOptionBtn"
+                android:text="XML shape 示例" />
 
             <Button
                 android:id="@+id/color_list_demo_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/MainOptionBtn"
                 android:text="颜色样式" />
 
             <Button
                 android:id="@+id/iv_demo1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ImageView 示例1"
-                android:textAllCaps="false" />
+                style="@style/MainOptionBtn"
+                android:text="ImageView 示例1" />
 
         </LinearLayout>
 

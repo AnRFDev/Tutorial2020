@@ -1,7 +1,6 @@
 package com.rustfisher.tutorial2020.recycler;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created on 2019-12-14
  */
-public class RecyclerViewDemoActivity extends AppCompatActivity {
+public class RecyclerViewDemoActivity extends AbsActivity {
 
     LetterAdapter mLetterAdapter;
 

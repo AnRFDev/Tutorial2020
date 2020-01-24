@@ -1,21 +1,18 @@
 package com.rustfisher.tutorial2020.recycler;
 
 import android.content.Intent;
-import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 import java.util.ArrayList;
@@ -25,7 +22,7 @@ import java.util.List;
 /**
  * Created on 2019-12-14
  */
-public class ReGuideAct extends AppCompatActivity {
+public class ReGuideAct extends AbsActivity {
     private static final int OPT_1 = 1;
     private static final int OPT_2 = 2;
 
