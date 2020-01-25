@@ -3,6 +3,7 @@ package com.rustfisher.tutorial2020.recycler;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
+import com.rustfisher.tutorial2020.recycler.data.DataTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,9 +27,12 @@ import java.util.List;
 public class ReGuideAct extends AbsActivity {
     private static final int OPT_1 = 1;
     private static final int OPT_2 = 2;
+    private static final int OPT_INPUT_DATA = 3;
 
     GuideAdapter mGuideAdapter;
-    private List<OptionItem> mOptions = Arrays.asList(new OptionItem(OPT_1, "列表1 - 字母"), new OptionItem(OPT_2, "列表2"));
+    private List<OptionItem> mOptions = Arrays.asList(new OptionItem(OPT_1, "列表1 - 字母"),
+            new OptionItem(OPT_2, "列表2"),
+            new OptionItem(OPT_INPUT_DATA, "输入数据的列表"));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +54,12 @@ public class ReGuideAct extends AbsActivity {
                     case OPT_2:
                         startActivity(new Intent(getApplicationContext(), RecyclerViewDemo2Act.class));
                         break;
+                    case OPT_INPUT_DATA:
+                        startInputData();
+                        break;
                 }
             }
+
         });
         letterReView.addItemDecoration(new RecyclerView.ItemDecoration() {
 
@@ -60,6 +69,14 @@ public class ReGuideAct extends AbsActivity {
                 outRect.bottom = 4;
             }
         });
+    }
+
+    private void startInputData() {
+        Intent intent = new Intent(getApplicationContext(), RecyclerViewDemo2Act.class);
+        DataTest out = new DataTest("input time", 233, 666, 999);
+        Log.d(TAG, "startInputData: sending object: " + out);
+        intent.putExtra(RecyclerViewDemo2Act.K_INPUT_DATA, out);
+        startActivity(intent);
     }
 
     private class GuideAdapter extends RecyclerView.Adapter<VH> {

@@ -27,6 +27,7 @@
         <activity android:name=".style.LayoutBackgroundDemo" />
         <activity android:name=".style.XMLShapeDemo" />
         <activity android:name=".image.ImageViewDemo1" />
+        <activity android:name=".act.SendParamsDemo" />
     </application>
 
 </manifest>

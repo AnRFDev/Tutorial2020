@@ -1,7 +1,9 @@
 package com.rustfisher.tutorial2020.recycler;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewDemo2Act extends AbsActivity {
-
+    public static final String K_INPUT_DATA = "key_data";
     private Adapter mAdapter = new Adapter();
 
     @Override
@@ -38,7 +40,16 @@ public class RecyclerViewDemo2Act extends AbsActivity {
                 outRect.top = getResources().getDimensionPixelOffset(R.dimen.re_2_gap);
             }
         });
+        getInputData();
+    }
 
+    private void getInputData() {
+        Intent intent = getIntent();
+        if (intent != null) {
+            DataTest d = (DataTest) intent.getSerializableExtra(K_INPUT_DATA);
+            Log.d(TAG, "getInputData: input data object: " + d);
+            mAdapter.insertData(d);
+        }
     }
 
     private void initHeader() {
@@ -86,6 +97,11 @@ public class RecyclerViewDemo2Act extends AbsActivity {
 
         public void setDataList(List<DataTest> dataList) {
             this.dataList = dataList;
+            notifyDataSetChanged();
+        }
+
+        public void insertData(DataTest data) {
+            dataList.add(0, data);
             notifyDataSetChanged();
         }
 

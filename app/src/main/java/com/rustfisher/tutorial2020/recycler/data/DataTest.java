@@ -1,10 +1,12 @@
 package com.rustfisher.tutorial2020.recycler.data;
 
+import java.io.Serializable;
+
 /**
  * 用来测试的
  * Created on 2019-12-17
  */
-public class DataTest {
+public class DataTest implements Serializable {
     private String timezone;
     private int number;
     private int personCount;
