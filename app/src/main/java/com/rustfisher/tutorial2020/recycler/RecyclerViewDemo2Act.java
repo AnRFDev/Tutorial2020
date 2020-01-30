@@ -41,6 +41,21 @@ public class RecyclerViewDemo2Act extends AbsActivity {
             }
         });
         getInputData();
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            int mmRvScrollY = 0; // 列表滑动距离
+
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                mmRvScrollY += dy;
+                Log.d(TAG, "onScrolled: mmRvScrollY: " + mmRvScrollY + ", dy: " + dy);
+            }
+        });
     }
 
     private void getInputData() {
@@ -48,7 +63,9 @@ public class RecyclerViewDemo2Act extends AbsActivity {
         if (intent != null) {
             DataTest d = (DataTest) intent.getSerializableExtra(K_INPUT_DATA);
             Log.d(TAG, "getInputData: input data object: " + d);
-            mAdapter.insertData(d);
+            if (d != null) {
+                mAdapter.insertData(d);
+            }
         }
     }
 

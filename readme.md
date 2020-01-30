@@ -9,30 +9,38 @@
 ## 教程目录
 不定期更新中。欢迎留言反馈。
 
-### 基础步进
-
 * [开始的开始，新建App工程](https://rustfisher.com/2019/12/08/Android_tutorial_2020/Android-tutorial_2020_new_project/)
 * [res资源目录简介](https://rustfisher.com/2019/12/18/Android_tutorial_2020/Android-tutorial_2020_resources_overview/)
+* [工程构建配置，gradle简介](https://rustfisher.com/2019/12/08/Android_tutorial_2020/Android-tutorial_2020_gradle_overview/)
 * [界面，Activity简介](https://rustfisher.com/2019/12/08/Android_tutorial_2020/Android-tutorial_2020_Activity_overview/)
+* [页面跳转，Activity之间的跳转；携带参数跳转页面](https://rustfisher.com/2020/01/01/Android_tutorial_2020/Android-tutorial_2020_Activity_launch)
+    * [传递Parcelable对象](https://rustfisher.com/2020/01/01/Android_tutorial_2020/Android-tutorial_2020_Activity_launch_send_parcelable)
     * [Activity 启动模式，任务和返回栈](https://rustfisher.com/2020/01/01/Android_tutorial_2020/Android-tutorial_2020_Activity_launch_mode_task_stack)
+* [app编译与打包配置，gradle简介](https://rustfisher.com/2019/12/08/Android_tutorial_2020/Android-tutorial_2020_gradle_overview/)
 * [显示文字，认识TextView](https://rustfisher.com/2019/12/09/Android_tutorial_2020/Android-tutorial_2020_TextView_overview/)
 * [LinearLayout简述](https://rustfisher.com/2019/12/19/Android_tutorial_2020/Android-tutorial_2020_LinearLayout_overview/)
-* [ ] 相对布局，RelativeLayout简述
+* [相对布局，RelativeLayout简述](https://rustfisher.com/2019/12/20/Android_tutorial_2020/Android-tutorial_2020_RelativeLayout_overview/)
 * [按钮与点击](https://rustfisher.com/2019/12/23/Android_tutorial_2020/Android-tutorial_2020_Button_overview/)
 * [美化按钮 drawable shape使用简介](https://rustfisher.com/2020/01/05/Android_tutorial_2020/Android-tutorial_2020_drawable_res_shape/)
 * [给按钮背景增添动感 drawable selector使用简介](https://rustfisher.com/2020/01/05/Android_tutorial_2020/Android-tutorial_2020_drawable_res_selector/)
-* [ ] 放置图片，ImageView简述
-* [ ] 页面跳转，Activity之间的跳转
+* [显示图片，ImageView简述](https://rustfisher.com/2020/01/04/Android_tutorial_2020/Android-tutorial_2020_ImageView_overview/)
 * [RecyclerView - 使用入门](https://rustfisher.com/2019/12/14/Android_tutorial_2020/Android-tutorial_2020_RecyclerView_intro)
     * [RecyclerView点击事件 - 如何设置点击事件](https://rustfisher.com/2019/12/14/Android_tutorial_2020/Android-tutorial_2020_RecyclerView_item_click)
     * [RecyclerView示例 - 实际使用](https://rustfisher.com/2019/12/17/Android_tutorial_2020/Android-tutorial_2020_RecyclerView_demo2)
+    * [RecyclerView获取滑动距离](https://rustfisher.com/2019/12/18/Android_tutorial_2020/Android-tutorial_2020_RecyclerView_scroll_distance)
 * [ ] 可滑动的视图，ScrollView
 * [广播机制 Broadcast的使用](https://rustfisher.com/2015/10/29/Android/Android-Broadcast_intro_use/)
 * [ ] 动态权限
 * [ ] 不需要用户可见的服务 Service
+    * [IntentService 分析和用法](https://rustfisher.com/2017/06/09/Android/Android-IntentService-intro1)
 * [ ] Handler
 * [ ] App内部存储相关
 * [ ] 读写文件
+
+### gradle
+* [Gradle for Android 开始](http://rustfisher.com/2017/01/19/Android/Gradle_for_android_Start/)
+* [Gradle 基础自定义构建](http://rustfisher.com/2017/01/19/Android/Gradle_for_android_Basic_Build_Customization/)
+* [Gradle 构建多种版本](http://rustfisher.com/2017/01/19/Android/Gradle_for_android_Creating_Build_Variants/)
 
 ### 媒体播放
 

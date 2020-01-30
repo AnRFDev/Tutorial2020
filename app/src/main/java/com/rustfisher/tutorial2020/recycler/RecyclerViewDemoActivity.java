@@ -59,6 +59,18 @@ public class RecyclerViewDemoActivity extends AbsActivity {
             }
         });
 
+        // 获取列表滑动的距离
+        letterReView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                Log.d(TAG, "onScrolled: dy: " + dy);
+            }
+        });
     }
 
 

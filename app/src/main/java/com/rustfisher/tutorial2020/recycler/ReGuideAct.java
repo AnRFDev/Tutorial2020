@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.recycler.data.DataTest;
+import com.rustfisher.tutorial2020.recycler.multi.ReViewDemoMulti;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,11 +29,14 @@ public class ReGuideAct extends AbsActivity {
     private static final int OPT_1 = 1;
     private static final int OPT_2 = 2;
     private static final int OPT_INPUT_DATA = 3;
+    private static final int OPT_MULTI_1 = 4;
 
     GuideAdapter mGuideAdapter;
     private List<OptionItem> mOptions = Arrays.asList(new OptionItem(OPT_1, "列表1 - 字母"),
             new OptionItem(OPT_2, "列表2"),
-            new OptionItem(OPT_INPUT_DATA, "输入数据的列表"));
+            new OptionItem(OPT_INPUT_DATA, "输入数据的列表"),
+            new OptionItem(OPT_MULTI_1, "多种item的列表")
+            );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,9 @@ public class ReGuideAct extends AbsActivity {
                         break;
                     case OPT_INPUT_DATA:
                         startInputData();
+                        break;
+                    case OPT_MULTI_1:
+                        startActivity(new Intent(getApplicationContext(), ReViewDemoMulti.class));
                         break;
                 }
             }
