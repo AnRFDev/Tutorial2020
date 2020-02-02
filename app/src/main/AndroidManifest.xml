@@ -29,6 +29,9 @@
         <activity android:name=".image.ImageViewDemo1" />
         <activity android:name=".act.SendParamsDemo" />
         <activity android:name=".recycler.multi.ReViewDemoMulti" />
+        <activity android:name=".act.ForResultFirstAct" />
+        <activity android:name=".act.ForResultSecondAct" />
+        <activity android:name=".act.ActDemoGuide" />
     </application>
 
 </manifest>

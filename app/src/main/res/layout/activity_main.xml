@@ -16,9 +16,9 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/send_params_btn"
+                android:id="@+id/act_demo_list_btn"
                 style="@style/MainOptionBtn"
-                android:text="Activity传递参数" />
+                android:text="Activity示例列表" />
 
             <Button
                 android:id="@+id/relative_layout_btn"
