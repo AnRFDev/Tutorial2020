@@ -32,6 +32,9 @@
         <activity android:name=".act.ForResultFirstAct" />
         <activity android:name=".act.ForResultSecondAct" />
         <activity android:name=".act.ActDemoGuide" />
+        <activity android:name=".text.TvDemoGuide" />
+        <activity android:name=".text.SpannableStringAct1" />
+        <activity android:name=".act.LifeCycleAct" />
     </application>
 
 </manifest>
