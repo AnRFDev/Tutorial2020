@@ -23,7 +23,7 @@ public class LifeCycleAct extends AbsActivity implements View.OnClickListener {
 
         Log.d(TAG, "onCreate");
         mLifeTv.append("\nonCreate");
-        setOnClickListener(this, R.id.pop_dialog_btn);
+        setOnClickListener(this, R.id.pop_dialog_btn, R.id.recreate_btn);
     }
 
     @Override
@@ -85,6 +85,10 @@ public class LifeCycleAct extends AbsActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.pop_dialog_btn:
                 popDialog();
+                break;
+            case R.id.recreate_btn:
+                Log.d(TAG, "click [recreate]");
+                recreate();
                 break;
         }
     }

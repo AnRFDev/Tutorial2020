@@ -46,6 +46,11 @@
                 android:text="XML shape 示例" />
 
             <Button
+                android:id="@+id/broadcast_demo_list_btn"
+                style="@style/MainOptionBtn"
+                android:text="Broadcast示例列表" />
+
+            <Button
                 android:id="@+id/color_list_demo_btn"
                 style="@style/MainOptionBtn"
                 android:text="颜色样式" />
@@ -54,6 +59,10 @@
                 android:id="@+id/iv_demo1"
                 style="@style/MainOptionBtn"
                 android:text="ImageView 示例1" />
+            <Button
+                android:id="@+id/tv_demo_list"
+                style="@style/MainOptionBtn"
+                android:text="TextView 示例" />
 
         </LinearLayout>
 

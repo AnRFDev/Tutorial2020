@@ -35,6 +35,10 @@
         <activity android:name=".text.TvDemoGuide" />
         <activity android:name=".text.SpannableStringAct1" />
         <activity android:name=".act.LifeCycleAct" />
+        <activity android:name=".broadcast.BroadcastDemo1" />
+        <activity android:name=".broadcast.BroadcastDemoGuide" />
+        <activity android:name=".text.TextHtmlDemo" />
+        <activity android:name=".text.TextStyleDemo" />
     </application>
 
 </manifest>

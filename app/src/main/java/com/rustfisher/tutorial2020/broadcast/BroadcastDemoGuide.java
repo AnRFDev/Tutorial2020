@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020.text;
+package com.rustfisher.tutorial2020.broadcast;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,26 +8,22 @@ import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
 import java.util.Arrays;
 
-public class TvDemoGuide extends AbsGuideAct {
-    private static final int K_ACT_TEXT_HTML = 2;
-    private static final int K_T_STYLE = 100;
+public class BroadcastDemoGuide extends AbsGuideAct {
+    private static final int K_B_1 = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem(K_T_STYLE, "字体"),
-                new GuideAdapter.OptionItem(K_ACT_TEXT_HTML, "Text html")
+                new GuideAdapter.OptionItem(K_B_1, "本地收发")
         ));
         mGuideAdapter.setOnItemClickListener(new GuideAdapter.OnOptClickListener() {
             @Override
             public void onClick(GuideAdapter.OptionItem item) {
                 switch (item.num) {
-                    case K_ACT_TEXT_HTML:
-                        startActivity(new Intent(getApplicationContext(), TextHtmlDemo.class));
-                        break;
-                    case K_T_STYLE:
-                        startActivity(new Intent(getApplicationContext(), TextStyleDemo.class));
+                    case K_B_1:
+                        startActivity(new Intent(getApplicationContext(), BroadcastDemo1.class));
                         break;
                 }
             }

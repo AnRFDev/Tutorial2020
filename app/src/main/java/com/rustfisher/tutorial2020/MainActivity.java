@@ -6,12 +6,14 @@ import android.view.View;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.animation.AnimationDemoActivity;
+import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
+import com.rustfisher.tutorial2020.text.TvDemoGuide;
 
 public class MainActivity extends AbsActivity implements View.OnClickListener {
 
@@ -21,7 +23,7 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         setOnClickListener(this, R.id.re_btn, R.id.animation_demo_btn, R.id.linear_layout_btn,
                 R.id.xml_shape_demo, R.id.color_list_demo_btn, R.id.relative_layout_btn,
-                R.id.iv_demo1, R.id.act_demo_list_btn);
+                R.id.iv_demo1, R.id.act_demo_list_btn, R.id.broadcast_demo_list_btn, R.id.tv_demo_list);
     }
 
     @Override
@@ -50,6 +52,12 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
                 break;
             case R.id.iv_demo1:
                 startActivity(new Intent(getApplicationContext(), ImageViewDemo1.class));
+                break;
+            case R.id.broadcast_demo_list_btn:
+                startActivity(new Intent(getApplicationContext(), BroadcastDemoGuide.class));
+                break;
+            case R.id.tv_demo_list:
+                startActivity(new Intent(getApplicationContext(), TvDemoGuide.class));
                 break;
         }
     }
