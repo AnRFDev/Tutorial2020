@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recycler.RecyclerViewDemoActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".recycler.RecyclerViewDemoActivity"/>
         <activity android:name=".animation.AnimationDemoActivity" />
         <activity android:name=".recycler.ReGuideAct" />
         <activity android:name=".recycler.RecyclerViewDemo2Act" />
@@ -39,6 +39,11 @@
         <activity android:name=".broadcast.BroadcastDemoGuide" />
         <activity android:name=".text.TextHtmlDemo" />
         <activity android:name=".text.TextStyleDemo" />
+        <activity android:name=".databinding.DataBindingAct1" />
+        <activity android:name=".text.SpecialCharAct" />
+        <activity android:name=".databinding.DataBindingAct2" />
+        <activity android:name=".databinding.GuideListAct" />
+        <activity android:name=".databinding.MutableDemo1" />
     </application>
 
 </manifest>

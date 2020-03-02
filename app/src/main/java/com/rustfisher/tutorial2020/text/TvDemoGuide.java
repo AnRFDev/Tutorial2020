@@ -11,13 +11,15 @@ import java.util.Arrays;
 public class TvDemoGuide extends AbsGuideAct {
     private static final int K_ACT_TEXT_HTML = 2;
     private static final int K_T_STYLE = 100;
+    private static final int K_T_S_C = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem(K_T_STYLE, "字体"),
-                new GuideAdapter.OptionItem(K_ACT_TEXT_HTML, "Text html")
+                new GuideAdapter.OptionItem(K_ACT_TEXT_HTML, "Text html"),
+                new GuideAdapter.OptionItem(K_T_S_C, "特殊字符")
         ));
         mGuideAdapter.setOnItemClickListener(new GuideAdapter.OnOptClickListener() {
             @Override
@@ -28,6 +30,9 @@ public class TvDemoGuide extends AbsGuideAct {
                         break;
                     case K_T_STYLE:
                         startActivity(new Intent(getApplicationContext(), TextStyleDemo.class));
+                        break;
+                    case K_T_S_C:
+                        startActivity(new Intent(getApplicationContext(), SpecialCharAct.class));
                         break;
                 }
             }

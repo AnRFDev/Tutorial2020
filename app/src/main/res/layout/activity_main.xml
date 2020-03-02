@@ -59,10 +59,16 @@
                 android:id="@+id/iv_demo1"
                 style="@style/MainOptionBtn"
                 android:text="ImageView 示例1" />
+
             <Button
                 android:id="@+id/tv_demo_list"
                 style="@style/MainOptionBtn"
                 android:text="TextView 示例" />
+
+            <Button
+                android:id="@+id/data_binding"
+                style="@style/MainOptionBtn"
+                android:text="DataBinding" />
 
         </LinearLayout>
 
