@@ -8,6 +8,18 @@
         <variable
             name="info"
             type="com.rustfisher.tutorial2020.databinding.data.SysInfoObs" />
+
+        <import type="androidx.databinding.ObservableArrayMap" />
+
+        <variable
+            name="user"
+            type="ObservableArrayMap&lt;String, Object>" />
+
+        <import type="androidx.databinding.ObservableArrayList" />
+
+        <variable
+            name="obList"
+            type="ObservableArrayList&lt;Object>" />
     </data>
 
     <LinearLayout
@@ -30,5 +42,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{DataUtils.formatTime(info.time)}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{user.firstName + " " + user.lastName}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(1 + (Integer)user.age)}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{obList[0] + " " + obList[1]}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{String.valueOf(1 + (Integer)obList[3])}' />
+
     </LinearLayout>
 </layout>

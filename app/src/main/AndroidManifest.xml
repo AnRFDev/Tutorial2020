@@ -44,6 +44,8 @@
         <activity android:name=".databinding.DataBindingAct2" />
         <activity android:name=".databinding.GuideListAct" />
         <activity android:name=".databinding.MutableDemo1" />
+        <activity android:name=".databinding.TwoWayAct1" />
+        <activity android:name=".databinding.BindingAdapterAct1" />
     </application>
 
 </manifest>

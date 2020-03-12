@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@{String.valueOf(vm.count)}"
+                android:text='@{"count: "+String.valueOf(vm.count)}'
                 android:textSize="16sp" />
 
             <Button
