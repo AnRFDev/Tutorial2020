@@ -1,11 +1,3 @@
 # Android 2020
 
-[Android教程2020](https://an.rustfisher.com/#/)
-
-为了方便朋友入门安卓应用开发，开始写2020年的Android新手教程。突出一个简单明了，上手快。
-从实用性出发，快速掌握Android开发基本技能。需要读者有一定的Java基础。
-
-学完本课程后，读者可以自己做出一个个方便工作生活的小工具来。
-
-## 教程目录
-不定期更新中。欢迎留言反馈。
+[Android 2020](https://an.rustfisher.com/#/)

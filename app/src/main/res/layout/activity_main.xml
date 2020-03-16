@@ -70,6 +70,16 @@
                 style="@style/MainOptionBtn"
                 android:text="DataBinding" />
 
+            <Button
+                android:id="@+id/life_cycle"
+                style="@style/MainOptionBtn"
+                android:text="LifeCycle" />
+
+            <Button
+                android:id="@+id/view_model_guide"
+                style="@style/MainOptionBtn"
+                android:text="ViewModel" />
+
         </LinearLayout>
 
     </ScrollView>

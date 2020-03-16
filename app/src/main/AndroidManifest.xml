@@ -46,6 +46,10 @@
         <activity android:name=".databinding.MutableDemo1" />
         <activity android:name=".databinding.TwoWayAct1" />
         <activity android:name=".databinding.BindingAdapterAct1" />
+        <activity android:name=".lifecycle.LcGuideAct" />
+        <activity android:name=".lifecycle.Lc1Act" />
+        <activity android:name=".viewmodel.ViewModelGuideAct" />
+        <activity android:name=".viewmodel.VmIntro1Act" />
     </application>
 
 </manifest>

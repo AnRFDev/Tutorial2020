@@ -22,6 +22,7 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
 
     private List<GuideAdapter.OptionItem> dataList;
     private GuideAdapter.OnOptClickListener onItemClickListener;
+    private OnClzListener onClzListener;
 
     public GuideAdapter() {
         this.dataList = new ArrayList<>();
@@ -48,6 +49,9 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
                 if (onItemClickListener != null) {
                     onItemClickListener.onClick(optionItem);
                 }
+                if (onClzListener != null && optionItem.useClz) {
+                    onClzListener.onClick(optionItem.clz);
+                }
             }
         });
     }
@@ -62,6 +66,9 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
         this.onItemClickListener = onItemClickListener;
     }
 
+    public void setOnClzListener(OnClzListener onClzListener) {
+        this.onClzListener = onClzListener;
+    }
 
     public class VH extends RecyclerView.ViewHolder {
         View item;
@@ -77,15 +84,27 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
     public static class OptionItem {
         public int num;
         public String name;
+        public boolean useClz = false;
+        public Class clz;
 
         public OptionItem(int num, String name) {
             this.num = num;
             this.name = name;
         }
+
+        public OptionItem(String name, boolean useClz, Class clz) {
+            this.useClz = useClz;
+            this.name = name;
+            this.clz = clz;
+        }
     }
 
     public interface OnOptClickListener {
         void onClick(GuideAdapter.OptionItem item);
+    }
+
+    public interface OnClzListener {
+        void onClick(Class actClz);
     }
 
 }
