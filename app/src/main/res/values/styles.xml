@@ -51,5 +51,14 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textAllCaps">false</item>
     </style>
->>>>>>> c70fe709a46d92198f5e8d7b9933d1179149ff13
+
+    <!-- con layout 示例text -->
+    <style name="ConSampleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#3F51B5</item>
+    </style>
+
 </resources>

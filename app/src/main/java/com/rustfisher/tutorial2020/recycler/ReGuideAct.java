@@ -30,12 +30,15 @@ public class ReGuideAct extends AbsActivity {
     private static final int OPT_2 = 2;
     private static final int OPT_INPUT_DATA = 3;
     private static final int OPT_MULTI_1 = 4;
+    private static final int OPT_CARD_1 = 10;
+
 
     GuideAdapter mGuideAdapter;
     private List<OptionItem> mOptions = Arrays.asList(new OptionItem(OPT_1, "列表1 - 字母"),
             new OptionItem(OPT_2, "列表2"),
             new OptionItem(OPT_INPUT_DATA, "输入数据的列表"),
-            new OptionItem(OPT_MULTI_1, "多种item的列表")
+            new OptionItem(OPT_MULTI_1, "多种item的列表"),
+            new OptionItem(OPT_CARD_1, "卡片效果")
             );
 
     @Override
@@ -63,6 +66,9 @@ public class ReGuideAct extends AbsActivity {
                         break;
                     case OPT_MULTI_1:
                         startActivity(new Intent(getApplicationContext(), ReViewDemoMulti.class));
+                        break;
+                    case OPT_CARD_1:
+                        startActivity(new Intent(getApplicationContext(), FlipCardAct.class));
                         break;
                 }
             }

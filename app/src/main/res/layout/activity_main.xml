@@ -36,6 +36,11 @@
                 android:text="RecyclerView demo" />
 
             <Button
+                android:id="@+id/con_layout_btn"
+                style="@style/MainOptionBtn"
+                android:text="ConstraintLayout demo" />
+
+            <Button
                 android:id="@+id/animation_demo_btn"
                 style="@style/MainOptionBtn"
                 android:text="Animation demo" />

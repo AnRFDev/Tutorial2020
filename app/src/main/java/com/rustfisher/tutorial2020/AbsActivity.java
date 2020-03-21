@@ -1,9 +1,10 @@
 package com.rustfisher.tutorial2020;
 
-import android.app.Activity;
 import android.view.View;
 
-public abstract class AbsActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public abstract class AbsActivity extends AppCompatActivity {
     protected String TAG = "rustApp" + getClass().getSimpleName();
 
     public void setOnClickListener(View.OnClickListener onClickListener, int... ids) {

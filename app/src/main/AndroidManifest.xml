@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".constraintlayout.Con1Act"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recycler.RecyclerViewDemoActivity"/>
+        <activity android:name=".recycler.RecyclerViewDemoActivity" />
         <activity android:name=".animation.AnimationDemoActivity" />
         <activity android:name=".recycler.ReGuideAct" />
         <activity android:name=".recycler.RecyclerViewDemo2Act" />
@@ -50,6 +51,9 @@
         <activity android:name=".lifecycle.Lc1Act" />
         <activity android:name=".viewmodel.ViewModelGuideAct" />
         <activity android:name=".viewmodel.VmIntro1Act" />
+        <activity android:name=".recycler.FlipCardAct" />
+        <activity android:name=".constraintlayout.ConGuideAct" />
+        <activity android:name=".constraintlayout.Con2Act" />
     </application>
 
 </manifest>

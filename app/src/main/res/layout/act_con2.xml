@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACACAC">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c21"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#f0f0f0"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/ConSampleText"
+            android:layout_marginStart="10dp"
+            android:text="an"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/ConSampleText"
+            android:layout_marginStart="10dp"
+            android:text="Rust"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+            app:layout_constraintStart_toEndOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/ConSampleText"
+            android:layout_marginStart="10dp"
+            android:text="Fisher"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+            app:layout_constraintStart_toEndOf="@+id/tv2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c22"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="#f3f3f3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c21">
+
+        <TextView
+            android:id="@+id/tv221"
+            style="@style/ConSampleText"
+            android:layout_marginStart="10dp"
+            android:text="an"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv222"
+            style="@style/ConSampleText"
+            android:layout_marginTop="4dp"
+            android:text="RustFisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv221" />
+
+        <TextView
+            style="@style/ConSampleText"
+            android:layout_marginTop="4dp"
+            android:text="没有以此作为参考，不管这个有多长"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv222" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv221 ,tv222" />
+
+        <TextView
+            android:id="@+id/tv223"
+            style="@style/ConSampleText"
+            android:layout_marginStart="10dp"
+            android:text=".com"
+            app:layout_constraintStart_toEndOf="@id/barrier1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/c23"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        android:background="#f3f3f3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/c22">
+
+        <TextView
+            style="@style/ConSampleText"
+            android:text="Rust"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/ConSampleText"
+            android:text="0.33,0.33"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.33" />
+
+        <TextView
+            style="@style/ConSampleText"
+            android:text="0.8,0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
