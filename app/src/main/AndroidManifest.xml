@@ -54,6 +54,7 @@
         <activity android:name=".recycler.FlipCardAct" />
         <activity android:name=".constraintlayout.ConGuideAct" />
         <activity android:name=".constraintlayout.Con2Act" />
+        <activity android:name=".constraintlayout.Con3Act" />
     </application>
 
 </manifest>

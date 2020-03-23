@@ -17,7 +17,8 @@ public class ConGuideAct extends AbsGuideAct {
 
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("对齐，GuideLine示例", true, Con1Act.class),
-                new GuideAdapter.OptionItem("基线对齐，屏障约束", true, Con2Act.class)
+                new GuideAdapter.OptionItem("基线对齐，屏障约束", true, Con2Act.class),
+                new GuideAdapter.OptionItem("尺寸，线性", true, Con3Act.class)
                 )
         );
 
