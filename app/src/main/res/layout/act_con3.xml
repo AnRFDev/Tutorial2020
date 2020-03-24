@@ -136,5 +136,114 @@
 
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/ConSampleText"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="2"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:text="R"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/ConSampleText"
+            android:layout_width="0dp"
+            android:background="#009688"
+            app:layout_constraintHorizontal_weight="1"
+            android:gravity="center"
+            android:text="u"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv3"
+            app:layout_constraintStart_toEndOf="@+id/tv1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/ConSampleText"
+            android:background="#4CAF50"
+            android:gravity="center"
+            android:text="s"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv4"
+            app:layout_constraintStart_toEndOf="@+id/tv2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/ConSampleText"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="t"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/tv21"
+            style="@style/ConSampleText"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="R"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv22"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv22"
+            style="@style/ConSampleText"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="u"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv23"
+            app:layout_constraintStart_toEndOf="@+id/tv21"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv23"
+            style="@style/ConSampleText"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="s"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/tv24"
+            app:layout_constraintStart_toEndOf="@+id/tv22"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv24"
+            style="@style/ConSampleText"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="t"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv23"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>

@@ -1,87 +1,47 @@
 package com.rustfisher.tutorial2020.recycler;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.rustfisher.tutorial2020.AbsActivity;
-import com.rustfisher.tutorial2020.R;
+import com.rustfisher.tutorial2020.AbsGuideAct;
 import com.rustfisher.tutorial2020.recycler.data.DataTest;
+import com.rustfisher.tutorial2020.recycler.move.MoveToDelAct;
 import com.rustfisher.tutorial2020.recycler.multi.ReViewDemoMulti;
+import com.rustfisher.tutorial2020.recycler.staggeredgrid.StaggeredGrid1Act;
+import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created on 2019-12-14
  */
-public class ReGuideAct extends AbsActivity {
-    private static final int OPT_1 = 1;
-    private static final int OPT_2 = 2;
-    private static final int OPT_INPUT_DATA = 3;
-    private static final int OPT_MULTI_1 = 4;
-    private static final int OPT_CARD_1 = 10;
-
-
-    GuideAdapter mGuideAdapter;
-    private List<OptionItem> mOptions = Arrays.asList(new OptionItem(OPT_1, "列表1 - 字母"),
-            new OptionItem(OPT_2, "列表2"),
-            new OptionItem(OPT_INPUT_DATA, "输入数据的列表"),
-            new OptionItem(OPT_MULTI_1, "多种item的列表"),
-            new OptionItem(OPT_CARD_1, "卡片效果")
-            );
+public class ReGuideAct extends AbsGuideAct {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_re_guide);
 
-        mGuideAdapter = new GuideAdapter();
-        mGuideAdapter.setDataList(mOptions);
-        RecyclerView letterReView = findViewById(R.id.re_view);
-        letterReView.setAdapter(mGuideAdapter);
-        letterReView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        mGuideAdapter.setOnItemClickListener(new OnOptClickListener() {
+        mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("列表1 - 字母", true, RecyclerViewDemoActivity.class),
+                new GuideAdapter.OptionItem("列表2", true, RecyclerViewDemo2Act.class),
+                new GuideAdapter.OptionItem("多种item的列表", true, ReViewDemoMulti.class),
+                new GuideAdapter.OptionItem("垂直列表，侧滑删除，长按拖动更换顺序", true, MoveToDelAct.class),
+                new GuideAdapter.OptionItem("瀑布流1", true, StaggeredGrid1Act.class),
+                new GuideAdapter.OptionItem("卡片效果", true, FlipCardAct.class)
+        ));
+
+        mGuideAdapter.setOnClzListener(new com.rustfisher.tutorial2020.widget.GuideAdapter.OnClzListener() {
             @Override
-            public void onClick(OptionItem item) {
-                switch (item.num) {
-                    case OPT_1:
-                        startActivity(new Intent(getApplicationContext(), RecyclerViewDemoActivity.class));
-                        break;
-                    case OPT_2:
-                        startActivity(new Intent(getApplicationContext(), RecyclerViewDemo2Act.class));
-                        break;
-                    case OPT_INPUT_DATA:
-                        startInputData();
-                        break;
-                    case OPT_MULTI_1:
-                        startActivity(new Intent(getApplicationContext(), ReViewDemoMulti.class));
-                        break;
-                    case OPT_CARD_1:
-                        startActivity(new Intent(getApplicationContext(), FlipCardAct.class));
-                        break;
+            public void onClick(Class actClz) {
+                if (actClz == RecyclerViewDemo2Act.class) {
+                    startInputData();
+                    return;
                 }
-            }
-
-        });
-        letterReView.addItemDecoration(new RecyclerView.ItemDecoration() {
-
-            @Override
-            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-                super.getItemOffsets(outRect, view, parent, state);
-                outRect.bottom = 4;
+                startActivity(new Intent(getApplicationContext(), actClz));
             }
         });
+
     }
 
     private void startInputData() {
@@ -90,75 +50,5 @@ public class ReGuideAct extends AbsActivity {
         Log.d(TAG, "startInputData: sending object: " + out);
         intent.putExtra(RecyclerViewDemo2Act.K_INPUT_DATA, out);
         startActivity(intent);
-    }
-
-    private class GuideAdapter extends RecyclerView.Adapter<VH> {
-
-        private List<OptionItem> dataList;
-        private OnOptClickListener onItemClickListener;
-
-        public GuideAdapter() {
-            this.dataList = new ArrayList<>();
-        }
-
-        public void setDataList(List<OptionItem> dataList) {
-            this.dataList = new ArrayList<>(dataList);
-            notifyDataSetChanged();
-        }
-
-        @NonNull
-        @Override
-        public VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new VH(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_opt, parent, false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull VH holder, int position) {
-            final OptionItem optionItem = dataList.get(position);
-            holder.tv1.setText(optionItem.name);
-            holder.item.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onItemClickListener != null) {
-                        onItemClickListener.onClick(optionItem);
-                    }
-                }
-            });
-        }
-
-        @Override
-        public int getItemCount() {
-            return dataList.size();
-        }
-
-
-        public void setOnItemClickListener(OnOptClickListener onItemClickListener) {
-            this.onItemClickListener = onItemClickListener;
-        }
-    }
-
-    private class VH extends RecyclerView.ViewHolder {
-        View item;
-        TextView tv1;
-
-        public VH(@NonNull View itemView) {
-            super(itemView);
-            item = itemView;
-            tv1 = itemView.findViewById(R.id.tv1);
-        }
-    }
-
-    private static class OptionItem {
-        public int num;
-        public String name;
-
-        public OptionItem(int num, String name) {
-            this.num = num;
-            this.name = name;
-        }
-    }
-
-    public interface OnOptClickListener {
-        void onClick(OptionItem item);
     }
 }

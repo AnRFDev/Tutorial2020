@@ -55,6 +55,8 @@
         <activity android:name=".constraintlayout.ConGuideAct" />
         <activity android:name=".constraintlayout.Con2Act" />
         <activity android:name=".constraintlayout.Con3Act" />
+        <activity android:name=".recycler.move.MoveToDelAct" />
+        <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
     </application>
 
 </manifest>
