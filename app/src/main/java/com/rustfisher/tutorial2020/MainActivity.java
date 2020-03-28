@@ -1,13 +1,18 @@
 package com.rustfisher.tutorial2020;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.animation.AnimationDemoActivity;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
+import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
+import com.rustfisher.tutorial2020.customview.CustomViewAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
 import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
@@ -28,12 +33,19 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
         setOnClickListener(this, R.id.re_btn, R.id.animation_demo_btn, R.id.linear_layout_btn,
                 R.id.xml_shape_demo, R.id.color_list_demo_btn, R.id.relative_layout_btn,
                 R.id.iv_demo1, R.id.act_demo_list_btn, R.id.broadcast_demo_list_btn, R.id.tv_demo_list,
-                R.id.data_binding, R.id.life_cycle, R.id.view_model_guide, R.id.con_layout_btn);
+                R.id.data_binding, R.id.life_cycle, R.id.view_model_guide, R.id.con_layout_btn,
+                R.id.act_cor, R.id.act_custom_view);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.act_custom_view:
+                startActivity(new Intent(getApplicationContext(), CustomViewAct.class));
+                break;
+            case R.id.act_cor:
+                startActivity(new Intent(getApplicationContext(), CorrectSampleAct.class));
+                break;
             case R.id.view_model_guide:
                 startActivity(new Intent(getApplicationContext(), ViewModelGuideAct.class));
                 break;
@@ -79,5 +91,18 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getDefaultLauncherInfo();
+    }
+
+    private void getDefaultLauncherInfo() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        ResolveInfo resolveInfo = getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        String currentHomePackage = resolveInfo.activityInfo.packageName;
+        Log.d(TAG, "getDefaultLauncherInfo: " + resolveInfo);
+    }
 
 }

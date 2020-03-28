@@ -16,6 +16,16 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/act_custom_view"
+                style="@style/MainOptionBtn"
+                android:text="自定义view" />
+
+            <Button
+                android:id="@+id/act_cor"
+                style="@style/MainOptionBtn"
+                android:text="文章修改" />
+
+            <Button
                 android:id="@+id/act_demo_list_btn"
                 style="@style/MainOptionBtn"
                 android:text="Activity示例列表" />
