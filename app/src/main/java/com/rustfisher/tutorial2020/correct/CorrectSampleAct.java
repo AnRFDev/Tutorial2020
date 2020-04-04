@@ -1,12 +1,19 @@
 package com.rustfisher.tutorial2020.correct;
 
+import android.content.Context;
+import android.graphics.Point;
+import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
 import androidx.databinding.DataBindingUtil;
@@ -16,6 +23,7 @@ import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.correct.view.CorrectPopupWindow;
 import com.rustfisher.tutorial2020.correct.view.CorrectView;
 import com.rustfisher.tutorial2020.correct.view.DelAnsFloatingWindow;
+import com.rustfisher.tutorial2020.correct.view.InputTextDialog;
 import com.rustfisher.tutorial2020.correct.view.InputTextPopupWindow;
 import com.rustfisher.tutorial2020.correct.view.OnChooseCmd;
 import com.rustfisher.tutorial2020.correct.view.Word;
@@ -39,6 +47,8 @@ public class CorrectSampleAct extends AbsActivity {
     private DelAnsFloatingWindow delAnsFloatingWindow;
     private InputTextPopupWindow inputTextPopupWindow;
 
+    private InputTextDialog inputTextDialog = new InputTextDialog();
+
     private Word mCurrentWord = null;
 
     private float downX;
@@ -48,6 +58,7 @@ public class CorrectSampleAct extends AbsActivity {
 
     private ActCorrectSampleBinding binding;
     private CorrectView mCorrectView;
+    private KeyBoardHelper keyboardHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,12 +161,74 @@ public class CorrectSampleAct extends AbsActivity {
         });
 
         binding.getRoot().getViewTreeObserver().addOnScrollChangedListener(mOnScrollChangedListener);
+
+        keyboardHelper = new KeyBoardHelper(this);
+        keyboardHelper.onCreate();
+        keyboardHelper.setOnKeyBoardStatusChangeListener(new KeyBoardHelper.OnKeyboardChangedListener() {
+            @Override
+            public void OnKeyBoardPop(int keyBoardHeight) {
+                Log.d(TAG, "OnKeyBoardPop: height: " + keyBoardHeight);
+                if (inputTextPopupWindow.isShowing()) {
+//                    int keyboardTop = getWindowSize(getApplicationContext()).y - keyBoardHeight;
+//                    binding.getRoot().scrollTo(0, keyboardTop);
+//                    Log.d(TAG, "OnKeyBoardPop: keyboardTop: " + keyboardTop);
+//                    if (inputTextPopupWindow.getOnShowY() > keyboardTop) {
+//                        int adjustHeight = keyboardTop - inputTextPopupWindow.getOnShowY();
+//                        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) binding.rootBotHolder.getLayoutParams();
+//                        lp.height  = adjustHeight;
+//                        binding.rootBotHolder.setLayoutParams(lp);
+//                        inputTextPopupWindow.show(inputTextPopupWindow.getWordStatusCode(), binding.getRoot(), inputTextPopupWindow.getOnShowX(), inputTextPopupWindow.getOnShowY() + adjustHeight);
+//                    }
+                }
+            }
+
+            @Override
+            public void OnKeyBoardClose(int oldKeyBoardheight) {
+                Log.d(TAG, "OnKeyBoardClose: oldHeight: " + oldKeyBoardheight);
+            }
+        });
+
+
+    }
+
+    private void controlKeyboardLayout(final View root, final View scrollToView) {
+        binding.getRoot().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+
+            }
+        });
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            Log.d(TAG, "onWindowFocusChanged: " +
+                    "rootView-size [" + getWindowSize(getApplicationContext()) + "]");
+        }
     }
 
     @Override
     protected void onDestroy() {
+        keyboardHelper.onDestroy();
         binding.getRoot().getViewTreeObserver().removeOnScrollChangedListener(mOnScrollChangedListener);
         super.onDestroy();
+    }
+
+    public static Point getWindowSize(Context context) {
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        final Display display = windowManager.getDefaultDisplay();
+        Point outPoint = new Point();
+        if (Build.VERSION.SDK_INT >= 19) {
+            // 可能有虚拟按键的情况
+            display.getRealSize(outPoint);
+        } else {
+            // 不可能有虚拟按键
+            display.getSize(outPoint);
+        }
+        return outPoint;
     }
 
     private ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener = new ViewTreeObserver.OnScrollChangedListener() {
@@ -179,7 +252,12 @@ public class CorrectSampleAct extends AbsActivity {
             if (mCurrentWord != null) {
                 inputTextPopupWindow.setNote("在" + mCurrentWord.getOriginTxt() + "之前插入");
                 inputTextPopupWindow.setOpText(mCurrentWord.getOpTxt());
-                inputTextPopupWindow.show(Word.INSERT_FRONT, mCorrectView, 0, (int) (rawDownY - 2.5 * (mCurrentWord.getBottom() - mCurrentWord.getTop())));
+
+                inputTextDialog = new InputTextDialog();
+                inputTextDialog.setShowY((int) (rawDownY - 2.5 * (mCurrentWord.getBottom() - mCurrentWord.getTop())));
+                inputTextDialog.show(getSupportFragmentManager(), "input_dialog");
+
+//                inputTextPopupWindow.show(Word.INSERT_FRONT, binding.getRoot(), 0, (int) (rawDownY - 2.5 * (mCurrentWord.getBottom() - mCurrentWord.getTop())));
             }
         }
 
@@ -190,7 +268,7 @@ public class CorrectSampleAct extends AbsActivity {
             if (mCurrentWord != null) {
                 inputTextPopupWindow.setNote("替换" + mCurrentWord.getOriginTxt());
                 inputTextPopupWindow.setOpText(mCurrentWord.getOpTxt());
-                inputTextPopupWindow.show(Word.REPLACE, mCorrectView, 0, (int) (rawDownY - 2.5 * (mCurrentWord.getBottom() - mCurrentWord.getTop())));
+                inputTextPopupWindow.show(Word.REPLACE, binding.getRoot(), 0, (int) (rawDownY - 2.5 * (mCurrentWord.getBottom() - mCurrentWord.getTop())));
             }
         }
 

@@ -20,7 +20,14 @@
                 android:id="@+id/cv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/root_bot_holder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
 </layout>

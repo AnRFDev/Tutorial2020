@@ -3,6 +3,7 @@ package com.rustfisher.tutorial2020.correct.view;
 import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class InputTextPopupWindow {
         mWindow.setFocusable(true);
 
         mWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NEEDED);
-        mWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        mWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         noteTv = contentView.findViewById(R.id.note_tv);
 
@@ -84,7 +85,7 @@ public class InputTextPopupWindow {
         }
         onShowX = x;
         onShowY = y - mHeight;
-        mWindow.showAtLocation(view, Gravity.NO_GRAVITY, x, y);
+        mWindow.showAtLocation(view, Gravity.BOTTOM, x, y);
     }
 
     public void dismiss() {

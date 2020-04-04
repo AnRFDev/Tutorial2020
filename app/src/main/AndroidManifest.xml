@@ -57,8 +57,12 @@
         <activity android:name=".constraintlayout.Con3Act" />
         <activity android:name=".recycler.move.MoveToDelAct" />
         <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
-        <activity android:name=".correct.CorrectSampleAct" />
+        <activity
+            android:name=".correct.CorrectSampleAct"
+            android:configChanges="keyboardHidden"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".customview.CustomViewAct" />
+        <activity android:name=".popupwindow.PopupWindowDemo" />
     </application>
 
 </manifest>
