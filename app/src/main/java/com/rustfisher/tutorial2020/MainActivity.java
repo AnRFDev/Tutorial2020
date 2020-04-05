@@ -5,7 +5,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.animation.AnimationDemoActivity;
@@ -14,6 +13,7 @@ import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
 import com.rustfisher.tutorial2020.customview.CustomViewAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
+import com.rustfisher.tutorial2020.dialog.DialogGuideAct;
 import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
@@ -23,72 +23,42 @@ import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
 import com.rustfisher.tutorial2020.text.TvDemoGuide;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
+import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
-public class MainActivity extends AbsActivity implements View.OnClickListener {
+import java.util.Arrays;
+
+public class MainActivity extends AbsGuideAct {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setOnClickListener(this, R.id.re_btn, R.id.animation_demo_btn, R.id.linear_layout_btn,
-                R.id.xml_shape_demo, R.id.color_list_demo_btn, R.id.relative_layout_btn,
-                R.id.iv_demo1, R.id.act_demo_list_btn, R.id.broadcast_demo_list_btn, R.id.tv_demo_list,
-                R.id.data_binding, R.id.life_cycle, R.id.view_model_guide, R.id.con_layout_btn,
-                R.id.act_cor, R.id.act_custom_view);
-    }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.act_custom_view:
-                startActivity(new Intent(getApplicationContext(), CustomViewAct.class));
-                break;
-            case R.id.act_cor:
-                startActivity(new Intent(getApplicationContext(), CorrectSampleAct.class));
-                break;
-            case R.id.view_model_guide:
-                startActivity(new Intent(getApplicationContext(), ViewModelGuideAct.class));
-                break;
-            case R.id.act_demo_list_btn:
-                startActivity(new Intent(getApplicationContext(), ActDemoGuide.class));
-                break;
-            case R.id.relative_layout_btn:
-                startActivity(new Intent(getApplicationContext(), RelativeLayoutGuideAct.class));
-                break;
-            case R.id.re_btn:
-                startActivity(new Intent(getApplicationContext(), ReGuideAct.class));
-                break;
-            case R.id.animation_demo_btn:
-                startActivity(new Intent(getApplicationContext(), AnimationDemoActivity.class));
-                break;
-            case R.id.linear_layout_btn:
-                startActivity(new Intent(getApplicationContext(), LinearGuideAct.class));
-                break;
-            case R.id.xml_shape_demo:
-                startActivity(new Intent(getApplicationContext(), XMLShapeDemo.class));
-                break;
-            case R.id.color_list_demo_btn:
-                startActivity(new Intent(getApplicationContext(), LayoutBackgroundDemo.class));
-                break;
-            case R.id.iv_demo1:
-                startActivity(new Intent(getApplicationContext(), ImageViewDemo1.class));
-                break;
-            case R.id.broadcast_demo_list_btn:
-                startActivity(new Intent(getApplicationContext(), BroadcastDemoGuide.class));
-                break;
-            case R.id.tv_demo_list:
-                startActivity(new Intent(getApplicationContext(), TvDemoGuide.class));
-                break;
-            case R.id.data_binding:
-                startActivity(new Intent(getApplicationContext(), GuideListAct.class));
-                break;
-            case R.id.life_cycle:
-                startActivity(new Intent(getApplicationContext(), LcGuideAct.class));
-                break;
-            case R.id.con_layout_btn:
-                startActivity(new Intent(getApplicationContext(), ConGuideAct.class));
-                break;
-        }
+        mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
+                new GuideAdapter.OptionItem("自定义view", true, CustomViewAct.class),
+                new GuideAdapter.OptionItem("文章修改", true, CorrectSampleAct.class),
+                new GuideAdapter.OptionItem("ViewModel", true, ViewModelGuideAct.class),
+                new GuideAdapter.OptionItem("Activity示例列表", true, ActDemoGuide.class),
+                new GuideAdapter.OptionItem("Relative Layout demo", true, RelativeLayoutGuideAct.class),
+                new GuideAdapter.OptionItem("RecyclerView demo", true, ReGuideAct.class),
+                new GuideAdapter.OptionItem("Animation demo", true, AnimationDemoActivity.class),
+                new GuideAdapter.OptionItem("XML shape 示例", true, XMLShapeDemo.class),
+                new GuideAdapter.OptionItem("LinearLayout demo", true, LinearGuideAct.class),
+                new GuideAdapter.OptionItem("颜色样式", true, LayoutBackgroundDemo.class),
+                new GuideAdapter.OptionItem("ImageView 示例1", true, ImageViewDemo1.class),
+                new GuideAdapter.OptionItem("Broadcast示例列表", true, BroadcastDemoGuide.class),
+                new GuideAdapter.OptionItem("TextView 示例", true, TvDemoGuide.class),
+                new GuideAdapter.OptionItem("DataBinding", true, GuideListAct.class),
+                new GuideAdapter.OptionItem("LifeCycle", true, LcGuideAct.class),
+                new GuideAdapter.OptionItem("ConstraintLayout demo", true, ConGuideAct.class)
+        ));
+
+        mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
+            @Override
+            public void onClick(Class actClz) {
+                startActivity(new Intent(getApplicationContext(), actClz));
+            }
+        });
     }
 
     @Override

@@ -45,7 +45,7 @@ public class InputTextDialog extends DialogFragment {
             dialogWindow.setGravity(Gravity.LEFT | Gravity.TOP);
             lp.y = showY;
             dialogWindow.setAttributes(lp);
-            dialogWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE );
+            dialogWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
 //            dialogWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 //            lp.y = showY;

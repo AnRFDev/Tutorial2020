@@ -63,6 +63,8 @@
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".customview.CustomViewAct" />
         <activity android:name=".popupwindow.PopupWindowDemo" />
+        <activity android:name=".dialog.DialogGuideAct" />
+        <activity android:name=".dialog.DialogLocationAct" />
     </application>
 
 </manifest>
