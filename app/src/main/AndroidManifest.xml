@@ -65,6 +65,10 @@
         <activity android:name=".popupwindow.PopupWindowDemo" />
         <activity android:name=".dialog.DialogGuideAct" />
         <activity android:name=".dialog.DialogLocationAct" />
+        <activity android:name=".edittext.EtGuideAct" />
+        <activity
+            android:name=".edittext.SoftInputModeAct"
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>
