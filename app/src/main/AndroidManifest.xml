@@ -69,6 +69,7 @@
         <activity
             android:name=".edittext.SoftInputModeAct"
             android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".edittext.EtSelectionAct" />
     </application>
 
 </manifest>

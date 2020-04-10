@@ -16,7 +16,9 @@ public class EtGuideAct extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem("Activit SoftInputMode", true, SoftInputModeAct.class))
+                new GuideAdapter.OptionItem("Activity SoftInputMode", true, SoftInputModeAct.class),
+                new GuideAdapter.OptionItem("光标移动", true, EtSelectionAct.class)
+                )
         );
 
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
