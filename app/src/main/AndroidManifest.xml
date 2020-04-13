@@ -70,6 +70,8 @@
             android:name=".edittext.SoftInputModeAct"
             android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".edittext.EtSelectionAct" />
+        <activity android:name=".drawerlayout.DLGuideAct" />
+        <activity android:name=".drawerlayout.Drawer1Act" />
     </application>
 
 </manifest>

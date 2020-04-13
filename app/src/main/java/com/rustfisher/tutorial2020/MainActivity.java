@@ -14,6 +14,7 @@ import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
 import com.rustfisher.tutorial2020.customview.CustomViewAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
 import com.rustfisher.tutorial2020.dialog.DialogGuideAct;
+import com.rustfisher.tutorial2020.drawerlayout.DLGuideAct;
 import com.rustfisher.tutorial2020.edittext.EtGuideAct;
 import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
@@ -35,6 +36,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("DrawerLayout示例", true, DLGuideAct.class),
                 new GuideAdapter.OptionItem("EditText示例", true, EtGuideAct.class),
                 new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
                 new GuideAdapter.OptionItem("自定义view", true, CustomViewAct.class),
