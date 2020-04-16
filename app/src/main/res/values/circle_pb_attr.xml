@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CirclePb">
+        <attr name="stroke_wid" format="dimension"/>
+        <attr name="under_color" format="color"/>
+        <attr name="pb_color" format="color"/>
+    </declare-styleable>
+
+</resources>

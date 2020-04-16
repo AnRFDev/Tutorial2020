@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
-import com.rustfisher.tutorial2020.animation.AnimationDemoActivity;
+import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
@@ -17,8 +17,10 @@ import com.rustfisher.tutorial2020.dialog.DialogGuideAct;
 import com.rustfisher.tutorial2020.drawerlayout.DLGuideAct;
 import com.rustfisher.tutorial2020.edittext.EtGuideAct;
 import com.rustfisher.tutorial2020.image.ImageViewDemo1;
+import com.rustfisher.tutorial2020.kotlinguide.KotlinGuideAct;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
+import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
@@ -36,6 +38,8 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Kotlin入门", true, KotlinGuideAct.class),
+                new GuideAdapter.OptionItem("汉字转拼音", true, PinyinGuideAct.class),
                 new GuideAdapter.OptionItem("DrawerLayout示例", true, DLGuideAct.class),
                 new GuideAdapter.OptionItem("EditText示例", true, EtGuideAct.class),
                 new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
@@ -45,7 +49,7 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("Activity示例列表", true, ActDemoGuide.class),
                 new GuideAdapter.OptionItem("Relative Layout demo", true, RelativeLayoutGuideAct.class),
                 new GuideAdapter.OptionItem("RecyclerView demo", true, ReGuideAct.class),
-                new GuideAdapter.OptionItem("Animation demo", true, AnimationDemoActivity.class),
+                new GuideAdapter.OptionItem("Animation demo", true, AnimGuideAct.class),
                 new GuideAdapter.OptionItem("XML shape 示例", true, XMLShapeDemo.class),
                 new GuideAdapter.OptionItem("LinearLayout demo", true, LinearGuideAct.class),
                 new GuideAdapter.OptionItem("颜色样式", true, LayoutBackgroundDemo.class),

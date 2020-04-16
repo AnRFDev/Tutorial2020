@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil;
 import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.correct.view.Word;
+import com.rustfisher.tutorial2020.customview.frag.ClipPathFrag1;
 import com.rustfisher.tutorial2020.customview.frag.TextFrag;
 import com.rustfisher.tutorial2020.databinding.ActCorrectSampleBinding;
 import com.rustfisher.tutorial2020.databinding.ActCustomViewBinding;
@@ -30,7 +31,9 @@ public class CustomViewAct extends AbsActivity {
         final ActCustomViewBinding binding = DataBindingUtil.setContentView(this, R.layout.act_custom_view);
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, new TextFrag()).commit();
+                .add(R.id.container, new TextFrag())
+                .add(R.id.container, new ClipPathFrag1())
+                .commit();
 
     }
 

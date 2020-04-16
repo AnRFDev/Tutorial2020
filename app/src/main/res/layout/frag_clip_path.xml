@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.rustfisher.tutorial2020.customview.view.RoundImageView
+                    style="@style/RoundIvCube"
+                    app:botLeftR="8dp"
+                    app:botRightR="8dp"
+                    app:topLeftR="8dp"
+                    app:topRightR="8dp" />
+
+                <com.rustfisher.tutorial2020.customview.view.RoundImageView
+                    style="@style/RoundIvCube"
+                    app:botLeftR="25dp"
+                    app:botRightR="25dp"
+                    app:topLeftR="25dp"
+                    app:topRightR="25dp" />
+
+                <com.rustfisher.tutorial2020.customview.view.RoundImageView
+                    style="@style/RoundIvCube"
+                    app:botLeftR="16dp" />
+
+                <com.rustfisher.tutorial2020.customview.view.RoundImageView
+                    style="@style/RoundIvCube"
+                    app:topLeftR="16dp" />
+
+                <com.rustfisher.tutorial2020.customview.view.RoundImageView
+                    style="@style/RoundIvCube"
+                    app:botRightR="16dp"
+                    app:topLeftR="16dp" />
+
+            </LinearLayout>
+
+
+            <com.rustfisher.tutorial2020.customview.view.CirclePb
+                android:id="@+id/cpb1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:stroke_wid="5dp" />
+
+            <com.rustfisher.tutorial2020.customview.view.CirclePb
+                android:id="@+id/cpb2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:stroke_wid="7dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

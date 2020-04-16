@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundImageView">
+        <attr name="topLeftR" format="dimension" />
+        <attr name="topRightR" format="dimension" />
+        <attr name="botLeftR" format="dimension" />
+        <attr name="botRightR" format="dimension" />
+    </declare-styleable>
+</resources>
