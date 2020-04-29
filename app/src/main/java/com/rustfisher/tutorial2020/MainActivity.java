@@ -1,10 +1,15 @@
 package com.rustfisher.tutorial2020;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.Window;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
@@ -73,6 +78,7 @@ public class MainActivity extends AbsGuideAct {
     protected void onResume() {
         super.onResume();
         getDefaultLauncherInfo();
+        getScreenInfo();
     }
 
     private void getDefaultLauncherInfo() {
@@ -83,4 +89,26 @@ public class MainActivity extends AbsGuideAct {
         Log.d(TAG, "getDefaultLauncherInfo: " + resolveInfo);
     }
 
+
+    private void getScreenInfo() {
+        final Window window = getWindow();
+        window.getDecorView().post(new Runnable() {
+            @Override
+            public void run() {
+                View decorView = window.getDecorView();
+                DisplayMetrics dpm = getResources().getDisplayMetrics();
+                Log.d(TAG, "DisplayMetrics density: " + dpm.density + ", densityDpi: " + dpm.densityDpi + ", heightPx:" + dpm.heightPixels + ", widPx: " + dpm.widthPixels);
+
+                Log.d(TAG, "decorView size [" + decorView.getWidth() + ", " + decorView.getHeight() + "] px");
+                float decorWidDp = px2Dp(getApplicationContext(), decorView.getWidth());
+                float decorHeightDp = px2Dp(getApplicationContext(), decorView.getHeight());
+                Log.d(TAG, "decorView size [" + decorWidDp + ", " + decorHeightDp + "] dp");
+
+            }
+        });
+    }
+
+    public static float px2Dp(Context context, int px) {
+        return px / context.getResources().getDisplayMetrics().density;
+    }
 }
