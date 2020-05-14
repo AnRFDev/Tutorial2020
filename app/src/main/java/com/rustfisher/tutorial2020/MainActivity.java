@@ -1,7 +1,9 @@
 package com.rustfisher.tutorial2020;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ import com.rustfisher.tutorial2020.kotlinguide.KotlinGuideAct;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
 import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
+import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
@@ -43,6 +46,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("pm", true, Pm1Act.class),
                 new GuideAdapter.OptionItem("Kotlin入门", true, KotlinGuideAct.class),
                 new GuideAdapter.OptionItem("汉字转拼音", true, PinyinGuideAct.class),
                 new GuideAdapter.OptionItem("DrawerLayout示例", true, DLGuideAct.class),
@@ -72,6 +76,7 @@ public class MainActivity extends AbsGuideAct {
                 startActivity(new Intent(getApplicationContext(), actClz));
             }
         });
+        registerScreenListener();
     }
 
     @Override
@@ -79,6 +84,12 @@ public class MainActivity extends AbsGuideAct {
         super.onResume();
         getDefaultLauncherInfo();
         getScreenInfo();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(mScreenReceiver);
     }
 
     private void getDefaultLauncherInfo() {
@@ -111,4 +122,25 @@ public class MainActivity extends AbsGuideAct {
     public static float px2Dp(Context context, int px) {
         return px / context.getResources().getDisplayMetrics().density;
     }
+
+
+    private void registerScreenListener() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_SCREEN_ON);
+        filter.addAction(Intent.ACTION_SCREEN_OFF);
+//        filter.addAction(Intent.ACTION_USER_PRESENT);
+        registerReceiver(mScreenReceiver, filter);
+    }
+
+    private BroadcastReceiver mScreenReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            if (Intent.ACTION_SCREEN_ON.equals(action)) {
+                Log.d(TAG, "onReceive: screen-on");
+            } else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
+                Log.d(TAG, "onReceive: screen-off");
+            }
+        }
+    };
 }
