@@ -12,6 +12,12 @@ android {
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
     }
     buildTypes {
         release {
@@ -21,6 +27,13 @@ android {
     }
     dataBinding {
         enabled true
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
     }
 }
 

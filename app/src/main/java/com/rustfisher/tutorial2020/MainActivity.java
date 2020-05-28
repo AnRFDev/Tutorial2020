@@ -27,6 +27,7 @@ import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.kotlinguide.KotlinGuideAct;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
+import com.rustfisher.tutorial2020.ndk.NDKGuide;
 import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
@@ -46,6 +47,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("NDK", true, NDKGuide.class),
                 new GuideAdapter.OptionItem("pm", true, Pm1Act.class),
                 new GuideAdapter.OptionItem("Kotlin入门", true, KotlinGuideAct.class),
                 new GuideAdapter.OptionItem("汉字转拼音", true, PinyinGuideAct.class),

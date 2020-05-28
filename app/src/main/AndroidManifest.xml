@@ -78,6 +78,7 @@
         <activity android:name=".pinyin.PinyinGuideAct" />
         <activity android:name=".pinyin.TinyPinyinDemo" />
         <activity android:name=".pm.Pm1Act" />
+        <activity android:name=".ndk.NDKGuide" />
     </application>
 
 </manifest>
