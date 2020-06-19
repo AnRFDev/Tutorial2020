@@ -36,6 +36,7 @@ import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
 import com.rustfisher.tutorial2020.text.TvDemoGuide;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
+import com.rustfisher.tutorial2020.web.WebViewGuide;
 import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
 import java.util.Arrays;
@@ -47,6 +48,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("WebView", true, WebViewGuide.class),
                 new GuideAdapter.OptionItem("NDK", true, NDKGuide.class),
                 new GuideAdapter.OptionItem("pm", true, Pm1Act.class),
                 new GuideAdapter.OptionItem("Kotlin入门", true, KotlinGuideAct.class),

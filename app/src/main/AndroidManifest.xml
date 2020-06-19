@@ -79,6 +79,8 @@
         <activity android:name=".pinyin.TinyPinyinDemo" />
         <activity android:name=".pm.Pm1Act" />
         <activity android:name=".ndk.NDKGuide" />
+        <activity android:name=".web.WebViewGuide" />
+        <activity android:name=".web.WvDemo1Act" />
     </application>
 
 </manifest>
