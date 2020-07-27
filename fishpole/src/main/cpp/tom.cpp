@@ -1,9 +1,12 @@
 #include <jni.h>
 #include <string>
+#include <android/log.h>
 
 //
 // Created by RustFisher on 2020/5/31.
 //
+
+#define tag "rustApp"
 
 extern "C"
 JNIEXPORT jstring JNICALL

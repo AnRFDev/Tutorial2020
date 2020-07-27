@@ -10,4 +10,5 @@ class Jerry {
     external fun addFish(a: Int, b: Int): Int
     external fun calFish(f1: Float, f2: Float): Float
     external fun name(): String?
+    external fun reverseString(input: String): String?
 }

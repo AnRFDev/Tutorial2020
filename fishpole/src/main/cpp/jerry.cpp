@@ -4,6 +4,9 @@
 
 #include <jni.h>
 #include <string>
+#include <android/log.h>
+
+#define tag "rustApp"
 
 extern "C"
 JNIEXPORT jint JNICALL
@@ -22,4 +25,33 @@ JNIEXPORT jstring JNICALL
 Java_com_rustfisher_fishpole_worker_Jerry_name(JNIEnv *env, jobject thiz) {
     std::string jerry = "Jerry";
     return env->NewStringUTF(jerry.c_str());
+}
+
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_rustfisher_fishpole_worker_Jerry_reverseString(JNIEnv *env, jobject thiz, jstring input) {
+    const char *inputPtr = env->GetStringUTFChars(input, NULL);
+    int len1 = env->GetStringLength(input);
+    int len2 = strlen(inputPtr);
+
+    __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] input: %s", inputPtr);
+    __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] GetStringLength: %d, strlen: %d",
+                        len1, len2);
+
+    char *out = new char[len1]{};
+
+    __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] origin out: %s", out);
+
+    for (int i = 0; i < len1; i++) {
+        out[i] = inputPtr[len1 - i - 1];
+    }
+
+    __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] result: %s", out);
+    jstring res = env->NewStringUTF(out);
+
+    delete[] out;
+    env->ReleaseStringChars(input, reinterpret_cast<const jchar *>(inputPtr));
+
+    return res;
 }
