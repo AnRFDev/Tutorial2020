@@ -27,9 +27,11 @@ public class NDKGuide extends AbsGuideAct {
                 new GuideAdapter.OptionItem(-1, mCalUtil.getMsg() + mCalUtil.getNumber()),
                 new GuideAdapter.OptionItem(-1, tom.name() + ": int: " + tom.addFish(1, 2) + ", float: " + tom.calFish(2, 3.4f)),
                 new GuideAdapter.OptionItem(-1, jerry.name() + ": int: " + jerry.addFish(1, 2) + ", float: " + jerry.calFish(2, 3.4f)),
-                new GuideAdapter.OptionItem(-1, "123456 -> " + jerry.reverseString("123456"))
+                new GuideAdapter.OptionItem(-1, "reverseString: 123456 -> " + jerry.reverseString("123456")),
+                new GuideAdapter.OptionItem(-1, "Tom money: " + tom.getMoney() + "\n addMoney: " + tom.addMoney() + "; nAddMoney: " + tom.nAddMoney())
         ));
-
+        tom.nVisitStaticNumber1();
+        FisherTom.nVisitStaticNumber2();
         demoBaseParam();
     }
 

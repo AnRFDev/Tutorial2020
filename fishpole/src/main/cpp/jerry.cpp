@@ -39,7 +39,7 @@ Java_com_rustfisher_fishpole_worker_Jerry_reverseString(JNIEnv *env, jobject thi
     __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] GetStringLength: %d, strlen: %d",
                         len1, len2);
 
-    char *out = new char[len1]{};
+    char *out = new char[len1 + 1]{}; // 这里需要多一位
 
     __android_log_print(ANDROID_LOG_INFO, tag, "[reverseString] origin out: %s", out);
 
