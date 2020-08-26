@@ -32,6 +32,7 @@ import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
+import com.rustfisher.tutorial2020.secret.SecretGuide;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
 import com.rustfisher.tutorial2020.text.TvDemoGuide;
@@ -48,6 +49,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("加密解密", true, SecretGuide.class),
                 new GuideAdapter.OptionItem("WebView", true, WebViewGuide.class),
                 new GuideAdapter.OptionItem("NDK", true, NDKGuide.class),
                 new GuideAdapter.OptionItem("pm", true, Pm1Act.class),
