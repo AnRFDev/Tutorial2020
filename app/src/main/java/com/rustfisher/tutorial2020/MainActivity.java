@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
+import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
@@ -49,6 +50,7 @@ public class MainActivity extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
                 new GuideAdapter.OptionItem("加密解密", true, SecretGuide.class),
                 new GuideAdapter.OptionItem("WebView", true, WebViewGuide.class),
                 new GuideAdapter.OptionItem("NDK", true, NDKGuide.class),
