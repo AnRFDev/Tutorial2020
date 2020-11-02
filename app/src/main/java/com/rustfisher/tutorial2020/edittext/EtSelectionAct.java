@@ -36,10 +36,10 @@ public class EtSelectionAct extends AbsActivity implements View.OnClickListener 
                 mEt1.setSelection(mEt1.getText().length());
                 break;
             case R.id.s3:
-                mEt1.setSelection(mEt1.getSelectionEnd() + 1);
+                mEt1.setSelection(Math.min(mEt1.getText().length() - 1, mEt1.getSelectionEnd() + 1));
                 break;
             case R.id.s4:
-                mEt1.setSelection(mEt1.getSelectionEnd() - 1);
+                mEt1.setSelection(Math.max(0, mEt1.getSelectionEnd() - 1));
                 break;
             case R.id.s5:
                 mEt1.setSelection(0, mEt1.getText().length());
