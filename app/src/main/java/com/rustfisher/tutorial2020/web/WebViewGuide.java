@@ -17,7 +17,8 @@ public class WebViewGuide extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem("demo1", true, WvDemo1Act.class)
+                new GuideAdapter.OptionItem("demo1", true, WvDemo1Act.class),
+                new GuideAdapter.OptionItem("长按和点击", true, Wv2ClickAct.class)
         ));
 
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {

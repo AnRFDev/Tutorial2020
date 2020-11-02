@@ -88,6 +88,7 @@
         <activity android:name=".web.WvDemo1Act" />
         <activity android:name=".secret.SecretGuide" />
         <activity android:name=".act.HttpUrlConnDemo1" />
+        <activity android:name=".web.Wv2ClickAct" />
     </application>
 
 </manifest>
