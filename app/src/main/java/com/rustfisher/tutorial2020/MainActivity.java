@@ -1,5 +1,6 @@
 package com.rustfisher.tutorial2020;
 
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,9 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
@@ -40,15 +44,27 @@ import com.rustfisher.tutorial2020.text.TvDemoGuide;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
 import com.rustfisher.tutorial2020.web.WebViewGuide;
 import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.tencent.smtt.sdk.QbSdk;
 
 import java.util.Arrays;
 
 public class MainActivity extends AbsGuideAct {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        QbSdk.initX5Environment(getApplicationContext(), new QbSdk.PreInitCallback() {
+            @Override
+            public void onCoreInitFinished() {
+                Log.d(TAG, "qb sdk onCoreInitFinished");
+            }
 
+            @Override
+            public void onViewInitFinished(boolean b) {
+                Log.d(TAG, "qb sdk onViewInitFinished: " + b);
+            }
+        });
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
                 new GuideAdapter.OptionItem("加密解密", true, SecretGuide.class),
@@ -85,6 +101,8 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         registerScreenListener();
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
     }
 
     @Override
