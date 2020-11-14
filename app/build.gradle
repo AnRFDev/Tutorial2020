@@ -55,4 +55,6 @@ dependencies {
     implementation project(path: ':fishpole')
 //    api 'com.tencent.tbs.tbssdk:sdk:43697'
     implementation files('libs/tbs_sdk_thirdapp_v4.3.0.67_43967_sharewithdownloadwithfile_withoutGame_obfs_20200923_120452.jar')
+
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

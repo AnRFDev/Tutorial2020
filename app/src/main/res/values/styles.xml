@@ -74,4 +74,11 @@
         <item name="android:src">#303F9F</item>
         <item name="android:layout_margin">8dp</item>
     </style>
+
+    <style name="NormalBtn">
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/se_main_btn_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
 </resources>

@@ -92,6 +92,7 @@
         <activity android:name=".act.HttpUrlConnDemo1" />
         <activity android:name=".web.Wv2ClickAct" />
         <activity android:name=".web.WebViewX5ClickAct" />
+        <activity android:name=".rwfile.ReadWriteFileActivity" />
     </application>
 
 </manifest>

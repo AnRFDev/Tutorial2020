@@ -37,6 +37,7 @@ import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
+import com.rustfisher.tutorial2020.rwfile.ReadWriteFileActivity;
 import com.rustfisher.tutorial2020.secret.SecretGuide;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
@@ -67,6 +68,7 @@ public class MainActivity extends AbsGuideAct {
         });
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
+                new GuideAdapter.OptionItem("读写文件", true, ReadWriteFileActivity.class),
                 new GuideAdapter.OptionItem("加密解密", true, SecretGuide.class),
                 new GuideAdapter.OptionItem("WebView", true, WebViewGuide.class),
                 new GuideAdapter.OptionItem("NDK", true, NDKGuide.class),
