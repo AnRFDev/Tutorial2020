@@ -32,6 +32,7 @@ import com.rustfisher.tutorial2020.image.ImageViewDemo1;
 import com.rustfisher.tutorial2020.kotlinguide.KotlinGuideAct;
 import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
+import com.rustfisher.tutorial2020.lottie.LottieDemo1;
 import com.rustfisher.tutorial2020.ndk.NDKGuide;
 import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
@@ -67,6 +68,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Lottie demo", true, LottieDemo1.class),
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
                 new GuideAdapter.OptionItem("读写文件", true, ReadWriteFileActivity.class),
                 new GuideAdapter.OptionItem("加密解密", true, SecretGuide.class),

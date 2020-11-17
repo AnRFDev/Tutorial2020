@@ -93,6 +93,7 @@
         <activity android:name=".web.Wv2ClickAct" />
         <activity android:name=".web.WebViewX5ClickAct" />
         <activity android:name=".rwfile.ReadWriteFileActivity" />
+        <activity android:name=".lottie.LottieDemo1" />
     </application>
 
 </manifest>
