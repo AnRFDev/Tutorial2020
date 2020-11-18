@@ -95,6 +95,7 @@
         <activity android:name=".rwfile.ReadWriteFileActivity" />
         <activity android:name=".lottie.LottieDemo1" />
         <activity android:name=".content.SpDemo1" />
+        <activity android:name=".animation.MoveAniDemo1" />
     </application>
 
 </manifest>

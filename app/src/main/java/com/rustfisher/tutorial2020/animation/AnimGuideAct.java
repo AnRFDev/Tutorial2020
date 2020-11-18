@@ -16,7 +16,8 @@ public class AnimGuideAct extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem("缩放动画", true, AnimationDemoActivity.class)
+                new GuideAdapter.OptionItem("缩放动画", true, AnimationDemoActivity.class),
+                new GuideAdapter.OptionItem("位移动画", true, MoveAniDemo1.class)
 //                new GuideAdapter.OptionItem("res动画", true, ComplexAnimResAct.class)
         ));
 
