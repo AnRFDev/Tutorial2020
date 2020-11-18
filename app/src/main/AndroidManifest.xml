@@ -94,6 +94,7 @@
         <activity android:name=".web.WebViewX5ClickAct" />
         <activity android:name=".rwfile.ReadWriteFileActivity" />
         <activity android:name=".lottie.LottieDemo1" />
+        <activity android:name=".content.SpDemo1" />
     </application>
 
 </manifest>

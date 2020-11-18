@@ -22,6 +22,7 @@ import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
+import com.rustfisher.tutorial2020.content.SpDemo1;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
 import com.rustfisher.tutorial2020.customview.CustomViewAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
@@ -68,6 +69,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("SharedPreference demo", true, SpDemo1.class),
                 new GuideAdapter.OptionItem("Lottie demo", true, LottieDemo1.class),
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
                 new GuideAdapter.OptionItem("读写文件", true, ReadWriteFileActivity.class),
