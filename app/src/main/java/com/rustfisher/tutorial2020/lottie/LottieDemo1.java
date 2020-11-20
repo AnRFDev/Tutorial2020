@@ -2,21 +2,34 @@ package com.rustfisher.tutorial2020.lottie;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieDrawable;
+import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Lottie使用示例
  * 2020-11-17
  */
-public class LottieDemo1 extends Activity implements View.OnClickListener {
+public class LottieDemo1 extends AbsActivity implements View.OnClickListener {
 
     private LinearLayout mRoot;
     private LottieAnimationView mLa1;
@@ -73,8 +86,23 @@ public class LottieDemo1 extends Activity implements View.OnClickListener {
         findViewById(R.id.reset_la6).setOnClickListener(this);
         findViewById(R.id.reset_la7).setOnClickListener(this);
 
+        RecyclerView recyclerView = findViewById(R.id.re_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
+        recyclerView.setAdapter(adapter);
+        try {
+            List<String> list = new ArrayList<>();
+            for (String s : getAssets().list("lottie")) {
+                list.add("lottie/" + s);
+            }
+            adapter.setDataList(list);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e(TAG, "onCreate: ", e);
+        }
 //        initExtraLottie1();
     }
+
+    private Adapter adapter = new Adapter();
 
     private void initExtraLottie1() {
         final LottieAnimationView view = new LottieAnimationView(this);
@@ -156,5 +184,54 @@ public class LottieDemo1 extends Activity implements View.OnClickListener {
         btn.setVisibility(View.VISIBLE);
         animationView.setProgress(0);
         animationView.pauseAnimation();
+    }
+
+    public static class Adapter extends RecyclerView.Adapter<VH> {
+        private static final String TAG = "rustApp";
+
+        private List<String> dataList = new ArrayList<>();
+
+        public void setDataList(List<String> list) {
+            if (list != null) {
+                dataList = list;
+            } else {
+                this.dataList = new ArrayList<>();
+            }
+            Log.d("rustApp", "setDataList: " + dataList);
+            notifyDataSetChanged();
+        }
+
+        @NonNull
+        @Override
+        public VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new VH(LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.lottie_item, parent, false));
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull VH holder, int position) {
+            final String path = dataList.get(position);
+            Log.d(TAG, "onBindViewHolder: " + path);
+            holder.lottieAnimationView.setAnimation(path);
+            holder.tv1.setText(path);
+        }
+
+        @Override
+        public int getItemCount() {
+            return dataList.size();
+        }
+    }
+
+    public static class VH extends RecyclerView.ViewHolder {
+        LottieAnimationView lottieAnimationView;
+        TextView tv1;
+
+        public VH(@NonNull View itemView) {
+            super(itemView);
+            lottieAnimationView = itemView.findViewById(R.id.la);
+            tv1 = itemView.findViewById(R.id.tv1);
+
+            lottieAnimationView.setImageAssetsFolder("lottie");
+        }
     }
 }

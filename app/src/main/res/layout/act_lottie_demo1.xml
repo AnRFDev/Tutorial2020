@@ -26,84 +26,84 @@
             android:layout_height="wrap_content"
             android:text="播放1" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/la2"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="star_lottie.json"
-            app:lottie_loop="false" />
-
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="播放2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/la3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="star_lottie.json"
-            app:lottie_loop="false" />
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="播放3" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/la4"
+                android:id="@+id/la2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:lottie_autoPlay="false"
+                app:lottie_autoPlay="true"
                 app:lottie_fileName="star_lottie.json"
                 app:lottie_loop="false" />
 
             <Button
-                android:id="@+id/btn4"
+                android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="播放4" />
-        </RelativeLayout>
+                android:text="播放2" />
 
-        <Button
-            android:id="@+id/reset_la4"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="20dp"
-            android:text="重置4" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/la3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="star_lottie.json"
+                app:lottie_loop="false" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/la4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="star_lottie.json"
+                    app:lottie_loop="false" />
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="播放4" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/reset_la4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:text="重置4" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -217,5 +217,10 @@
             android:text="重置7" />
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/re_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
