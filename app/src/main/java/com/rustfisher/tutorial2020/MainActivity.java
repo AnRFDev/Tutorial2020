@@ -69,6 +69,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
                 new GuideAdapter.OptionItem("SharedPreference demo", true, SpDemo1.class),
                 new GuideAdapter.OptionItem("Lottie demo", true, LottieDemo1.class),
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", true, HttpUrlConnDemo1.class),
@@ -81,7 +82,6 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("汉字转拼音", true, PinyinGuideAct.class),
                 new GuideAdapter.OptionItem("DrawerLayout示例", true, DLGuideAct.class),
                 new GuideAdapter.OptionItem("EditText示例", true, EtGuideAct.class),
-                new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
                 new GuideAdapter.OptionItem("自定义view", true, CustomViewAct.class),
                 new GuideAdapter.OptionItem("文章修改", true, CorrectSampleAct.class),
                 new GuideAdapter.OptionItem("ViewModel", true, ViewModelGuideAct.class),

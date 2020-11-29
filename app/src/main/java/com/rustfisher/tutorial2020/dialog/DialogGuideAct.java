@@ -14,6 +14,8 @@ import java.util.Arrays;
 
 public class DialogGuideAct extends AbsGuideAct {
     private static final int D1 = 100;
+    private static final int D_SHOW_VERSION = 101;
+    private static final int D_SHOW_VERSION_ADJUST = 102;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,8 @@ public class DialogGuideAct extends AbsGuideAct {
 
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem(D1, "简单Dialog1"),
+                new GuideAdapter.OptionItem(D_SHOW_VERSION, "DialogFragment"),
+                new GuideAdapter.OptionItem(D_SHOW_VERSION_ADJUST, "DialogFragment改变大小"),
                 new GuideAdapter.OptionItem("改变dialog的位置", true, DialogLocationAct.class)
                 )
         );
@@ -39,9 +43,21 @@ public class DialogGuideAct extends AbsGuideAct {
                     case D1:
                         popSimpleDialog1("欢迎访问", "欢迎访问https://an.rustfisher.com\n入门的好选择～");
                         break;
+                    case D_SHOW_VERSION:
+                        popShowVersionDialog(false);
+                        break;
+                    case D_SHOW_VERSION_ADJUST:
+                        popShowVersionDialog(true);
+                        break;
                 }
             }
         });
+    }
+
+    private void popShowVersionDialog(boolean adjustSize) {
+        ShowVersionDialogFrag dialogFrag = new ShowVersionDialogFrag();
+        dialogFrag.adjustSize = adjustSize;
+        dialogFrag.show(getSupportFragmentManager(), "show-version");
     }
 
     private void popSimpleDialog1(String title, String content) {
@@ -52,4 +68,6 @@ public class DialogGuideAct extends AbsGuideAct {
         dialog.setArguments(bundle);
         dialog.show(getSupportFragmentManager(), "one-tag");
     }
+
+
 }
