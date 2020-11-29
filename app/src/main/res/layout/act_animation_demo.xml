@@ -20,4 +20,16 @@
         android:text="zoom 2"
         android:textSize="16sp" />
 
+    <ImageView
+        android:id="@+id/frame_iv1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/anim_frame1" />
+
+    <Button
+        android:id="@+id/frame_1_btn"
+        style="@style/NormalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加1帧" />
 </LinearLayout>

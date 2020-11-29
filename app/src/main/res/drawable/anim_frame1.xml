@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@android:color/holo_blue_light"
+        android:duration="300" />
+
+    <item
+        android:drawable="@android:color/holo_blue_bright"
+        android:duration="400" />
+
+    <item
+        android:drawable="@android:color/holo_blue_dark"
+        android:duration="500" />
+
+    <item
+        android:drawable="@drawable/ic_launcher_foreground"
+        android:duration="600" />
+
+</animation-list>
