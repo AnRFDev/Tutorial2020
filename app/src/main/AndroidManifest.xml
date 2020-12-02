@@ -97,6 +97,7 @@
         <activity android:name=".content.SpDemo1" />
         <activity android:name=".animation.MoveAniDemo1" />
         <activity android:name=".animation.collection.AnimCollectAct" />
+        <activity android:name=".text.TvDrawableSpanDemoAct" />
     </application>
 
 </manifest>

@@ -69,6 +69,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("TextView 示例", true, TvDemoGuide.class),
                 new GuideAdapter.OptionItem("Animation demo", true, AnimGuideAct.class),
                 new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
                 new GuideAdapter.OptionItem("SharedPreference demo", true, SpDemo1.class),
@@ -94,7 +95,6 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("颜色样式", true, LayoutBackgroundDemo.class),
                 new GuideAdapter.OptionItem("ImageView 示例1", true, ImageViewDemo1.class),
                 new GuideAdapter.OptionItem("Broadcast示例列表", true, BroadcastDemoGuide.class),
-                new GuideAdapter.OptionItem("TextView 示例", true, TvDemoGuide.class),
                 new GuideAdapter.OptionItem("DataBinding", true, GuideListAct.class),
                 new GuideAdapter.OptionItem("LifeCycle", true, LcGuideAct.class),
                 new GuideAdapter.OptionItem("ConstraintLayout demo", true, ConGuideAct.class)
