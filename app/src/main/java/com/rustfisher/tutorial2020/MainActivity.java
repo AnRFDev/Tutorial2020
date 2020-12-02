@@ -69,6 +69,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Animation demo", true, AnimGuideAct.class),
                 new GuideAdapter.OptionItem("Dialog示例", true, DialogGuideAct.class),
                 new GuideAdapter.OptionItem("SharedPreference demo", true, SpDemo1.class),
                 new GuideAdapter.OptionItem("Lottie demo", true, LottieDemo1.class),
@@ -88,7 +89,6 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("Activity示例列表", true, ActDemoGuide.class),
                 new GuideAdapter.OptionItem("Relative Layout demo", true, RelativeLayoutGuideAct.class),
                 new GuideAdapter.OptionItem("RecyclerView demo", true, ReGuideAct.class),
-                new GuideAdapter.OptionItem("Animation demo", true, AnimGuideAct.class),
                 new GuideAdapter.OptionItem("XML shape 示例", true, XMLShapeDemo.class),
                 new GuideAdapter.OptionItem("LinearLayout demo", true, LinearGuideAct.class),
                 new GuideAdapter.OptionItem("颜色样式", true, LayoutBackgroundDemo.class),

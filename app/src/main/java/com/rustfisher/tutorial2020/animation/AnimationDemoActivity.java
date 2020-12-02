@@ -16,6 +16,7 @@ import java.util.Locale;
 
 /**
  * 演示动画
+ * @deprecated
  * 2019-12-15
  */
 public class AnimationDemoActivity extends AbsActivity implements View.OnClickListener {
