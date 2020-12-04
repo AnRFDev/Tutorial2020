@@ -30,7 +30,7 @@ public class AbsAniFrag extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TAG += getClass().getSimpleName();
-        mAnimVm = new ViewModelProvider(getActivity()).get(AnimCollectVm.class);
+        mAnimVm = new ViewModelProvider(requireActivity()).get(AnimCollectVm.class);
         Log.d(TAG, "onCreate: frag vm-" + mAnimVm.hashCode());
     }
 
