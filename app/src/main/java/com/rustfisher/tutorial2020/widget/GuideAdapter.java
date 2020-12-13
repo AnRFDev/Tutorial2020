@@ -1,8 +1,10 @@
 package com.rustfisher.tutorial2020.widget;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,6 +44,7 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
     @Override
     public void onBindViewHolder(@NonNull GuideAdapter.VH holder, int position) {
         final GuideAdapter.OptionItem optionItem = dataList.get(position);
+        holder.iv1.setImageResource(optionItem.headIvResId);
         holder.tv1.setText(optionItem.name);
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,12 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
                 }
             }
         });
+        if (TextUtils.isEmpty(optionItem.desc)) {
+            holder.tv2.setVisibility(View.GONE);
+        } else {
+            holder.tv2.setVisibility(View.VISIBLE);
+            holder.tv2.setText(optionItem.desc);
+        }
     }
 
     @Override
@@ -70,22 +79,28 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
         this.onClzListener = onClzListener;
     }
 
-    public class VH extends RecyclerView.ViewHolder {
+    public static class VH extends RecyclerView.ViewHolder {
         View item;
+        ImageView iv1;
         TextView tv1;
+        TextView tv2;
 
         public VH(@NonNull View itemView) {
             super(itemView);
             item = itemView;
+            iv1 = itemView.findViewById(R.id.iv1);
             tv1 = itemView.findViewById(R.id.tv1);
+            tv2 = itemView.findViewById(R.id.tv2);
         }
     }
 
     public static class OptionItem {
         public int num;
         public String name;
+        public String desc;
         public boolean useClz = false;
         public Class clz;
+        public int headIvResId = R.drawable.item_type_code;
 
         public OptionItem(int num, String name) {
             this.num = num;
@@ -96,6 +111,21 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
             this.useClz = useClz;
             this.name = name;
             this.clz = clz;
+        }
+
+        public OptionItem(String name, String desc, boolean useClz, Class clz) {
+            this.name = name;
+            this.desc = desc;
+            this.useClz = useClz;
+            this.clz = clz;
+        }
+
+        public OptionItem(String name, String desc, boolean useClz, Class clz, int headIvResId) {
+            this.name = name;
+            this.desc = desc;
+            this.useClz = useClz;
+            this.clz = clz;
+            this.headIvResId = headIvResId;
         }
     }
 
