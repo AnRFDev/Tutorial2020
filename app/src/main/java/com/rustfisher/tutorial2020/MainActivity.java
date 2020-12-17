@@ -39,6 +39,7 @@ import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.rwfile.ReadWriteFileActivity;
 import com.rustfisher.tutorial2020.secret.SecretGuide;
+import com.rustfisher.tutorial2020.storage.StorageGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
 import com.rustfisher.tutorial2020.text.TvDemoGuide;
@@ -68,6 +69,7 @@ public class MainActivity extends AbsGuideAct {
         });
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("TextView 示例", "显示文字，文字效果，html", true, TvDemoGuide.class, R.drawable.item_type_text),
+                new GuideAdapter.OptionItem("数据库", "操作本地数据库", true, StorageGuideAct.class, R.drawable.item_type_storage),
                 new GuideAdapter.OptionItem("Animation demo", "Animation的使用", true, AnimGuideAct.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("Dialog示例", "弹窗", true, DialogGuideAct.class, R.drawable.item_type_assignment_turned_in),
                 new GuideAdapter.OptionItem("SharedPreference demo", "存放一些配置信息", true, SpDemo1.class, R.drawable.item_type_storage),

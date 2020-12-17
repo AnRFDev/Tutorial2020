@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.rustfisher.tutorial2020.storage.StartDbVm" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/msg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_1_btn"
+            style="@style/NormalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{vm.add1User}"
+            android:text="新增一个记录"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/query_all_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/query_all_btn"
+            style="@style/NormalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{vm.onQueryAll}"
+            android:text="查询全部"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rm_1_btn"
+            app:layout_constraintStart_toEndOf="@id/add_1_btn" />
+
+        <Button
+            android:id="@+id/rm_1_btn"
+            style="@style/NormalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{vm.deleteUser}"
+            android:text="删除1条"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/query_all_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

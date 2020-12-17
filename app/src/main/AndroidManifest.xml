@@ -98,6 +98,8 @@
         <activity android:name=".animation.MoveAniDemo1" />
         <activity android:name=".animation.collection.AnimCollectAct" />
         <activity android:name=".text.TvDrawableSpanDemoAct" />
+        <activity android:name=".storage.StorageGuideAct" />
+        <activity android:name=".storage.StartDbAct" />
     </application>
 
 </manifest>
