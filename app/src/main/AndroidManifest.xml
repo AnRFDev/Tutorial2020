@@ -103,6 +103,7 @@
         <activity
             android:name=".web.WebViewLoadAssetsAct"
             android:screenOrientation="landscape" />
+        <activity android:name=".web.WebViewLoadAppLocal1Act" />
     </application>
 
 </manifest>
