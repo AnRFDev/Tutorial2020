@@ -28,7 +28,8 @@ public class WebViewGuide extends AbsGuideAct {
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
             @Override
             public void onClick(Class actClz) {
-                startActivity(new Intent(getApplicationContext(), actClz));
+                Intent intent = new Intent(getApplicationContext(), actClz);
+                startActivity(intent);
             }
         });
     }
