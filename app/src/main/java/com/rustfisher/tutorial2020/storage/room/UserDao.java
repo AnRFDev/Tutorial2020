@@ -3,6 +3,7 @@ package com.rustfisher.tutorial2020.storage.room;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -24,4 +25,14 @@ public interface UserDao {
 
     @Delete
     void delete(User user);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public void insertUsers(User... users);
+
+    @Insert
+    public void insertBothUsers(User user1, User user2);
+
+    @Insert
+    public void insertUsersAndFriends(User user, List<User> friends);
+
 }

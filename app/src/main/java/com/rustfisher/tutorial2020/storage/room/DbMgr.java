@@ -27,7 +27,9 @@ public class DbMgr {
     }
 
     public void initDb(Context context) {
-        database = Room.databaseBuilder(context, AppDatabase.class, DB_NAME).build();
+        database = Room.databaseBuilder(context, AppDatabase.class, DB_NAME)
+//                .allowMainThreadQueries() // 是否允许主线程操作
+                .build();
     }
 
     public AppDatabase getDatabase() {
