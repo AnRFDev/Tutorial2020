@@ -104,6 +104,7 @@
             android:name=".web.WebViewLoadAssetsAct"
             android:screenOrientation="landscape" />
         <activity android:name=".web.WebViewLoadAppLocal1Act" />
+        <activity android:name=".storage.update.RoomUpdateAct" />
     </application>
 
 </manifest>

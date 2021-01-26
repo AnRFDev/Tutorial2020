@@ -5,6 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -27,12 +28,29 @@ public interface UserDao {
     void delete(User user);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void insertUsers(User... users);
+    void insertUsers(User... users);
 
     @Insert
-    public void insertBothUsers(User user1, User user2);
+    void insertBothUsers(User user1, User user2);
 
     @Insert
-    public void insertUsersAndFriends(User user, List<User> friends);
+    void insertUsersAndFriends(User user, List<User> friends);
 
+    @Update
+    void updateOneUser(User user);
+
+    @Update
+    int updateOneUserAndResult(User user);
+
+    @Update
+    void updateUsers(User... user);
+
+    @Update(onConflict = OnConflictStrategy.ABORT)
+    int updateUsersCanAbort(User... user);
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    int updateUsersCanIgnore(User... user);
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    int updateUsersCanReplace(User... user);
 }

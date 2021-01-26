@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.rustfisher.tutorial2020.AbsGuideAct;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.storage.room.DbMgr;
+import com.rustfisher.tutorial2020.storage.update.RoomUpdateAct;
 import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
 import java.util.Arrays;
@@ -21,7 +22,8 @@ public class StorageGuideAct extends AbsGuideAct {
         DbMgr.getMgr().initDb(getApplicationContext());
 
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem("开始", "引入Room，建立第一个数据库", true, StartDbAct.class, R.drawable.item_type_storage)
+                new GuideAdapter.OptionItem("开始", "引入Room，建立第一个数据库", true, StartDbAct.class, R.drawable.item_type_storage),
+                new GuideAdapter.OptionItem("更新数据", "更新数据库中已有的数据", true, RoomUpdateAct.class, R.drawable.item_type_storage)
         ));
 
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
