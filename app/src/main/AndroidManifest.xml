@@ -100,6 +100,7 @@
         <activity android:name=".text.TvDrawableSpanDemoAct" />
         <activity android:name=".storage.StorageGuideAct" />
         <activity android:name=".storage.StartDbAct" />
+        <activity android:name=".ndk.demo.NdkFileDemoAct" />
         <activity
             android:name=".web.WebViewLoadAssetsAct"
             android:screenOrientation="landscape" />
