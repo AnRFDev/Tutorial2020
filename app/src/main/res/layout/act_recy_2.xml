@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C4064"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rePage2Item"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="测试记录"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/RePage2Header"
+            android:layout_marginEnd="@dimen/re_2_half_gap"
+            android:text="时区" />
+
+        <TextView
+            style="@style/RePage2Header"
+            android:layout_marginStart="@dimen/re_2_half_gap"
+            android:layout_marginEnd="@dimen/re_2_half_gap"
+            android:text="序号" />
+
+        <TextView
+            style="@style/RePage2Header"
+            android:layout_marginStart="@dimen/re_2_half_gap"
+            android:layout_marginEnd="@dimen/re_2_half_gap"
+            android:text="人员" />
+
+        <TextView
+            style="@style/RePage2Header"
+            android:layout_marginStart="@dimen/re_2_half_gap"
+            android:text="数量" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/re_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

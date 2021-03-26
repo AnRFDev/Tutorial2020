@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rustfisher.tutorial2020">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".kotlinguide.KotlinGuideAct" />
+        <activity android:name=".constraintlayout.Con1Act" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".recycler.RecyclerViewDemoActivity" />
+        <activity android:name=".animation.AnimationDemoActivity" />
+        <activity android:name=".recycler.ReGuideAct" />
+        <activity android:name=".recycler.RecyclerViewDemo2Act" />
+        <activity android:name=".linear.LinearGuideAct" />
+        <activity android:name=".linear.LinearLayoutChildGravityDemo" />
+        <activity android:name=".relativelayout.RelativeLayoutGuideAct" />
+        <activity android:name=".relativelayout.RelativeDemo1" />
+        <activity android:name=".style.LayoutBackgroundDemo" />
+        <activity android:name=".style.XMLShapeDemo" />
+        <activity android:name=".image.ImageViewDemo1" />
+        <activity android:name=".act.SendParamsDemo" />
+        <activity android:name=".recycler.multi.ReViewDemoMulti" />
+        <activity android:name=".act.ForResultFirstAct" />
+        <activity android:name=".act.ForResultSecondAct" />
+        <activity android:name=".act.ActDemoGuide" />
+        <activity android:name=".text.TvDemoGuide" />
+        <activity android:name=".text.SpannableStringAct1" />
+        <activity android:name=".act.LifeCycleAct" />
+        <activity android:name=".broadcast.BroadcastDemo1" />
+        <activity android:name=".broadcast.BroadcastDemoGuide" />
+        <activity android:name=".text.TextHtmlDemo" />
+        <activity android:name=".text.TextStyleDemo" />
+        <activity android:name=".databinding.DataBindingAct1" />
+        <activity android:name=".text.SpecialCharAct" />
+        <activity android:name=".databinding.DataBindingAct2" />
+        <activity android:name=".databinding.GuideListAct" />
+        <activity android:name=".databinding.MutableDemo1" />
+        <activity android:name=".databinding.TwoWayAct1" />
+        <activity android:name=".databinding.BindingAdapterAct1" />
+        <activity android:name=".lifecycle.LcGuideAct" />
+        <activity android:name=".lifecycle.Lc1Act" />
+        <activity android:name=".viewmodel.ViewModelGuideAct" />
+        <activity android:name=".viewmodel.VmIntro1Act" />
+        <activity android:name=".recycler.FlipCardAct" />
+        <activity android:name=".constraintlayout.ConGuideAct" />
+        <activity android:name=".constraintlayout.Con2Act" />
+        <activity android:name=".constraintlayout.Con3Act" />
+        <activity android:name=".recycler.move.MoveToDelAct" />
+        <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
+        <activity
+            android:name=".correct.CorrectSampleAct"
+            android:configChanges="keyboardHidden"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".customview.CustomViewAct" />
+        <activity android:name=".popupwindow.PopupWindowDemo" />
+        <activity android:name=".dialog.DialogGuideAct" />
+        <activity android:name=".dialog.DialogLocationAct" />
+        <activity android:name=".edittext.EtGuideAct" />
+        <activity
+            android:name=".edittext.SoftInputModeAct"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".edittext.EtSelectionAct" />
+        <activity android:name=".drawerlayout.DLGuideAct" />
+        <activity android:name=".drawerlayout.Drawer1Act" />
+        <activity android:name=".animation.AnimGuideAct" />
+        <activity android:name=".animation.ComplexAnimResAct" />
+        <activity android:name=".pinyin.PinyinGuideAct" />
+        <activity android:name=".pinyin.TinyPinyinDemo" />
+        <activity android:name=".pm.Pm1Act" />
+        <activity android:name=".ndk.NDKGuide" />
+        <activity android:name=".web.WebViewGuide" />
+        <activity android:name=".web.WvDemo1Act" />
+        <activity android:name=".secret.SecretGuide" />
+        <activity android:name=".act.HttpUrlConnDemo1" />
+        <activity android:name=".web.Wv2ClickAct" />
+        <activity android:name=".web.WebViewX5ClickAct" />
+        <activity android:name=".rwfile.ReadWriteFileActivity" />
+        <activity android:name=".lottie.LottieDemo1" />
+        <activity android:name=".content.SpDemo1" />
+        <activity android:name=".animation.MoveAniDemo1" />
+        <activity android:name=".animation.collection.AnimCollectAct" />
+        <activity android:name=".text.TvDrawableSpanDemoAct" />
+        <activity android:name=".storage.StorageGuideAct" />
+        <activity android:name=".storage.StartDbAct" />
+        <activity android:name=".ndk.demo.NdkFileDemoAct" />
+        <activity
+            android:name=".web.WebViewLoadAssetsAct"
+            android:screenOrientation="landscape" />
+        <activity android:name=".web.WebViewLoadAppLocal1Act" />
+        <activity android:name=".storage.update.RoomUpdateAct" />
+    </application>
+
+</manifest>

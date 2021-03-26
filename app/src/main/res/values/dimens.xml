@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="re_2_gap">4dp</dimen>
+    <dimen name="re_2_half_gap">2dp</dimen>
+    <dimen name="con_card_size">80dp</dimen>
+    <dimen name="adjust_dialog_et_height">36dp</dimen>
+    <dimen name="item_iv_size">36dp</dimen>
+</resources>

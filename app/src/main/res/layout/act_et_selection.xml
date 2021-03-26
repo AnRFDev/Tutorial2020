@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:openDrawer="start">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/et_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_field"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/s1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="光标移动到最前" />
+
+                <Button
+                    android:id="@+id/s2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="光标移动到最后" />
+
+                <Button
+                    android:id="@+id/s3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="光标右移1位" />
+
+                <Button
+                    android:id="@+id/s4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="光标左移1位" />
+
+                <Button
+                    android:id="@+id/s5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="全选" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Ha Ha" />
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

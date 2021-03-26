@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical">
+
+    <com.rustfisher.tutorial2020.web.x5longmenu.X5CustomClickWebView
+        android:id="@+id/web1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/web2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

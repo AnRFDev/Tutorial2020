@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="rePage2Item">#082941</color>
+    <color name="secondPageItemPressed">#0277BD</color>
+    <color name="secondPageItemNormal">#2196F3</color>
+    <color name="test">#0E0822</color>
+</resources>

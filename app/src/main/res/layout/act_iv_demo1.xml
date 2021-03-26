@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:background="@drawable/pic_2_robots" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/pic_2_robots" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:columnCount="4"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="1"
+            android:scaleType="fitStart"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="fitStart" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.9"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="fitCenter" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.8"
+            android:scaleType="fitEnd"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="fitEnd" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.7"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="fitEnd" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.6"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="fitXY" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.5"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="fitXY" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.4"
+            android:scaleType="center"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="center" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.3"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="center" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="centerCrop" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="centerCrop" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:alpha="0.0"
+            android:scaleType="centerInside"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="centerInside" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="centerInside" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:scaleType="matrix"
+            android:src="@drawable/pic_2_robots" />
+
+        <TextView android:text="matrix" />
+
+        <ImageView
+            style="@style/IvDemo1"
+            android:layout_marginStart="20dp"
+            android:scaleType="matrix"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView android:text="matrix" />
+    </GridLayout>
+</LinearLayout>

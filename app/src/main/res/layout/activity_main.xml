@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/act_custom_view"
+                style="@style/MainOptionBtn"
+                android:text="自定义view" />
+
+            <Button
+                android:id="@+id/act_cor"
+                style="@style/MainOptionBtn"
+                android:text="文章修改" />
+
+            <Button
+                android:id="@+id/act_demo_list_btn"
+                style="@style/MainOptionBtn"
+                android:text="Activity示例列表" />
+
+            <Button
+                android:id="@+id/relative_layout_btn"
+                style="@style/MainOptionBtn"
+                android:text="Relative Layout demo" />
+
+            <Button
+                android:id="@+id/linear_layout_btn"
+                style="@style/MainOptionBtn"
+                android:text="LinearLayout demo" />
+
+            <Button
+                android:id="@+id/re_btn"
+                style="@style/MainOptionBtn"
+                android:text="RecyclerView demo" />
+
+            <Button
+                android:id="@+id/con_layout_btn"
+                style="@style/MainOptionBtn"
+                android:text="ConstraintLayout demo" />
+
+            <Button
+                android:id="@+id/animation_demo_btn"
+                style="@style/MainOptionBtn"
+                android:text="Animation demo" />
+
+            <Button
+                android:id="@+id/xml_shape_demo"
+                style="@style/MainOptionBtn"
+                android:text="XML shape 示例" />
+
+            <Button
+                android:id="@+id/broadcast_demo_list_btn"
+                style="@style/MainOptionBtn"
+                android:text="Broadcast示例列表" />
+
+            <Button
+                android:id="@+id/color_list_demo_btn"
+                style="@style/MainOptionBtn"
+                android:text="颜色样式" />
+
+            <Button
+                android:id="@+id/iv_demo1"
+                style="@style/MainOptionBtn"
+                android:text="ImageView 示例1" />
+
+            <Button
+                android:id="@+id/tv_demo_list"
+                style="@style/MainOptionBtn"
+                android:text="TextView 示例" />
+
+            <Button
+                android:id="@+id/data_binding"
+                style="@style/MainOptionBtn"
+                android:text="DataBinding" />
+
+            <Button
+                android:id="@+id/life_cycle"
+                style="@style/MainOptionBtn"
+                android:text="LifeCycle" />
+
+            <Button
+                android:id="@+id/view_model_guide"
+                style="@style/MainOptionBtn"
+                android:text="ViewModel" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
