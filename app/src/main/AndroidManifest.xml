@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".recycler.RecyclerViewDemoActivity" />
+        <activity android:name=".recycler.ReDemo1" />
         <activity android:name=".animation.AnimationDemoActivity" />
         <activity android:name=".recycler.ReGuideAct" />
         <activity android:name=".recycler.RecyclerViewDemo2Act" />

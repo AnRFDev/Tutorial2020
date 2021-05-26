@@ -24,6 +24,7 @@ public class ReGuideAct extends AbsGuideAct {
 
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("列表1 - 字母", true, RecyclerViewDemoActivity.class),
+                new GuideAdapter.OptionItem("列表1 - 字母(kt)", true, ReDemo1.class),
                 new GuideAdapter.OptionItem("列表2", true, RecyclerViewDemo2Act.class),
                 new GuideAdapter.OptionItem("多种item的列表", true, ReViewDemoMulti.class),
                 new GuideAdapter.OptionItem("垂直列表，侧滑删除，长按拖动更换顺序", true, MoveToDelAct.class),
