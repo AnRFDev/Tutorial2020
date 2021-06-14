@@ -39,6 +39,7 @@ import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.rwfile.ReadWriteFileActivity;
 import com.rustfisher.tutorial2020.secret.SecretGuide;
+import com.rustfisher.tutorial2020.service.ServiceDemoListActivity;
 import com.rustfisher.tutorial2020.storage.StorageGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
@@ -68,12 +69,21 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
+                new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),
+                new GuideAdapter.OptionItem("RecyclerView demo", "常用的列表示例", true, ReGuideAct.class, R.drawable.item_type_list),
+                new GuideAdapter.OptionItem("XML shape 示例", "常用形状，圆角，背景，边框", true, XMLShapeDemo.class, R.drawable.item_type_image),
+                new GuideAdapter.OptionItem("LinearLayout demo", "线性布局", true, LinearGuideAct.class, R.drawable.item_type_layers),
+                new GuideAdapter.OptionItem("颜色样式", "colors", true, LayoutBackgroundDemo.class, R.drawable.item_type_image),
+                new GuideAdapter.OptionItem("ImageView 示例1", "显示图片", true, ImageViewDemo1.class, R.drawable.item_type_image),
+                new GuideAdapter.OptionItem("Broadcast示例列表", "广播的使用", true, BroadcastDemoGuide.class, R.drawable.item_type_cast_connected),
                 new GuideAdapter.OptionItem("TextView 示例", "显示文字，文字效果，html", true, TvDemoGuide.class, R.drawable.item_type_text),
-                new GuideAdapter.OptionItem("数据库", "操作本地数据库", true, StorageGuideAct.class, R.drawable.item_type_storage),
+                new GuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Animation demo", "Animation的使用", true, AnimGuideAct.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("Dialog示例", "弹窗", true, DialogGuideAct.class, R.drawable.item_type_assignment_turned_in),
+                new GuideAdapter.OptionItem("DataBinding", true, GuideListAct.class),
+                new GuideAdapter.OptionItem("数据库", "操作本地数据库", true, StorageGuideAct.class, R.drawable.item_type_storage),
                 new GuideAdapter.OptionItem("SharedPreference demo", "存放一些配置信息", true, SpDemo1.class, R.drawable.item_type_storage),
-                new GuideAdapter.OptionItem("Lottie demo", "一款优秀的动画播放库", true, LottieDemo1.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", "发起网络连接", true, HttpUrlConnDemo1.class, R.drawable.item_type_cast_connected),
                 new GuideAdapter.OptionItem("读写文件", "文本文件", true, ReadWriteFileActivity.class, R.drawable.item_type_file),
                 new GuideAdapter.OptionItem("加密解密", "", true, SecretGuide.class, R.drawable.item_type_security),
@@ -85,18 +95,10 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("DrawerLayout示例", "", true, DLGuideAct.class, R.drawable.item_type_layers),
                 new GuideAdapter.OptionItem("EditText示例", "输入文字", true, EtGuideAct.class, R.drawable.item_type_text),
                 new GuideAdapter.OptionItem("自定义view", "", true, CustomViewAct.class, R.drawable.item_type_view_array),
-                new GuideAdapter.OptionItem("文章修改", "修改文字的示例", true, CorrectSampleAct.class, R.drawable.item_type_text),
                 new GuideAdapter.OptionItem("ViewModel", "androidx", true, ViewModelGuideAct.class),
-                new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
-                new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),
-                new GuideAdapter.OptionItem("RecyclerView demo", "常用的列表示例", true, ReGuideAct.class, R.drawable.item_type_list),
-                new GuideAdapter.OptionItem("XML shape 示例", "常用形状，圆角，背景，边框", true, XMLShapeDemo.class, R.drawable.item_type_image),
-                new GuideAdapter.OptionItem("LinearLayout demo", "线性布局", true, LinearGuideAct.class, R.drawable.item_type_layers),
-                new GuideAdapter.OptionItem("颜色样式", "colors", true, LayoutBackgroundDemo.class, R.drawable.item_type_image),
-                new GuideAdapter.OptionItem("ImageView 示例1", "显示图片", true, ImageViewDemo1.class, R.drawable.item_type_image),
-                new GuideAdapter.OptionItem("Broadcast示例列表", "广播的使用", true, BroadcastDemoGuide.class, R.drawable.item_type_cast_connected),
-                new GuideAdapter.OptionItem("DataBinding", true, GuideListAct.class),
                 new GuideAdapter.OptionItem("LifeCycle", true, LcGuideAct.class),
+                new GuideAdapter.OptionItem("Lottie demo", "一款优秀的动画播放库", true, LottieDemo1.class, R.drawable.item_type_local_play),
+                new GuideAdapter.OptionItem("文章修改", "修改文字的示例", true, CorrectSampleAct.class, R.drawable.item_type_text),
                 new GuideAdapter.OptionItem("ConstraintLayout 示例", "对齐，尺寸，线性", true, ConGuideAct.class, R.drawable.item_type_layers)
         ));
 

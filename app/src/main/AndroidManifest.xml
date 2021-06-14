@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
+        <service
+            android:name=".service.start.ServiceStartDemo"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity android:name=".kotlinguide.KotlinGuideAct" />
         <activity android:name=".constraintlayout.Con1Act" />
         <activity android:name=".MainActivity">
@@ -66,6 +72,8 @@
         <activity android:name=".constraintlayout.Con3Act" />
         <activity android:name=".recycler.move.MoveToDelAct" />
         <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
+        <activity android:name=".service.ServiceDemoListActivity" />
+        <activity android:name=".service.start.UseStartServiceAct" />
         <activity
             android:name=".correct.CorrectSampleAct"
             android:configChanges="keyboardHidden"

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <Button
+                android:id="@+id/start_service_btn"
+                style="@style/MainOptionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="startService" />
+
+            <Button
+                android:id="@+id/stop_service_btn"
+                style="@style/MainOptionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="act:stopService" />
+
+            <TextView
+                android:id="@+id/tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
