@@ -15,6 +15,7 @@ import java.util.Arrays;
 public class GuideListAct extends AbsGuideAct {
     private static final int K_1 = 1;
     private static final int K_2 = 2;
+    private static final int K_2_KT = 3;
     private static final int K_M_1 = 10;
     private static final int K_TOW_WAY_1 = 100;
     private static final int K_BINDING_ADAPTER_1 = 200;
@@ -26,6 +27,7 @@ public class GuideListAct extends AbsGuideAct {
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem(K_1, "使用Observable"),
                 new GuideAdapter.OptionItem(K_2, "使用ObservableField"),
+                new GuideAdapter.OptionItem(K_2_KT, "使用ObservableField kt"),
                 new GuideAdapter.OptionItem(K_M_1, "使用MutableLiveData"),
                 new GuideAdapter.OptionItem(K_TOW_WAY_1, "双向绑定"),
                 new GuideAdapter.OptionItem(K_BINDING_ADAPTER_1, "自定义适配器")
@@ -39,6 +41,9 @@ public class GuideListAct extends AbsGuideAct {
                         break;
                     case K_2:
                         startActivity(new Intent(getApplicationContext(), DataBindingAct2.class));
+                        break;
+                    case K_2_KT:
+                        startActivity(new Intent(getApplicationContext(), DataBindingAct2Kt.class));
                         break;
                     case K_M_1:
                         startActivity(new Intent(getApplicationContext(), MutableDemo1.class));

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.rustfisher.tutorial2020.databinding.DataUtils" />
+
+        <variable
+            name="info"
+            type="com.rustfisher.tutorial2020.databinding.data.SysInfoObsKt" />
+
+        <import type="androidx.databinding.ObservableArrayMap" />
+
+        <variable
+            name="user"
+            type="ObservableArrayMap&lt;String, Object>" />
+
+        <import type="androidx.databinding.ObservableArrayList" />
+
+        <variable
+            name="obList"
+            type="ObservableArrayList&lt;Object>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ObservableField kt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{info.info1}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{info.timeStr}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{DataUtils.formatTime(info.time)}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{user.firstName + " " + user.lastName}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(1 + (Integer)user.age)}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{obList[0] + " " + obList[1]}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{String.valueOf(1 + (Integer)obList[3])}' />
+
+    </LinearLayout>
+</layout>
