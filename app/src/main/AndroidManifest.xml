@@ -91,6 +91,7 @@
         <activity android:name=".drawerlayout.DLGuideAct" />
         <activity android:name=".drawerlayout.Drawer1Act" />
         <activity android:name=".animation.AnimGuideAct" />
+        <activity android:name=".animation.frame.FrameAnimationAct1" />
         <activity android:name=".animation.ComplexAnimResAct" />
         <activity android:name=".pinyin.PinyinGuideAct" />
         <activity android:name=".pinyin.TinyPinyinDemo" />
