@@ -47,6 +47,7 @@ import com.rustfisher.tutorial2020.text.TvDemoGuide;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
 import com.rustfisher.tutorial2020.web.WebViewGuide;
 import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.tutorial2020.workmanaer.WorkManagerAct;
 import com.tencent.smtt.sdk.QbSdk;
 
 import java.util.Arrays;
@@ -99,7 +100,8 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("LifeCycle", true, LcGuideAct.class),
                 new GuideAdapter.OptionItem("Lottie demo", "一款优秀的动画播放库", true, LottieDemo1.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("文章修改", "修改文字的示例", true, CorrectSampleAct.class, R.drawable.item_type_text),
-                new GuideAdapter.OptionItem("ConstraintLayout 示例", "对齐，尺寸，线性", true, ConGuideAct.class, R.drawable.item_type_layers)
+                new GuideAdapter.OptionItem("ConstraintLayout 示例", "对齐，尺寸，线性", true, ConGuideAct.class, R.drawable.item_type_layers),
+                new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code)
         ));
 
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
