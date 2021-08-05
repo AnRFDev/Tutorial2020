@@ -14,7 +14,6 @@ class FrameAnimationAct2 : Activity() {
         const val TAG = "rustApp"
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.frame_animation_2)
