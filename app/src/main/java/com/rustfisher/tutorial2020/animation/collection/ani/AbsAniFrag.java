@@ -49,7 +49,7 @@ public class AbsAniFrag extends Fragment {
 
     public void startAnimation() {
         if (mAnimation != null) {
-            mBinding.iv.startAnimation(mAnimation);
+            mBinding.contentTv.startAnimation(mAnimation);
         } else {
             Log.e(TAG, "startAnimation: 没有动画");
         }

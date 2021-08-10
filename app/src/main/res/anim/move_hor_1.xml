@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:repeatCount="-1">
-    <!-- 左右移动 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 左移动 -->
     <translate
         android:duration="200"
-        android:toXDelta="-150%" />
+        android:toXDelta="-100%" />
 
     <translate
         android:duration="400"
         android:startOffset="200"
-        android:toXDelta="300%" />
+        android:toXDelta="100%" />
 </set>

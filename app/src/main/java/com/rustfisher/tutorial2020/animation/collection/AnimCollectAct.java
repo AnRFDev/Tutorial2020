@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * 集中展示一些动画效果
+ * https://developer.android.com/guide/topics/resources/animation-resource#Tween
  * 2020-12-1
  */
 public class AnimCollectAct extends AppCompatActivity {
@@ -30,10 +31,10 @@ public class AnimCollectAct extends AppCompatActivity {
     private AnimCollectVm mAnimVm;
     private AniVpAdapter mAniVpAdapter;
     private int mCurPageIndex;
-    private List<AnimCfg> mAnimCfgList = Arrays.asList(
+    private final List<AnimCfg> mAnimCfgList = Arrays.asList(
             new AnimCfg("变大", R.anim.zoom_1),
             new AnimCfg("变小", R.anim.zoom_2),
-            new AnimCfg("先左后右", R.anim.move_hor_1)
+            new AnimCfg("向左走", R.anim.move_hor_1)
     );
 
     @Override
@@ -91,7 +92,7 @@ public class AnimCollectAct extends AppCompatActivity {
         super.onDestroy();
     }
 
-    private ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+    private final ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 

@@ -20,6 +20,4 @@
         android:startOffset="200"
         android:toXScale="1"
         android:toYScale="1" />
-
-
 </set>
