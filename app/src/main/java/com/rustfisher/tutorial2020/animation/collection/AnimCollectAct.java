@@ -34,7 +34,8 @@ public class AnimCollectAct extends AppCompatActivity {
     private final List<AnimCfg> mAnimCfgList = Arrays.asList(
             new AnimCfg("变大", R.anim.zoom_1),
             new AnimCfg("变小", R.anim.zoom_2),
-            new AnimCfg("向左走", R.anim.move_hor_1)
+            new AnimCfg("向左走", R.anim.move_hor_1),
+            new AnimCfg("滚动组合1", R.anim.multi_1)
     );
 
     @Override
