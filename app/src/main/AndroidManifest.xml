@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".animation.Animator1Activity"></activity>
 
         <service
             android:name=".service.start.ServiceStartDemo"

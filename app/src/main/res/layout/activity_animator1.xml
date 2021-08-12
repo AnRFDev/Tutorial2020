@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grid">
+
+    <LinearLayout
+        android:id="@+id/bot_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ani1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="translationX" />
+
+            <Button
+                android:id="@+id/ani2"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="translationY" />
+
+            <Button
+                android:id="@+id/ani3"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="x" />
+
+            <Button
+                android:id="@+id/ani4"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="y" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ani_path1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="圆弧路线" />
+
+            <Button
+                android:id="@+id/ani_path2"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="折线" />
+
+            <Button
+                android:id="@+id/go_0"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回(0,0)" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bot_field">
+
+        <Button
+            android:id="@+id/go_up"
+            style="@style/NormalBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="上" />
+
+        <Button
+            android:id="@+id/go_down"
+            style="@style/NormalBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:text="下" />
+
+        <Button
+            android:id="@+id/go_left"
+            style="@style/NormalBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:text="左" />
+
+        <Button
+            android:id="@+id/go_right"
+            style="@style/NormalBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:text="右" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0288D1"
+        android:gravity="center_horizontal"
+        android:minWidth="150dp"
+        android:padding="5dp"
+        android:text="RustFisher\n动画示例"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

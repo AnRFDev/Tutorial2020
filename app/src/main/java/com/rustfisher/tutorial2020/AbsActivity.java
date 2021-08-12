@@ -1,5 +1,6 @@
 package com.rustfisher.tutorial2020;
 
+import android.animation.Animator;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,27 @@ public abstract class AbsActivity extends AppCompatActivity {
         for (View view : views) {
             view.setOnClickListener(onClickListener);
         }
+        Animator.AnimatorListener listener = new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        };
     }
 
 }
