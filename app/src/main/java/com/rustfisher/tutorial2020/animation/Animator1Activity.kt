@@ -1,6 +1,5 @@
 package com.rustfisher.tutorial2020.animation
 
-import android.animation.Animator
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.graphics.Path
@@ -39,7 +38,7 @@ class Animator1Activity : AppCompatActivity() {
         mTv = findViewById(R.id.tv)
 
         findViewById<Button>(R.id.ani1).setOnClickListener {
-            val ani = ObjectAnimator.ofFloat(mTv, View.TRANSLATION_X, 0f, 100f, 140f).apply {
+            val ani = ObjectAnimator.ofFloat(mTv, View.TRANSLATION_X, 0f, 200f, 640f).apply {
                 duration = 1000
             }
             ani.addUpdateListener(mUpdateListener)
@@ -53,14 +52,14 @@ class Animator1Activity : AppCompatActivity() {
             ani.start()
         }
         findViewById<Button>(R.id.ani3).setOnClickListener {
-            val ani = ObjectAnimator.ofFloat(mTv, View.X, 100f).apply {
+            val ani = ObjectAnimator.ofFloat(mTv, View.X, 500f).apply {
                 duration = 800
             }
             ani.addUpdateListener(mUpdateListener)
             ani.start()
         }
         findViewById<Button>(R.id.ani4).setOnClickListener {
-            val ani = ObjectAnimator.ofFloat(mTv, View.Y, 500f).apply {
+            val ani = ObjectAnimator.ofFloat(mTv, View.Y, 700f).apply {
                 duration = 700
             }
             ani.addUpdateListener(mUpdateListener)
