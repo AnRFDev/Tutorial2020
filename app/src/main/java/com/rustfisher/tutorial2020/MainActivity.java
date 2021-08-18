@@ -71,6 +71,7 @@ public class MainActivity extends AbsGuideAct {
         });
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
+                new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),
                 new GuideAdapter.OptionItem("RecyclerView demo", "常用的列表示例", true, ReGuideAct.class, R.drawable.item_type_list),
                 new GuideAdapter.OptionItem("XML shape 示例", "常用形状，圆角，背景，边框", true, XMLShapeDemo.class, R.drawable.item_type_image),
@@ -100,8 +101,7 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("LifeCycle", true, LcGuideAct.class),
                 new GuideAdapter.OptionItem("Lottie demo", "一款优秀的动画播放库", true, LottieDemo1.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("文章修改", "修改文字的示例", true, CorrectSampleAct.class, R.drawable.item_type_text),
-                new GuideAdapter.OptionItem("ConstraintLayout 示例", "对齐，尺寸，线性", true, ConGuideAct.class, R.drawable.item_type_layers),
-                new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code)
+                new GuideAdapter.OptionItem("ConstraintLayout 示例", "对齐，尺寸，线性", true, ConGuideAct.class, R.drawable.item_type_layers)
         ));
 
         mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
