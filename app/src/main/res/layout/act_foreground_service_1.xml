@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="前台服务"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/start_service_btn"
+                style="@style/MainOptionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="启动前台服务" />
+
+            <Button
+                android:id="@+id/stop_service_btn"
+                style="@style/MainOptionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="停止服务 stopService" />
+
+            <Button
+                android:id="@+id/stop_foreground_service_btn"
+                style="@style/MainOptionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="停止前台服务" />
+
+            <TextView
+                android:id="@+id/tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

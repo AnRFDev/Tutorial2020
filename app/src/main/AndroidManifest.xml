@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rustfisher.tutorial2020">
 
+    <!--  前台服务  -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -22,6 +25,7 @@
             android:name=".service.start.ServiceStartDemo"
             android:enabled="true"
             android:exported="false" />
+        <service android:name=".service.foreground.ForegroundService1" />
 
         <activity android:name=".kotlinguide.KotlinGuideAct" />
         <activity android:name=".constraintlayout.Con1Act" />
@@ -76,6 +80,9 @@
         <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
         <activity android:name=".service.ServiceDemoListActivity" />
         <activity android:name=".service.start.UseStartServiceAct" />
+        <activity
+            android:name=".service.foreground.ForegroundDemoAct"
+            android:launchMode="singleTop" />
         <activity
             android:name=".correct.CorrectSampleAct"
             android:configChanges="keyboardHidden"
