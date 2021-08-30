@@ -6,36 +6,38 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.work.*
+import com.google.common.util.concurrent.ListenableFuture
 import com.rustfisher.tutorial2020.R
+import com.rustfisher.tutorial2020.databinding.ActWorkManagerBinding
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 
 class WorkManagerAct : AppCompatActivity() {
     companion object {
-        const val TAG = "rustAppWorkManagerAct"
+        const val TAG = "rfDevWorkMgrAct"
     }
 
     private val mWorkA = OneTimeWorkRequest.Builder(UploadWorker::class.java)
             .addTag("workA").build()
 
     private val mIdList = ArrayList<UUID>()
-    private lateinit var mBtnB: Button
+    private lateinit var mBinding: ActWorkManagerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.act_work_manager)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.act_work_manager)
 
         mIdList.add(mWorkA.id)
 
-        findViewById<View>(R.id.btn_workA).setOnClickListener {
+        mBinding.btnWorkA.setOnClickListener {
             Log.d(TAG, "点击按钮A: mWorkA: $mWorkA")
             WorkManager.getInstance(applicationContext).enqueue(mWorkA)
-
         }
-        mBtnB = findViewById(R.id.btn_workB)
-        mBtnB.setOnClickListener {
+
+        mBinding.btnWorkB.setOnClickListener {
             Log.d(TAG, "点击按钮B ${Thread.currentThread()}")
             val workB = OneTimeWorkRequest.Builder(UploadWorker::class.java)
                     .addTag("workB").build()
@@ -64,11 +66,53 @@ class WorkManagerAct : AppCompatActivity() {
             WorkManager.getInstance(applicationContext).enqueue(d1)
         }
 
-        findViewById<View>(R.id.sch_work1).setOnClickListener {
-            val r1 = PeriodicWorkRequestBuilder<UploadWorker>(15, TimeUnit.MINUTES)
+        mBinding.schWork1.setOnClickListener {
+            val r1 = PeriodicWorkRequestBuilder<UploadWorker2>(15, TimeUnit.MINUTES)
                     .addTag("r1").build()
             mIdList.add(r1.id)
             WorkManager.getInstance(applicationContext).enqueue(r1)
+        }
+
+        mBinding.schWorkOnly1.setOnClickListener {
+            val r1 = PeriodicWorkRequestBuilder<UploadWorker2>(15, TimeUnit.MINUTES)
+                    .addTag("r2").build()
+            mIdList.add(r1.id)
+            WorkManager.getInstance(applicationContext)
+                    .enqueueUniquePeriodicWork(
+                            "单独的定时任务r2",
+                            ExistingPeriodicWorkPolicy.KEEP,
+                            r1)
+        }
+
+        mBinding.checkSch.setOnClickListener {
+            val status = WorkManager.getInstance(applicationContext).getWorkInfosByTag("r1")
+            val workInfoList: List<WorkInfo> = status.get()
+            for (w in workInfoList) {
+                Log.d(TAG, " $w")
+            }
+        }
+        mBinding.checkSchR2.setOnClickListener {
+            Log.d(TAG, "查r2任务")
+            val status = WorkManager.getInstance(applicationContext).getWorkInfosByTag("r2")
+            val workInfoList: List<WorkInfo> = status.get()
+            for (w in workInfoList) {
+                Log.d(TAG, " $w")
+            }
+        }
+
+        mBinding.cancelAllWork.setOnClickListener {
+            Log.d(TAG, "取消所有的任务")
+            WorkManager.getInstance(applicationContext).cancelAllWork()
+        }
+
+        mBinding.cancelSchR1.setOnClickListener {
+            Log.d(TAG, "取消tag=r1的任务")
+            WorkManager.getInstance(applicationContext).cancelAllWorkByTag("r1")
+        }
+
+        mBinding.cancelSchR2.setOnClickListener {
+            Log.d(TAG, "取消单独的定时任务r2")
+            WorkManager.getInstance(applicationContext).cancelUniqueWork("单独的定时任务r2")
         }
 
         findViewById<View>(R.id.show_work).setOnClickListener {

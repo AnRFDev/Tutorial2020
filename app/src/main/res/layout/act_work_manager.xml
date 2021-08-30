@@ -1,101 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/show_work"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="查询任务" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/show_last_work"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/show_work"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询任务" />
+
+            <Button
+                android:id="@+id/show_last_work"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="查最后的任务" />
+
+            <Button
+                android:id="@+id/show_con_work1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="查约束1" />
+
+            <Button
+                android:id="@+id/cancel_all_work"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="取消所有" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:text="查最后的任务" />
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/show_con_work1"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btn_workA"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="workA" />
+
+            <Button
+                android:id="@+id/btn_workB"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="workB" />
+
+            <Button
+                android:id="@+id/con_1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="约束1" />
+
+            <Button
+                android:id="@+id/delay_1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="延迟1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:text="查约束1" />
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/sch_work1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定时r1" />
+
+            <Button
+                android:id="@+id/sch_work_only1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="单个定时r2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/check_sch"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查r1" />
+
+            <Button
+                android:id="@+id/check_sch_r2"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="查r2" />
+
+            <Button
+                android:id="@+id/cancel_sch_r1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="取消r1" />
+
+            <Button
+                android:id="@+id/cancel_sch_r2"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="取消单独r2" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_workA"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="workA" />
-
-        <Button
-            android:id="@+id/btn_workB"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="workB" />
-
-        <Button
-            android:id="@+id/con_1"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="约束1" />
-
-        <Button
-            android:id="@+id/delay_1"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="延迟1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/sch_work1"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="定时1" />
-
-        <Button
-            android:id="@+id/sch_work2"
-            style="@style/NormalBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="定时2" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</layout>
