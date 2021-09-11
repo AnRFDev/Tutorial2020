@@ -18,6 +18,7 @@ import androidx.core.app.ActivityCompat;
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
+import com.rustfisher.tutorial2020.asynctask.AsyncTaskGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
@@ -74,6 +75,7 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("线程池 示例", "调度任务，异步", true, ThreadPoolGuideAct.class, R.drawable.item_type_code),
+                new GuideAdapter.OptionItem("AsyncTask 示例", "异步任务", true, AsyncTaskGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),
                 new GuideAdapter.OptionItem("RecyclerView demo", "常用的列表示例", true, ReGuideAct.class, R.drawable.item_type_list),
                 new GuideAdapter.OptionItem("XML shape 示例", "常用形状，圆角，背景，边框", true, XMLShapeDemo.class, R.drawable.item_type_image),

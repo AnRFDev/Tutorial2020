@@ -1,7 +1,6 @@
 package com.rustfisher.tutorial2020.threadpool
 
 import android.os.Bundle
-import android.text.format.Time
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import java.util.concurrent.*
