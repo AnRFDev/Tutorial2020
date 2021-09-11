@@ -44,6 +44,7 @@ import com.rustfisher.tutorial2020.storage.StorageGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
 import com.rustfisher.tutorial2020.style.XMLShapeDemo;
 import com.rustfisher.tutorial2020.text.TvDemoGuide;
+import com.rustfisher.tutorial2020.threadpool.ThreadPoolGuideAct;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
 import com.rustfisher.tutorial2020.web.WebViewGuide;
 import com.rustfisher.tutorial2020.widget.GuideAdapter;
@@ -72,6 +73,7 @@ public class MainActivity extends AbsGuideAct {
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),
+                new GuideAdapter.OptionItem("线程池 示例", "调度任务，异步", true, ThreadPoolGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),
                 new GuideAdapter.OptionItem("RecyclerView demo", "常用的列表示例", true, ReGuideAct.class, R.drawable.item_type_list),
                 new GuideAdapter.OptionItem("XML shape 示例", "常用形状，圆角，背景，边框", true, XMLShapeDemo.class, R.drawable.item_type_image),

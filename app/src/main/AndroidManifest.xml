@@ -121,6 +121,8 @@
         <activity android:name=".storage.StorageGuideAct" />
         <activity android:name=".storage.StartDbAct" />
         <activity android:name=".ndk.demo.NdkFileDemoAct" />
+        <activity android:name=".threadpool.ThreadPoolGuideAct" />
+        <activity android:name=".threadpool.TpAct1" />
         <activity
             android:name=".web.WebViewLoadAssetsAct"
             android:screenOrientation="landscape" />
