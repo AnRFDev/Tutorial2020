@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.rustfisher.tutorial2020.coroutines.d1.CorVm1" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主线程启动" />
+
+            <Button
+                android:id="@+id/io_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="协程 io" />
+
+            <Button
+                android:id="@+id/main_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="协程 main" />
+
+            <Button
+                android:id="@+id/def_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="协程 default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/un_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="协程 un" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/t_start_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="子线程启动" />
+
+            <Button
+                android:id="@+id/t_def_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="子线程 def" />
+
+            <Button
+                android:id="@+id/t_main_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="子线程 main" />
+
+            <Button
+                android:id="@+id/t_io_btn"
+                style="@style/NormalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="子线程 io" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/net_btn"
+            style="@style/NormalBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:onClick="@{vm.net1}"
+            android:text="网络请求" />
+
+
+        <TextView
+            android:id="@+id/info1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

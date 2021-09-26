@@ -22,6 +22,7 @@ import com.rustfisher.tutorial2020.asynctask.AsyncTaskGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
+import com.rustfisher.tutorial2020.coroutines.CoroutinesGuideAct;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
 import com.rustfisher.tutorial2020.customview.CustomViewAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
@@ -74,6 +75,7 @@ public class MainActivity extends AbsGuideAct {
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),
+                new GuideAdapter.OptionItem("协程示例", "使用Kotlin协程", true, CoroutinesGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("线程池 示例", "调度任务，异步", true, ThreadPoolGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("AsyncTask 示例", "异步任务", true, AsyncTaskGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Relative Layout demo", "", true, RelativeLayoutGuideAct.class, R.drawable.item_type_layers),

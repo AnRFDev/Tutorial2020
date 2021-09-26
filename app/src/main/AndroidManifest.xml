@@ -130,6 +130,8 @@
         <activity android:name=".web.WebViewLoadAppLocal1Act" />
         <activity android:name=".storage.update.RoomUpdateAct" />
         <activity android:name=".web.applocal.UnzipLocalWebAct" />
+        <activity android:name=".coroutines.CoroutinesGuideAct" />
+        <activity android:name=".coroutines.d1.CorAct1" />
     </application>
 
 </manifest>
