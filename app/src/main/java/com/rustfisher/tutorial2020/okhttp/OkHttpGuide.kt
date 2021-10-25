@@ -14,7 +14,7 @@ class OkHttpGuide : AbsGuideAct() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mGuideAdapter.setDataList(Arrays.asList(
-                GuideAdapter.OptionItem("直接使用", "直接使用OkHttp发起网络请求", true, null)
+                GuideAdapter.OptionItem("直接使用", "直接使用OkHttp发起网络请求", true, OkHttpUse1::class.java)
         ))
         mGuideAdapter.setOnClzListener { actClz: Class<*>? ->
             if (actClz != null) {
