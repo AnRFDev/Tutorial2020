@@ -35,6 +35,7 @@ import com.rustfisher.tutorial2020.lifecycle.LcGuideAct;
 import com.rustfisher.tutorial2020.linear.LinearGuideAct;
 import com.rustfisher.tutorial2020.lottie.LottieDemo1;
 import com.rustfisher.tutorial2020.ndk.NDKGuide;
+import com.rustfisher.tutorial2020.okhttp.OkHttpGuide;
 import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
@@ -73,6 +74,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("OkHttp", "网络请求演示", true, OkHttpGuide.class, R.drawable.ic_square),
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("协程示例", "使用Kotlin协程", true, CoroutinesGuideAct.class, R.drawable.item_type_code),

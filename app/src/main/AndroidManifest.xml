@@ -80,6 +80,7 @@
         <activity android:name=".recycler.staggeredgrid.StaggeredGrid1Act" />
         <activity android:name=".service.ServiceDemoListActivity" />
         <activity android:name=".service.start.UseStartServiceAct" />
+        <activity android:name=".okhttp.OkHttpGuide" />
         <activity
             android:name=".service.foreground.ForegroundDemoAct"
             android:launchMode="singleTop" />
