@@ -20,6 +20,7 @@ import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.asynctask.AsyncTaskGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
+import com.rustfisher.tutorial2020.compose.ComposeGuideAct;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
 import com.rustfisher.tutorial2020.coroutines.CoroutinesGuideAct;
@@ -74,6 +75,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Compose", "示例", true, ComposeGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("OkHttp", "网络请求演示", true, OkHttpGuide.class, R.drawable.ic_square),
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("WorkManager 示例", "调度任务，异步", true, WorkManagerAct.class, R.drawable.item_type_code),

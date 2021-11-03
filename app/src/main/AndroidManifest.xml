@@ -82,6 +82,7 @@
         <activity android:name=".service.start.UseStartServiceAct" />
         <activity android:name=".okhttp.OkHttpGuide" />
         <activity android:name=".okhttp.OkHttpUse1" />
+        <activity android:name=".compose.ComposeGuideAct" />
         <activity
             android:name=".service.foreground.ForegroundDemoAct"
             android:launchMode="singleTop" />
