@@ -52,8 +52,9 @@ class OkHttpUse1 : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 Log.d(TAG, "[get1] onResponse: $call\n$response")
                 if (response.code == 200) {
+                    val resStr = response.body!!.string()
                     mHandler.post {
-                        binding.resTv.text = response.body!!.string()
+                        binding.resTv.text = resStr
                     }
                 }
             }
