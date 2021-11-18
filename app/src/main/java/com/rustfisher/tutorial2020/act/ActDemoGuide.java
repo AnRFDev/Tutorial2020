@@ -13,6 +13,7 @@ public class ActDemoGuide extends AbsGuideAct {
     private static final int K_ACT_SEND_PARAM = 1;
     private static final int K_ACT_RES = 2;
     private static final int K_ACT_LIFE = 3;
+    private static final int K_ACT_CUSTOM_SIZE = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,22 +21,23 @@ public class ActDemoGuide extends AbsGuideAct {
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem(K_ACT_LIFE, "Activity生命周期"),
                 new GuideAdapter.OptionItem(K_ACT_SEND_PARAM, "Activity传递参数"),
-                new GuideAdapter.OptionItem(K_ACT_RES, "Activity返回时传递参数")
+                new GuideAdapter.OptionItem(K_ACT_RES, "Activity返回时传递参数"),
+                new GuideAdapter.OptionItem(K_ACT_CUSTOM_SIZE, "尺寸可调")
         ));
-        mGuideAdapter.setOnItemClickListener(new GuideAdapter.OnOptClickListener() {
-            @Override
-            public void onClick(GuideAdapter.OptionItem item) {
-                switch (item.num) {
-                    case K_ACT_LIFE:
-                        startActivity(new Intent(getApplicationContext(), LifeCycleAct.class));
-                        break;
-                    case K_ACT_SEND_PARAM:
-                        goSendParamsDemo();
-                        break;
-                    case K_ACT_RES:
-                        startActivity(new Intent(getApplicationContext(), ForResultFirstAct.class));
-                        break;
-                }
+        mGuideAdapter.setOnItemClickListener(item -> {
+            switch (item.num) {
+                case K_ACT_LIFE:
+                    startActivity(new Intent(getApplicationContext(), LifeCycleAct.class));
+                    break;
+                case K_ACT_SEND_PARAM:
+                    goSendParamsDemo();
+                    break;
+                case K_ACT_RES:
+                    startActivity(new Intent(getApplicationContext(), ForResultFirstAct.class));
+                    break;
+                case K_ACT_CUSTOM_SIZE:
+                    startActivity(new Intent(getApplicationContext(), CustomSizeAct.class));
+                    break;
             }
         });
     }

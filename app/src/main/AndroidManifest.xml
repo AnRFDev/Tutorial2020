@@ -135,6 +135,10 @@
         <activity android:name=".web.applocal.UnzipLocalWebAct" />
         <activity android:name=".coroutines.CoroutinesGuideAct" />
         <activity android:name=".coroutines.d1.CorAct1" />
+        <activity
+            android:name=".act.CustomSizeAct"
+            android:theme="@style/TranslucentAct" />
+        <activity android:name=".seekbar.SeekbarRotateAct" />
     </application>
 
 </manifest>
