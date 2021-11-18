@@ -43,6 +43,7 @@ import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
 import com.rustfisher.tutorial2020.rwfile.ReadWriteFileActivity;
 import com.rustfisher.tutorial2020.secret.SecretGuide;
+import com.rustfisher.tutorial2020.seekbar.SeekbarRotateAct;
 import com.rustfisher.tutorial2020.service.ServiceDemoListActivity;
 import com.rustfisher.tutorial2020.storage.StorageGuideAct;
 import com.rustfisher.tutorial2020.style.LayoutBackgroundDemo;
@@ -75,6 +76,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("SeekBar", "示例", true, SeekbarRotateAct.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("Compose", "示例", true, ComposeGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("OkHttp", "网络请求演示", true, OkHttpGuide.class, R.drawable.ic_square),
                 new GuideAdapter.OptionItem("Activity示例列表", "Activity生命周期，传递参数", true, ActDemoGuide.class, R.drawable.item_type_view_array),

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/audio_seek_bar_thumb_size"
+                android:height="@dimen/audio_seek_bar_thumb_size" />
+            <solid android:color="#E4E4E4" />
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:innerRadius="6dp"
+            android:thicknessRatio="5"
+            android:shape="ring"
+            android:useLevel="false">
+            <gradient
+                android:endColor="#BECCF6"
+                android:startColor="#7095fc"
+                android:type="sweep" />
+            <size
+                android:width="@dimen/audio_seek_bar_thumb_size"
+                android:height="@dimen/audio_seek_bar_thumb_size" />
+        </shape>
+    </item>
+</layer-list>
