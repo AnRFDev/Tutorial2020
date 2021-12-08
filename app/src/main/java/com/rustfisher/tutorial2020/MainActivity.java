@@ -20,6 +20,7 @@ import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.asynctask.AsyncTaskGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
+import com.rustfisher.tutorial2020.camera.Camera1Act;
 import com.rustfisher.tutorial2020.compose.ComposeGuideAct;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
@@ -76,6 +77,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Camera", "示例", true, Camera1Act.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("SeekBar", "示例", true, SeekbarRotateAct.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("Compose", "示例", true, ComposeGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("OkHttp", "网络请求演示", true, OkHttpGuide.class, R.drawable.ic_square),
