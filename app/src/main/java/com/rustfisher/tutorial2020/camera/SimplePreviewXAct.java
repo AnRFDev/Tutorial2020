@@ -1,8 +1,8 @@
 package com.rustfisher.tutorial2020.camera;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.Camera;
@@ -11,7 +11,6 @@ import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.rustfisher.tutorial2020.R;
@@ -27,24 +26,38 @@ import java.util.concurrent.ExecutionException;
 public class SimplePreviewXAct extends AppCompatActivity {
 
     private ActSimplePreivewXBinding mBinding;
-    private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
+    private ListenableFuture<ProcessCameraProvider> mCameraProviderFuture;
+    private ProcessCameraProvider mCameraProvider;
+    private boolean mRunning = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.act_simple_preivew_x);
-        cameraProviderFuture = ProcessCameraProvider.getInstance(this);
-        cameraProviderFuture.addListener(() -> {
+        mCameraProviderFuture = ProcessCameraProvider.getInstance(this);
+        mCameraProviderFuture.addListener(() -> {
             try {
-                ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
-                bindPreview(cameraProvider);
+                mCameraProvider = mCameraProviderFuture.get();
             } catch (ExecutionException | InterruptedException e) {
                 // 这里不用处理
             }
         }, ContextCompat.getMainExecutor(this));
+        mBinding.start.setOnClickListener(v -> {
+            if (mCameraProvider != null && !mRunning) {
+                bindPreview(mCameraProvider);
+            }
+        });
+        mBinding.end.setOnClickListener(v -> {
+            mCameraProvider.unbindAll();
+            mRunning = false;
+        });
     }
 
-    void bindPreview(@NonNull ProcessCameraProvider cameraProvider) {
+    private void bindPreview(ProcessCameraProvider cameraProvider) {
+        if (cameraProvider == null) {
+            Toast.makeText(getApplicationContext(), "没获取到相机", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Preview preview = new Preview.Builder().build();
 
         CameraSelector cameraSelector = new CameraSelector.Builder()
@@ -53,8 +66,8 @@ public class SimplePreviewXAct extends AppCompatActivity {
 
         preview.setSurfaceProvider(mBinding.previewView.getSurfaceProvider());
 
-        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
-
+        Camera camera = cameraProvider.bindToLifecycle(this, cameraSelector, preview);
+        mRunning = true;
     }
 
 }
