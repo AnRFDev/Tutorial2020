@@ -16,8 +16,7 @@ public class ImgHelper {
     public static String TAG = "rfDevImg";
 
     // 获取到YuvImage对象 然后存文件
-    public static void useYuvImgSaveFile(ImageProxy imageProxy, int rotationDegrees, boolean outputYOnly) {
-        Log.d(TAG, "旋转角度: " + rotationDegrees);
+    public static void useYuvImgSaveFile(ImageProxy imageProxy, boolean outputYOnly) {
         final int wid = imageProxy.getWidth();
         final int height = imageProxy.getHeight();
         Log.d(TAG, "宽高: " + wid + ", " + height);

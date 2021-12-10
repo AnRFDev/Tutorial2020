@@ -44,7 +44,7 @@ public class SimplePreviewXAct extends AppCompatActivity {
                     .setTargetResolution(new Size(720, 1280)) // 图片的建议尺寸
                     .setOutputImageRotationEnabled(true) // 是否旋转分析器中得到的图片
                     .setTargetRotation(Surface.ROTATION_0) // 允许旋转后 得到图片的旋转设置
-                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                    .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
                     .build();
 
     @Override
@@ -56,7 +56,7 @@ public class SimplePreviewXAct extends AppCompatActivity {
             try {
                 mCameraProvider = mCameraProviderFuture.get();
                 Log.d(TAG, "获取到了 cameraProvider");
-                bindPreview(mCameraProvider);
+//                bindPreview(mCameraProvider);
             } catch (ExecutionException | InterruptedException e) {
                 // 这里不用处理
             }
@@ -80,21 +80,20 @@ public class SimplePreviewXAct extends AppCompatActivity {
         mBinding.enableAna.setOnClickListener(v -> {
             Toast.makeText(getApplicationContext(), "启用分析器", Toast.LENGTH_SHORT).show();
             mImageAnalysis.setAnalyzer(executorService, imageProxy -> {
-                int rotationDegrees = imageProxy.getImageInfo().getRotationDegrees();
                 // 下面处理数据
                 if (mTakeOneYuv) {
                     mTakeOneYuv = false;
-                    ImgHelper.useYuvImgSaveFile(imageProxy, rotationDegrees, false);
+                    Log.d(TAG, "旋转角度: " + imageProxy.getImageInfo().getRotationDegrees());
+                    ImgHelper.useYuvImgSaveFile(imageProxy,  true); // 存储这一帧为文件
+                    runOnUiThread(() -> Toast.makeText(getApplicationContext(), "截取一帧", Toast.LENGTH_SHORT).show());
                 }
                 imageProxy.close(); // 最后要关闭这个
             });
-            Log.d(TAG, "setAnalyzer");
         });
         mBinding.clrAna.setOnClickListener(v -> {
             mImageAnalysis.clearAnalyzer();
-            Log.d(TAG, "clearAnalyzer");
+            Toast.makeText(getApplicationContext(), "clearAnalyzer", Toast.LENGTH_SHORT).show();
         });
-
     }
 
     private void bindPreview(ProcessCameraProvider cameraProvider) {
