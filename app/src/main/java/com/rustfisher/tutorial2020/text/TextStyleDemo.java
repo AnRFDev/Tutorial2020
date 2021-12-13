@@ -5,7 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 public class TextStyleDemo extends AbsActivity {

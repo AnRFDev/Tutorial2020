@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.github.promeg.pinyinhelper.Pinyin;
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 public class TinyPinyinDemo extends AbsActivity {

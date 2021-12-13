@@ -3,7 +3,7 @@ package com.rustfisher.tutorial2020.text;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.databinding.ActSpecialCharBinding;
 
 public class SpecialCharAct extends AbsActivity {

@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020;
+package com.rustfisher.baselib;
 
 import android.animation.Animator;
 import android.view.View;

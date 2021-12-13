@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieDrawable;
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 import java.util.ArrayList;

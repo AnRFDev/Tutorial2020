@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 /**

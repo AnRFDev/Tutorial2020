@@ -3,12 +3,8 @@ package com.rustfisher.tutorial2020.databinding;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.rustfisher.tutorial2020.AbsGuideAct;
-import com.rustfisher.tutorial2020.databinding.data.TwoWay;
-import com.rustfisher.tutorial2020.text.SpecialCharAct;
-import com.rustfisher.tutorial2020.text.TextHtmlDemo;
-import com.rustfisher.tutorial2020.text.TextStyleDemo;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.AbsGuideAct;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.util.Arrays;
 

@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.rustfisher.tutorial2020.AbsGuideAct;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.AbsGuideAct;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.io.File;
 import java.io.FileInputStream;

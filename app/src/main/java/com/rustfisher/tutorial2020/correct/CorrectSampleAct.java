@@ -16,7 +16,7 @@ import android.widget.PopupWindow;
 
 import androidx.databinding.DataBindingUtil;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.correct.view.CorrectPopupWindow;
 import com.rustfisher.tutorial2020.correct.view.CorrectView;

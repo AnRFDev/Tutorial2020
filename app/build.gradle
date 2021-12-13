@@ -72,6 +72,7 @@ dependencies {
     implementation 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
     implementation 'com.belerweb:pinyin4j:2.5.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(path: ':baselib')
     implementation project(path: ':fishpole')
     implementation project(path: ':mediasamples')
 //    api 'com.tencent.tbs.tbssdk:sdk:43697'

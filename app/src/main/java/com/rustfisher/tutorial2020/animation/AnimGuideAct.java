@@ -3,11 +3,11 @@ package com.rustfisher.tutorial2020.animation;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.rustfisher.tutorial2020.AbsGuideAct;
+import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.tutorial2020.animation.collection.AnimCollectAct;
 import com.rustfisher.tutorial2020.animation.frame.FrameAnimationAct1;
 import com.rustfisher.tutorial2020.animation.frame.FrameAnimationAct2;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.util.Arrays;
 

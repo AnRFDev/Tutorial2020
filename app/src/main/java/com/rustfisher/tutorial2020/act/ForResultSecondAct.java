@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 public class ForResultSecondAct extends AbsActivity implements View.OnClickListener {

@@ -11,7 +11,7 @@ import android.webkit.JavascriptInterface;
 import androidx.annotation.Nullable;
 
 import com.google.gson.Gson;
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.web.data.User;
 import com.tencent.smtt.sdk.WebSettings;

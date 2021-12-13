@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.web.longmenu.CustomClickWebView;
 import com.rustfisher.tutorial2020.web.longmenu.WebChooseActionListener;

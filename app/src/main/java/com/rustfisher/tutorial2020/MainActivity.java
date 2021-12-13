@@ -15,6 +15,7 @@ import android.view.Window;
 
 import androidx.core.app.ActivityCompat;
 
+import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.tutorial2020.act.ActDemoGuide;
 import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
@@ -53,7 +54,7 @@ import com.rustfisher.tutorial2020.text.TvDemoGuide;
 import com.rustfisher.tutorial2020.threadpool.ThreadPoolGuideAct;
 import com.rustfisher.tutorial2020.viewmodel.ViewModelGuideAct;
 import com.rustfisher.tutorial2020.web.WebViewGuide;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.GuideAdapter;
 import com.rustfisher.tutorial2020.workmanaer.WorkManagerAct;
 import com.tencent.smtt.sdk.QbSdk;
 

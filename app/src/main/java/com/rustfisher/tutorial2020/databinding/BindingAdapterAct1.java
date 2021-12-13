@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.databinding.data.BindingAdapterModel;
 

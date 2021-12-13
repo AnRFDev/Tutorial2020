@@ -2,11 +2,10 @@ package com.rustfisher.tutorial2020.service
 
 import android.content.Intent
 import android.os.Bundle
-import com.rustfisher.tutorial2020.AbsGuideAct
+import com.rustfisher.baselib.AbsGuideAct
 import com.rustfisher.tutorial2020.service.foreground.ForegroundDemoAct
 import com.rustfisher.tutorial2020.service.start.UseStartServiceAct
-import com.rustfisher.tutorial2020.widget.GuideAdapter
-import java.util.*
+import com.rustfisher.baselib.GuideAdapter
 
 /**
  * service相关示例

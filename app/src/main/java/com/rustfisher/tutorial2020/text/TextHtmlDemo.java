@@ -5,7 +5,7 @@ import android.text.Html;
 import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 public class TextHtmlDemo extends AbsActivity {

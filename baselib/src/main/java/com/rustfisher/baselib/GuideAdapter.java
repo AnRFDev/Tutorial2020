@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020.widget;
+package com.rustfisher.baselib;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-
-import com.rustfisher.tutorial2020.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +35,7 @@ public class GuideAdapter extends RecyclerView.Adapter<GuideAdapter.VH> {
     @NonNull
     @Override
     public GuideAdapter.VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new GuideAdapter.VH(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_opt, parent, false));
+        return new GuideAdapter.VH(LayoutInflater.from(parent.getContext()).inflate(R.layout.base_item_opt, parent, false));
     }
 
     @Override

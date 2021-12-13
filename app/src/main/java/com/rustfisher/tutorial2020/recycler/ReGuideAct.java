@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.rustfisher.tutorial2020.AbsGuideAct;
+import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.tutorial2020.recycler.data.DataTest;
 import com.rustfisher.tutorial2020.recycler.move.MoveToDelAct;
 import com.rustfisher.tutorial2020.recycler.multi.ReViewDemoMulti;
 import com.rustfisher.tutorial2020.recycler.staggeredgrid.StaggeredGrid1Act;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.util.Arrays;
 
@@ -32,7 +32,7 @@ public class ReGuideAct extends AbsGuideAct {
                 new GuideAdapter.OptionItem("卡片效果", true, FlipCardAct.class)
         ));
 
-        mGuideAdapter.setOnClzListener(new com.rustfisher.tutorial2020.widget.GuideAdapter.OnClzListener() {
+        mGuideAdapter.setOnClzListener(new GuideAdapter.OnClzListener() {
             @Override
             public void onClick(Class actClz) {
                 if (actClz == RecyclerViewDemo2Act.class) {

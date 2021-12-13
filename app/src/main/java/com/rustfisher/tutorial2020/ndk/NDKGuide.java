@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import com.rustfisher.fishpole.worker.BaseParam;
 import com.rustfisher.fishpole.worker.FisherTom;
 import com.rustfisher.fishpole.worker.Jerry;
-import com.rustfisher.tutorial2020.AbsGuideAct;
+import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.cal.CalUtil;
 import com.rustfisher.tutorial2020.ndk.demo.NdkFileDemoAct;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.util.Arrays;
 

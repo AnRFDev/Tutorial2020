@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 
 import androidx.annotation.Nullable;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 /**

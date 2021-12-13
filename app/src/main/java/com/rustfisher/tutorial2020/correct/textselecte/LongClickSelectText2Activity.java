@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 
 
 public class LongClickSelectText2Activity extends AbsActivity {

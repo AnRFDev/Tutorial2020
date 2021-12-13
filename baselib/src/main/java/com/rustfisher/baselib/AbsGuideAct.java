@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020;
+package com.rustfisher.baselib;
 
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
 
 /**
  * 导航界面
@@ -22,7 +20,7 @@ public abstract class AbsGuideAct extends AbsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_common_guide);
+        setContentView(R.layout.base_act_common_guide);
         mGuideReView = findViewById(R.id.re_view);
         mGuideAdapter = new GuideAdapter();
         mGuideReView.setAdapter(mGuideAdapter);

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableArrayMap
-import com.rustfisher.tutorial2020.AbsActivity
+import com.rustfisher.baselib.AbsActivity
 import com.rustfisher.tutorial2020.R
 import com.rustfisher.tutorial2020.databinding.data.SysInfoObsKt
 import java.util.*

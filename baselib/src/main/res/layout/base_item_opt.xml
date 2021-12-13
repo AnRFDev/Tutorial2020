@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/iv1"
-        android:layout_width="@dimen/item_iv_size"
-        android:layout_height="@dimen/item_iv_size"
+        android:layout_width="@dimen/base_item_iv_size"
+        android:layout_height="@dimen/base_item_iv_size"
         android:layout_marginStart="6dp"
         android:src="@drawable/item_type_text"
         app:layout_constraintBottom_toBottomOf="parent"

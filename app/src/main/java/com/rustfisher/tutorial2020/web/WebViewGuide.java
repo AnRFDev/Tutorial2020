@@ -5,10 +5,10 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import com.rustfisher.tutorial2020.AbsGuideAct;
+import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.web.applocal.UnzipLocalWebAct;
-import com.rustfisher.tutorial2020.widget.GuideAdapter;
+import com.rustfisher.baselib.GuideAdapter;
 
 import java.util.Arrays;
 

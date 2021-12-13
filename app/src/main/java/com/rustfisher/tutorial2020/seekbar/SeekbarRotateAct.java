@@ -10,7 +10,7 @@ import android.view.animation.LinearInterpolator;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.databinding.DataBindingUtil;
 
-import com.rustfisher.tutorial2020.AbsActivity;
+import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.databinding.ActSeekbar1Binding;
 

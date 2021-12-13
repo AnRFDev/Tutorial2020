@@ -2,9 +2,9 @@ package com.rustfisher.tutorial2020.coroutines
 
 import android.content.Intent
 import android.os.Bundle
-import com.rustfisher.tutorial2020.AbsGuideAct
+import com.rustfisher.baselib.AbsGuideAct
 import com.rustfisher.tutorial2020.coroutines.d1.CorAct1
-import com.rustfisher.tutorial2020.widget.GuideAdapter.OptionItem
+import com.rustfisher.baselib.GuideAdapter.OptionItem
 import java.util.*
 
 class CoroutinesGuideAct : AbsGuideAct() {
