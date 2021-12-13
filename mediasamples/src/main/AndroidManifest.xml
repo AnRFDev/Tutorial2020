@@ -7,6 +7,9 @@
             android:name=".MediaGuideAct"
             android:exported="true" />
         <activity
+            android:name=".camera.CameraGuideAct"
+            android:exported="true" />
+        <activity
             android:name=".camera.MeSimplePreviewXAct"
             android:exported="true" />
         <activity

@@ -21,7 +21,7 @@ import com.rustfisher.tutorial2020.act.HttpUrlConnDemo1;
 import com.rustfisher.tutorial2020.animation.AnimGuideAct;
 import com.rustfisher.tutorial2020.asynctask.AsyncTaskGuideAct;
 import com.rustfisher.tutorial2020.broadcast.BroadcastDemoGuide;
-import com.rustfisher.tutorial2020.camera.CameraGuideAct;
+import com.rustfisher.mediasamples.camera.CameraGuideAct;
 import com.rustfisher.tutorial2020.compose.ComposeGuideAct;
 import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
