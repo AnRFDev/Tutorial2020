@@ -5,9 +5,6 @@ import android.animation.ValueAnimator;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RotateDrawable;
 import android.os.Bundle;
-import android.view.Display;
-import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 
 import androidx.appcompat.content.res.AppCompatResources;
@@ -15,7 +12,6 @@ import androidx.databinding.DataBindingUtil;
 
 import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
-import com.rustfisher.tutorial2020.databinding.ActCustomSizeBinding;
 import com.rustfisher.tutorial2020.databinding.ActSeekbar1Binding;
 
 /**

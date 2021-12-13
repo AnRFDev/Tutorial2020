@@ -2,9 +2,6 @@ package com.rustfisher.tutorial2020.animation;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 
 import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;

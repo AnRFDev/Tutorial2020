@@ -1,6 +1,5 @@
 package com.rustfisher.tutorial2020.pm;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;

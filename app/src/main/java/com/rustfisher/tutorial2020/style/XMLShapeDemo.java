@@ -1,7 +1,6 @@
 package com.rustfisher.tutorial2020.style;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.rustfisher.tutorial2020.AbsActivity;

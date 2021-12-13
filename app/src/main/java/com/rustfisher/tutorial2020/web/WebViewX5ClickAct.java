@@ -1,23 +1,16 @@
 package com.rustfisher.tutorial2020.web;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Point;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Message;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -28,26 +21,12 @@ import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 import com.rustfisher.tutorial2020.web.longmenu.WebChooseActionListener;
 import com.rustfisher.tutorial2020.web.x5longmenu.X5CustomClickWebView;
-import com.tencent.smtt.export.external.extension.interfaces.IX5WebChromeClientExtension;
-import com.tencent.smtt.export.external.extension.interfaces.IX5WebSettingsExtension;
-import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewClientExtension;
 import com.tencent.smtt.export.external.extension.interfaces.IX5WebViewExtension;
-import com.tencent.smtt.export.external.extension.proxy.ProxyWebChromeClientExtension;
 import com.tencent.smtt.export.external.extension.proxy.ProxyWebViewClientExtension;
 import com.tencent.smtt.export.external.interfaces.ISelectionInterface;
-import com.tencent.smtt.export.external.interfaces.IX5ScrollListener;
-import com.tencent.smtt.export.external.interfaces.IX5WebBackForwardListClient;
-import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient;
-import com.tencent.smtt.export.external.interfaces.IX5WebHistoryItem;
-import com.tencent.smtt.export.external.interfaces.IX5WebViewBase;
-import com.tencent.smtt.export.external.interfaces.IX5WebViewClient;
 import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 /**
  * 响应点击，长按

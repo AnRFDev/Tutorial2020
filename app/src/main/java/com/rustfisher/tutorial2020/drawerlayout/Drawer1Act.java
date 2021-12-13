@@ -1,6 +1,5 @@
 package com.rustfisher.tutorial2020.drawerlayout;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 

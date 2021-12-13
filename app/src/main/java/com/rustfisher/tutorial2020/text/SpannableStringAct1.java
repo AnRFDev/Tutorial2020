@@ -1,9 +1,7 @@
 package com.rustfisher.tutorial2020.text;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;

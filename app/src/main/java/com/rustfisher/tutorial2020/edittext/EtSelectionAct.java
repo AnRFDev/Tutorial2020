@@ -1,11 +1,8 @@
 package com.rustfisher.tutorial2020.edittext;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 

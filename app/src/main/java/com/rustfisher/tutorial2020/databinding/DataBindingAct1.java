@@ -1,7 +1,6 @@
 package com.rustfisher.tutorial2020.databinding;
 
 import android.os.Bundle;
-import android.util.Log;
 
 
 import androidx.databinding.DataBindingUtil;

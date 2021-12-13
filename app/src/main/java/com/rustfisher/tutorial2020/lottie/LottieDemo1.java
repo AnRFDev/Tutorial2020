@@ -1,6 +1,5 @@
 package com.rustfisher.tutorial2020.lottie;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -22,7 +20,6 @@ import com.rustfisher.tutorial2020.AbsActivity;
 import com.rustfisher.tutorial2020.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

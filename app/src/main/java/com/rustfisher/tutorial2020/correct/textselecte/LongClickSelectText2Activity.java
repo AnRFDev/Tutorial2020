@@ -1,10 +1,8 @@
 package com.rustfisher.tutorial2020.correct.textselecte;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
