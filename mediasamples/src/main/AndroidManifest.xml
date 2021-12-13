@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rustfisher.mediasamples">
+
+    <application>
+        <activity
+            android:name=".MediaGuideAct"
+            android:exported="true" />
+        <activity
+            android:name=".camera.MeSimplePreviewXAct"
+            android:exported="true" />
+    </application>
+</manifest>

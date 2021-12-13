@@ -29,7 +29,7 @@
         <item name="android:layout_marginTop">6dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/se_main_btn_bg</item>
+        <item name="android:background">@drawable/me_se_main_btn_bg</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:textAllCaps">false</item>
     </style>
@@ -77,7 +77,7 @@
 
     <style name="NormalBtn">
         <item name="android:textColor">#fff</item>
-        <item name="android:background">@drawable/se_main_btn_bg</item>
+        <item name="android:background">@drawable/me_se_main_btn_bg</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">10dp</item>
         <item name="android:textSize">12sp</item>

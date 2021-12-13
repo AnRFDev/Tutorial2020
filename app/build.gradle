@@ -73,6 +73,7 @@ dependencies {
     implementation 'com.belerweb:pinyin4j:2.5.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(path: ':fishpole')
+    implementation project(path: ':mediasamples')
 //    api 'com.tencent.tbs.tbssdk:sdk:43697'
     implementation files('libs/tbs_sdk_thirdapp_v4.3.0.67_43967_sharewithdownloadwithfile_withoutGame_obfs_20200923_120452.jar')
 
