@@ -3,6 +3,7 @@ package com.rustfisher.tutorial2020.camera;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.rustfisher.mediasamples.camera.Camera1Act;
 import com.rustfisher.mediasamples.camera.MeSimplePreviewXAct;
 import com.rustfisher.baselib.AbsGuideAct;
 import com.rustfisher.baselib.GuideAdapter;

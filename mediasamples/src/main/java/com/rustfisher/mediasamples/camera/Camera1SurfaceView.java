@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020.camera;
+package com.rustfisher.mediasamples.camera;
 
 import android.content.Context;
 

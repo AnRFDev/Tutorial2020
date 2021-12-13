@@ -9,5 +9,8 @@
         <activity
             android:name=".camera.MeSimplePreviewXAct"
             android:exported="true" />
+        <activity
+            android:name=".camera.Camera1Act"
+            android:exported="true" />
     </application>
 </manifest>

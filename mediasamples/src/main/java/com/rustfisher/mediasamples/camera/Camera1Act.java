@@ -1,4 +1,4 @@
-package com.rustfisher.tutorial2020.camera;
+package com.rustfisher.mediasamples.camera;
 
 import android.Manifest;
 import android.app.Activity;
@@ -14,8 +14,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
-import com.rustfisher.tutorial2020.R;
-import com.rustfisher.tutorial2020.databinding.ActGlSurfaceViewBinding;
+import com.rustfisher.mediasamples.R;
+import com.rustfisher.mediasamples.databinding.MeCamera1PreviewBinding;
+
 
 /**
  * 打开摄像头  实时画面用SurfaceView预览
@@ -29,12 +30,12 @@ public class Camera1Act extends Activity {
     private static final String[] permissions = new String[]{Manifest.permission.CAMERA};
     private Camera mCamera;
     private Camera1SurfaceView mPreview;
-    private ActGlSurfaceViewBinding mBinding;
+    private MeCamera1PreviewBinding mBinding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.act_gl_surface_view);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.me_camera1_preview);
         if (PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)) {
             startPreview();
         } else {

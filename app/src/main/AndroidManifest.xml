@@ -142,9 +142,7 @@
             android:name=".act.CustomSizeAct"
             android:theme="@style/TranslucentAct" />
         <activity android:name=".seekbar.SeekbarRotateAct" />
-        <activity android:name=".camera.Camera1Act" />
         <activity android:name=".camera.CameraGuideAct" />
-        <activity android:name=".camera.SimplePreviewXAct" />
     </application>
 
 </manifest>
