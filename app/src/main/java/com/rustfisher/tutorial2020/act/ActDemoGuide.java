@@ -13,7 +13,6 @@ public class ActDemoGuide extends AbsGuideAct {
     private static final int K_ACT_SEND_PARAM = 1;
     private static final int K_ACT_RES = 2;
     private static final int K_ACT_LIFE = 3;
-    private static final int K_ACT_CUSTOM_SIZE = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +21,7 @@ public class ActDemoGuide extends AbsGuideAct {
                 new GuideAdapter.OptionItem(K_ACT_LIFE, "Activity生命周期"),
                 new GuideAdapter.OptionItem(K_ACT_SEND_PARAM, "Activity传递参数"),
                 new GuideAdapter.OptionItem(K_ACT_RES, "Activity返回时传递参数"),
-                new GuideAdapter.OptionItem(K_ACT_CUSTOM_SIZE, "尺寸可调")
+                new GuideAdapter.OptionItem("悬浮Activity 可拖动", "缩小后可以拖动，可还原大小，外部可点击", true, FloatingScaleAct.class)
         ));
         mGuideAdapter.setOnItemClickListener(item -> {
             switch (item.num) {
@@ -35,11 +34,9 @@ public class ActDemoGuide extends AbsGuideAct {
                 case K_ACT_RES:
                     startActivity(new Intent(getApplicationContext(), ForResultFirstAct.class));
                     break;
-                case K_ACT_CUSTOM_SIZE:
-                    startActivity(new Intent(getApplicationContext(), CustomSizeAct.class));
-                    break;
             }
         });
+        mGuideAdapter.setOnClzListener(actClz -> startActivity(new Intent(getApplicationContext(), actClz)));
     }
 
     private void goSendParamsDemo() {

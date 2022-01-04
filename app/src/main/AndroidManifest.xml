@@ -139,7 +139,7 @@
         <activity android:name=".coroutines.CoroutinesGuideAct" />
         <activity android:name=".coroutines.d1.CorAct1" />
         <activity
-            android:name=".act.CustomSizeAct"
+            android:name=".act.FloatingScaleAct"
             android:theme="@style/TranslucentAct" />
         <activity android:name=".seekbar.SeekbarRotateAct" />
     </application>

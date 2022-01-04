@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class AbsActivity extends AppCompatActivity {
-    protected String TAG = "rustApp" + getClass().getSimpleName();
+    protected String TAG = "rfDev" + getClass().getSimpleName();
 
     public void setOnClickListener(View.OnClickListener onClickListener, int... ids) {
         for (int id : ids) {

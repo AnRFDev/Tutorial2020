@@ -18,7 +18,8 @@ public class CameraGuideAct extends AbsGuideAct {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mGuideAdapter.setDataList(Arrays.asList(
-                new GuideAdapter.OptionItem("camerax 预览", true, MeSimplePreviewXAct.class),
+                new GuideAdapter.OptionItem("camerax 预览", "演示预览功能", true, MeSimplePreviewXAct.class),
+                new GuideAdapter.OptionItem("camerax 预览，可缩放界面", "带有变成悬浮窗功能", true, MeSimplePreviewXScaleAct.class),
                 new GuideAdapter.OptionItem("android.hardware.camera 实现预览", true, Camera1Act.class)
                 )
         );
