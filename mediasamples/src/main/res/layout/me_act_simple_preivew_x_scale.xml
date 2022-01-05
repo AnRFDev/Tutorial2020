@@ -2,6 +2,7 @@
 <layout>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
@@ -69,7 +70,6 @@
                     android:layout_marginStart="4dp"
                     android:text="clearAnalyzer" />
 
-
                 <Button
                     android:id="@+id/take_one_analyse"
                     style="@style/NormalBtn"
@@ -93,6 +93,14 @@
             android:layout_height="40dp"
             android:layout_margin="12dp"
             android:src="@drawable/me_ic_to_small" />
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="rustfisher.com" />
 
     </RelativeLayout>
 </layout>

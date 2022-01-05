@@ -1,11 +1,10 @@
 package com.rustfisher.mediasamples.camera;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Size;
-import android.view.Display;
+import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +30,12 @@ import java.util.concurrent.Executors;
 
 
 /**
- * 预览照相机  尝试变成悬浮窗
+ * 预览照相机  悬浮窗
  *
  * @author an.rustfisher.com
  * @date 2021-12-31 15:53
  */
-public class MeSimplePreviewXScaleAct extends AppCompatActivity {
+public class MeSimplePreviewXFloatingAct extends AppCompatActivity {
     private static final String TAG = "rfDevX";
     private MeActSimplePreivewXScaleBinding mBinding;
     private ListenableFuture<ProcessCameraProvider> mCameraProviderFuture;
@@ -44,6 +43,7 @@ public class MeSimplePreviewXScaleAct extends AppCompatActivity {
     private boolean mRunning = false;
 
     private boolean mIsSmallWindow = false;
+    private boolean mLimitArea = true;
 
     private boolean mTakeOneYuv = false; // 获取一帧 实际工程中不要这么做
 
@@ -56,9 +56,19 @@ public class MeSimplePreviewXScaleAct extends AppCompatActivity {
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_BLOCK_PRODUCER)
                     .build();
 
+    private float mLastTx = 0; // 手指的上一个位置
+    private float mLastTy = 0;
+
+    private int mBigHeight = 0;
+    private int mBigWid = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        WindowManager.LayoutParams layoutParams = getWindow().getAttributes();
+        layoutParams.flags |= WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL;
+
         mBinding = DataBindingUtil.setContentView(this, R.layout.me_act_simple_preivew_x_scale);
         mCameraProviderFuture = ProcessCameraProvider.getInstance(this);
         mCameraProviderFuture.addListener(() -> {
@@ -110,6 +120,51 @@ public class MeSimplePreviewXScaleAct extends AppCompatActivity {
                 toSmallWindow();
             }
         });
+
+        mBinding.root.setOnTouchListener((v, event) -> {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    Log.d(TAG, "down " + event);
+                    mLastTx = event.getRawX();
+                    mLastTy = event.getRawY();
+                    return true;
+                case MotionEvent.ACTION_MOVE:
+                    Log.d(TAG, "move " + event);
+                    float dx = event.getRawX() - mLastTx;
+                    float dy = event.getRawY() - mLastTy;
+                    mLastTx = event.getRawX();
+                    mLastTy = event.getRawY();
+                    Log.d(TAG, "  dx: " + dx + ", dy: " + dy);
+                    if (mIsSmallWindow) {
+                        WindowManager.LayoutParams lp = getWindow().getAttributes();
+                        int tx = (int) (lp.x + dx);
+                        int ty = (int) (lp.y + dy);
+                        Log.d(TAG, "move to " + tx + ", " + ty);
+                        if (mLimitArea) {
+                            tx = Math.max(lp.width / 2 - mBigWid / 2, tx);
+                            tx = Math.min(mBigWid / 2 - lp.width / 2, tx);
+                            ty = Math.max(lp.height / 2 - mBigHeight / 2, ty);
+                            ty = Math.min(mBigHeight / 2 - lp.height / 2, ty);
+                        }
+                        lp.x = tx;
+                        lp.y = ty;
+                        getWindow().setAttributes(lp);
+                    }
+                    break;
+                case MotionEvent.ACTION_UP:
+                    Log.d(TAG, "up " + event);
+                    return true;
+                case MotionEvent.ACTION_CANCEL:
+                    Log.d(TAG, "cancel " + event);
+                    return true;
+            }
+            return false;
+        });
+        mBinding.container.post(() -> {
+            mBigWid = mBinding.container.getWidth();
+            mBigHeight = mBinding.container.getHeight();
+            Log.d(TAG, "container size: " + mBigWid + ", " + mBigHeight);
+        });
     }
 
     private void bindPreview(ProcessCameraProvider cameraProvider) {
@@ -131,7 +186,6 @@ public class MeSimplePreviewXScaleAct extends AppCompatActivity {
     }
 
     private void toSmallWindow() {
-//        getWindow().setLayout(360, 480);
         mBinding.funcField.setVisibility(View.GONE);
         mIsSmallWindow = true;
         mBinding.zoomIv.setImageResource(R.drawable.me_to_big);
@@ -141,14 +195,17 @@ public class MeSimplePreviewXScaleAct extends AppCompatActivity {
         p.width = 360;
         p.dimAmount = 0.0f;
         getWindow().setAttributes(p);
-
     }
 
     private void toBigWindow() {
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.x = 0;
+        lp.y = 0;
+        getWindow().setAttributes(lp);
+
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mBinding.funcField.setVisibility(View.VISIBLE);
         mIsSmallWindow = false;
         mBinding.zoomIv.setImageResource(R.drawable.me_ic_to_small);
-
     }
 }

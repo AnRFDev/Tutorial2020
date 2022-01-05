@@ -16,7 +16,7 @@
             android:name=".camera.Camera1Act"
             android:exported="true" />
         <activity
-            android:name=".camera.MeSimplePreviewXScaleAct"
+            android:name=".camera.MeSimplePreviewXFloatingAct"
             android:exported="true"
             android:theme="@style/MeTranslucentAct" />
     </application>
