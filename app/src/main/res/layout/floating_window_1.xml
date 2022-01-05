@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/f_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00897B"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="悬浮窗\nan.rustfisher.com"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/f_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#00897B"
+        android:text="打开控制页面"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="#eaeaea" />
+
+    <TextView
+        android:id="@+id/exit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00897B"
+        android:text="关闭悬浮窗服务"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

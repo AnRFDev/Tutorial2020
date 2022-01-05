@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!--  系统悬浮窗  -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/tools"
@@ -27,6 +30,8 @@
             android:enabled="true"
             android:exported="false" />
         <service android:name=".service.foreground.ForegroundService1" />
+
+        <service android:name=".service.floating.FloatingWindowService" />
 
         <activity android:name=".kotlinguide.KotlinGuideAct" />
         <activity android:name=".constraintlayout.Con1Act" />
@@ -142,6 +147,7 @@
             android:name=".act.FloatingScaleAct"
             android:theme="@style/TranslucentAct" />
         <activity android:name=".seekbar.SeekbarRotateAct" />
+        <activity android:name=".service.floating.FloatingCmdAct" />
     </application>
 
 </manifest>

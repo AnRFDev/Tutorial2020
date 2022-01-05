@@ -78,6 +78,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Camera", "相机示例", true, CameraGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("SeekBar", "示例", true, SeekbarRotateAct.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("Compose", "示例", true, ComposeGuideAct.class, R.drawable.item_type_code),
@@ -95,7 +96,6 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("ImageView 示例1", "显示图片", true, ImageViewDemo1.class, R.drawable.item_type_image),
                 new GuideAdapter.OptionItem("Broadcast示例列表", "广播的使用", true, BroadcastDemoGuide.class, R.drawable.item_type_cast_connected),
                 new GuideAdapter.OptionItem("TextView 示例", "显示文字，文字效果，html", true, TvDemoGuide.class, R.drawable.item_type_text),
-                new GuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Animation demo", "Animation的使用", true, AnimGuideAct.class, R.drawable.item_type_local_play),
                 new GuideAdapter.OptionItem("Dialog示例", "弹窗", true, DialogGuideAct.class, R.drawable.item_type_assignment_turned_in),
                 new GuideAdapter.OptionItem("DataBinding", true, GuideListAct.class),
