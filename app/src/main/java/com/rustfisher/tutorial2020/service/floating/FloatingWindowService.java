@@ -49,6 +49,9 @@ public class FloatingWindowService extends Service {
     @Override
     public void onDestroy() {
         Log.d(TAG, "onDestroy");
+        if (floatView != null) {
+            windowManager.removeView(floatView);
+        }
         super.onDestroy();
     }
 
@@ -86,7 +89,7 @@ public class FloatingWindowService extends Service {
             stopSelf();
             windowManager.removeView(floatView);
             Intent backToHome = new Intent(getApplicationContext(), FloatingCmdAct.class);
-            backToHome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            backToHome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(backToHome);
         });
         floatView.findViewById(R.id.exit_btn).setOnClickListener(v -> {

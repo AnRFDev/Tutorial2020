@@ -147,7 +147,9 @@
             android:name=".act.FloatingScaleAct"
             android:theme="@style/TranslucentAct" />
         <activity android:name=".seekbar.SeekbarRotateAct" />
-        <activity android:name=".service.floating.FloatingCmdAct" />
+        <activity
+            android:name=".service.floating.FloatingCmdAct"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

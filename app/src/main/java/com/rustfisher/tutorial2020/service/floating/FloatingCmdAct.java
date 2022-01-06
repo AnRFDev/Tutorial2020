@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,8 @@ import com.rustfisher.tutorial2020.databinding.ActFloatingCmdBinding;
  * @date 2022-01-05 14:57
  */
 public class FloatingCmdAct extends AppCompatActivity {
+    private static final String TAG = "rfDevFloatingCmd";
+
     private ActFloatingCmdBinding mBinding;
 
     @Override
@@ -47,6 +50,12 @@ public class FloatingCmdAct extends AppCompatActivity {
         if (!checkOverlayDisplayPermission()) {
             Toast.makeText(getApplicationContext(), "请允许应用显示悬浮窗", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG, "onNewIntent: 回来了");
     }
 
     private boolean checkOverlayDisplayPermission() {
