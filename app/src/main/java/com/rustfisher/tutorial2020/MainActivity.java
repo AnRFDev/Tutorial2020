@@ -79,7 +79,7 @@ public class MainActivity extends AbsGuideAct {
         });
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.item_type_code),
-                new GuideAdapter.OptionItem("Camera", "相机示例", true, CameraGuideAct.class, R.drawable.item_type_code),
+                new GuideAdapter.OptionItem("Camera", "相机示例", true, CameraGuideAct.class, R.drawable.ic_baseline_camera_alt_24),
                 new GuideAdapter.OptionItem("SeekBar", "示例", true, SeekbarRotateAct.class, R.drawable.item_type_view_array),
                 new GuideAdapter.OptionItem("Compose", "示例", true, ComposeGuideAct.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("OkHttp", "网络请求演示", true, OkHttpGuide.class, R.drawable.ic_square),

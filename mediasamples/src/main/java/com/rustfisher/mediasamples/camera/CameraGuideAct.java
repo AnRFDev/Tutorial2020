@@ -19,7 +19,8 @@ public class CameraGuideAct extends AbsGuideAct {
         super.onCreate(savedInstanceState);
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("camerax 预览", "演示预览功能", true, MeSimplePreviewXAct.class),
-                new GuideAdapter.OptionItem("camerax 预览，可缩放界面", "带有变成悬浮窗功能", true, MeSimplePreviewXFloatingAct.class),
+                new GuideAdapter.OptionItem("camerax 预览，可缩放界面", "带有变成悬浮功能", true, MeSimplePreviewXFloatingAct.class),
+                new GuideAdapter.OptionItem("camerax 预览，悬浮窗", "悬浮窗，可以退到系统后台，打开其他app", true, MeFloatingCameraXAct.class),
                 new GuideAdapter.OptionItem("android.hardware.camera 实现预览", true, Camera1Act.class)
                 )
         );

@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rustfisher.mediasamples">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
     <application>
-        <activity
-            android:name=".MediaGuideAct"
-            android:exported="true" />
         <activity
             android:name=".camera.CameraGuideAct"
             android:exported="true" />
@@ -19,5 +19,11 @@
             android:name=".camera.MeSimplePreviewXFloatingAct"
             android:exported="true"
             android:theme="@style/MeTranslucentAct" />
+        <activity
+            android:name=".camera.MeFloatingCameraXAct"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <service android:name=".camera.FloatingCameraXService" />
     </application>
 </manifest>
