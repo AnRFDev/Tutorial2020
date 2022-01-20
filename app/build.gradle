@@ -119,7 +119,7 @@ dependencies {
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.1'
 
-    implementation 'org.webrtc:google-webrtc:1.0.+'
+//    implementation 'org.webrtc:google-webrtc:1.0.+'
 
 
     // CameraX core library using the camera2 implementation
