@@ -19,6 +19,7 @@ public class WebViewGuide extends AbsGuideAct {
         super.onCreate(savedInstanceState);
 
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("普通URL", "", true, WebViewLoadURL1Act.class, R.drawable.item_type_web),
                 new GuideAdapter.OptionItem("demo1", "", true, WvDemo1Act.class, R.drawable.item_type_web),
                 new GuideAdapter.OptionItem("WebView长按和点击", "长按菜单", true, Wv2ClickAct.class, R.drawable.item_type_web),
                 new GuideAdapter.OptionItem("X5 WebView长按菜单", "需要进行一些操作", true, WebViewX5ClickAct.class, R.drawable.item_type_web),

@@ -78,6 +78,7 @@ public class MainActivity extends AbsGuideAct {
             }
         });
         mGuideAdapter.setDataList(Arrays.asList(
+                new GuideAdapter.OptionItem("WebView", "网页，js交互，x5 WebView", true, WebViewGuide.class, R.drawable.item_type_web),
                 new GuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("Camera", "相机示例", true, CameraGuideAct.class, R.drawable.ic_baseline_camera_alt_24),
                 new GuideAdapter.OptionItem("SeekBar", "示例", true, SeekbarRotateAct.class, R.drawable.item_type_view_array),
@@ -104,7 +105,6 @@ public class MainActivity extends AbsGuideAct {
                 new GuideAdapter.OptionItem("HttpUrlConnDemo1", "发起网络连接", true, HttpUrlConnDemo1.class, R.drawable.item_type_cast_connected),
                 new GuideAdapter.OptionItem("读写文件", "文本文件", true, ReadWriteFileActivity.class, R.drawable.item_type_file),
                 new GuideAdapter.OptionItem("加密解密", "", true, SecretGuide.class, R.drawable.item_type_security),
-                new GuideAdapter.OptionItem("WebView", "网页，js交互，x5 WebView", true, WebViewGuide.class, R.drawable.item_type_web),
                 new GuideAdapter.OptionItem("NDK", "环境搭建，访问，调用方法，读写文件", true, NDKGuide.class, R.drawable.item_type_code),
                 new GuideAdapter.OptionItem("pm", "PackageManager", true, Pm1Act.class, R.drawable.item_type_flag),
                 new GuideAdapter.OptionItem("Kotlin入门", "一些简单示例", true, KotlinGuideAct.class, R.drawable.item_type_code),
