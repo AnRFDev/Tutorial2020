@@ -13,6 +13,9 @@
             android:name=".camera.MeSimplePreviewXAct"
             android:exported="true" />
         <activity
+            android:name=".camera.MeSimplePreviewXNormalAct"
+            android:exported="true" />
+        <activity
             android:name=".camera.Camera1Act"
             android:exported="true" />
         <activity
