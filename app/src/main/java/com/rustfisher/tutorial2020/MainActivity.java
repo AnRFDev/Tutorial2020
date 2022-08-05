@@ -33,7 +33,8 @@ import com.rustfisher.tutorial2020.constraintlayout.ConGuideAct;
 import com.rustfisher.tutorial2020.content.SpDemo1;
 import com.rustfisher.tutorial2020.coroutines.CoroutinesGuideAct;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
-import com.rustfisher.tutorial2020.customview.CustomViewAct;
+import com.rustfisher.tutorial2020.customview.CustomView1Act;
+import com.rustfisher.tutorial2020.customview.CustomViewGuideAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
 import com.rustfisher.tutorial2020.dialog.DialogGuideAct;
 import com.rustfisher.tutorial2020.drawerlayout.DLGuideAct;
@@ -100,7 +101,7 @@ public class MainActivity extends AbsActivity {
             }
         });
         mMainGuideAdapter.setDataList(Arrays.asList(
-                new MainGuideAdapter.OptionItem("自定义view", "", true, CustomViewAct.class, R.drawable.ic_round_shoucang),
+                new MainGuideAdapter.OptionItem("自定义view", "", true, CustomViewGuideAct.class, R.drawable.ic_round_shoucang),
                 new MainGuideAdapter.OptionItem("OpenGL ES 2", "OpenGL ES 2 演示", true, GLES2FirstActivity.class, R.drawable.ic_round_dianzan),
                 new MainGuideAdapter.OptionItem("WebView", "网页，js交互，x5 WebView", true, WebViewGuide.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.ic_round_huiyuan),

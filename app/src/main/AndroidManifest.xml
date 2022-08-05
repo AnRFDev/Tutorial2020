@@ -98,7 +98,7 @@
             android:name=".correct.CorrectSampleAct"
             android:configChanges="keyboardHidden"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity android:name=".customview.CustomViewAct" />
+        <activity android:name=".customview.CustomView1Act" />
         <activity android:name=".popupwindow.PopupWindowDemo" />
         <activity android:name=".dialog.DialogGuideAct" />
         <activity android:name=".dialog.DialogLocationAct" />
@@ -152,6 +152,7 @@
             android:name=".service.floating.FloatingCmdAct"
             android:launchMode="singleTop" />
         <activity android:name=".opengles2.GLES2FirstActivity" />
+        <activity android:name=".customview.CustomViewGuideAct" />
     </application>
 
 </manifest>

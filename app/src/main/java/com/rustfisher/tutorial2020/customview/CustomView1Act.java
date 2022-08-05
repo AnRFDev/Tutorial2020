@@ -13,7 +13,7 @@ import com.rustfisher.tutorial2020.databinding.ActCustomViewBinding;
 /**
  * 自定义view
  */
-public class CustomViewAct extends AbsActivity {
+public class CustomView1Act extends AbsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
