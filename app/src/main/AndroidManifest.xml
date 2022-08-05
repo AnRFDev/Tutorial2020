@@ -153,6 +153,7 @@
             android:launchMode="singleTop" />
         <activity android:name=".opengles2.GLES2FirstActivity" />
         <activity android:name=".customview.CustomViewGuideAct" />
+        <activity android:name=".customview.soundwave.SoundWaveAct" />
     </application>
 
 </manifest>

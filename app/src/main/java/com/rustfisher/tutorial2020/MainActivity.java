@@ -35,6 +35,7 @@ import com.rustfisher.tutorial2020.coroutines.CoroutinesGuideAct;
 import com.rustfisher.tutorial2020.correct.CorrectSampleAct;
 import com.rustfisher.tutorial2020.customview.CustomView1Act;
 import com.rustfisher.tutorial2020.customview.CustomViewGuideAct;
+import com.rustfisher.tutorial2020.customview.soundwave.SoundWaveAct;
 import com.rustfisher.tutorial2020.databinding.GuideListAct;
 import com.rustfisher.tutorial2020.dialog.DialogGuideAct;
 import com.rustfisher.tutorial2020.drawerlayout.DLGuideAct;
@@ -154,6 +155,11 @@ public class MainActivity extends AbsActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://an.rustfisher.com/android/android-part-index/")));
             }
         });
+
+        if (BuildConfig.DEBUG) {
+            Log.d(TAG, "自动跳转..");
+            startActivity(new Intent(getApplicationContext(), SoundWaveAct.class));
+        }
     }
 
     @Override
