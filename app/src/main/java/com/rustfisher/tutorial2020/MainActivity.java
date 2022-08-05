@@ -100,6 +100,7 @@ public class MainActivity extends AbsActivity {
             }
         });
         mMainGuideAdapter.setDataList(Arrays.asList(
+                new MainGuideAdapter.OptionItem("自定义view", "", true, CustomViewAct.class, R.drawable.ic_round_shoucang),
                 new MainGuideAdapter.OptionItem("OpenGL ES 2", "OpenGL ES 2 演示", true, GLES2FirstActivity.class, R.drawable.ic_round_dianzan),
                 new MainGuideAdapter.OptionItem("WebView", "网页，js交互，x5 WebView", true, WebViewGuide.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("Service 示例", "使用服务", true, ServiceDemoListActivity.class, R.drawable.ic_round_huiyuan),
@@ -134,7 +135,6 @@ public class MainActivity extends AbsActivity {
                 new MainGuideAdapter.OptionItem("汉字转拼音", "TinyPinyin示例", true, PinyinGuideAct.class, R.drawable.ic_round_liwu),
                 new MainGuideAdapter.OptionItem("DrawerLayout示例", "", true, DLGuideAct.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("EditText示例", "输入文字", true, EtGuideAct.class, R.drawable.ic_round_liuyan),
-                new MainGuideAdapter.OptionItem("自定义view", "", true, CustomViewAct.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("ViewModel", "androidx", true, ViewModelGuideAct.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("LifeCycle", "生命周期", true, LcGuideAct.class, R.drawable.ic_round_lishi),
                 new MainGuideAdapter.OptionItem("Lottie demo", "一款优秀的动画播放库", true, LottieDemo1.class, R.drawable.ic_round_dianzan),

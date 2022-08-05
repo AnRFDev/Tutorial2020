@@ -38,6 +38,7 @@ public class FirstOpenGLProjectRenderer implements GLSurfaceView.Renderer {
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
         mTriangle.draw();
+
     }
 
     public static int loadShader(int type, String shaderCode){
