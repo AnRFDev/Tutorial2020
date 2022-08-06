@@ -63,7 +63,7 @@ public class SoundWaveAct extends AppCompatActivity {
         new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
                 try {
-                    Thread.sleep(20);
+                    Thread.sleep(250);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -77,7 +77,7 @@ public class SoundWaveAct extends AppCompatActivity {
         new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
                 try {
-                    Thread.sleep(20);
+                    Thread.sleep(40);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

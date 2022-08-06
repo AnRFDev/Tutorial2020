@@ -95,6 +95,7 @@ public class SoundWaveView extends View {
                     paint.setColor(rightColor);
                 }
                 float bh = (d / showMaxData) * viewHeight;
+                bh = Math.max(bh, 4); // 最小也要一点高度
                 float bhGap = (viewHeight - bh) / 2f;
                 canvas.drawLine(x, bhGap, x, viewHeight - bhGap, paint);
             }
