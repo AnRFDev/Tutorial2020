@@ -125,8 +125,19 @@ public class SoundWaveView extends View {
         invalidate();
     }
 
-    public void addData(float f) {
+    public void setShowMaxData(float showMaxData) {
+        this.showMaxData = showMaxData;
+    }
+
+    public float getShowMaxData() {
+        return showMaxData;
+    }
+
+    // 不停地插入数据
+    public void addDataEnd(float f) {
         dataList.add(f);
+        midIndex = dataList.size() - 1;
+        invalidate();
     }
 
     public void setLeftColor(int leftColor) {

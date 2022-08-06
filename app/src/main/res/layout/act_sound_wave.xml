@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eaeaea">
+    android:background="#eaeaea"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="静态" />
 
     <com.rustfisher.tutorial2020.customview.soundwave.SoundWaveView
         android:id="@+id/sound_wave_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="4dp"
         android:background="@android:color/white"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.rustfisher.tutorial2020.customview.soundwave.SoundWaveView
+        android:id="@+id/sound_wave_view2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:background="#fff" />
+
+    <Button
+        android:id="@+id/add_data_btn"
+        style="@style/NormalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:text="启动增加Sin" />
+
+    <com.rustfisher.tutorial2020.customview.soundwave.SoundWaveView
+        android:id="@+id/sound_wave_view3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/rand_data_btn"
+        style="@style/NormalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:text="启动随机增加" />
+
+
+</LinearLayout>
