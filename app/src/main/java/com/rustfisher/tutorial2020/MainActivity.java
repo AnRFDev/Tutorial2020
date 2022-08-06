@@ -158,7 +158,7 @@ public class MainActivity extends AbsActivity {
 
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "自动跳转..");
-            startActivity(new Intent(getApplicationContext(), SoundWaveAct.class));
+//            startActivity(new Intent(getApplicationContext(), SoundWaveAct.class));
         }
     }
 

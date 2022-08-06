@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import java.util.List;
  * @date 2022-08-05 23:50
  */
 public class SoundWaveAct extends AppCompatActivity {
+    private static final String TAG = "rustAppSoundWaveAct";
 
     private SoundWaveView soundWaveView;
     private SoundWaveView soundWaveView2;
@@ -34,6 +36,8 @@ public class SoundWaveAct extends AppCompatActivity {
         soundWaveView = findViewById(R.id.sound_wave_view);
         soundWaveView2 = findViewById(R.id.sound_wave_view2);
         soundWaveView3 = findViewById(R.id.sound_wave_view3);
+
+        soundWaveView.setMode(SoundWaveView.MODE_CAN_DRAG);
 
         soundWaveView2.setShowMaxData(110);
         soundWaveView2.setLeftColor(Color.parseColor("#FF388E3C"));
@@ -52,22 +56,30 @@ public class SoundWaveAct extends AppCompatActivity {
 
     private void setData1() {
         List<Float> dataList = new ArrayList<>();
-        for (int i = 0; i < 300; i++) {
-            dataList.add((float) i);
+        for (int i = 0; i < 1000; i++) {
+            final float v = (float) Math.abs(Math.sin(Math.toRadians(i))) * soundWaveView.getShowMaxData();
+            dataList.add(v);
         }
         soundWaveView.setDataList(dataList);
-        soundWaveView.setMidIndex(220);
+        soundWaveView.setMidIndex(0);
+
+        soundWaveView.setOnEventListener(new SoundWaveView.OnEvent() {
+            @Override
+            public void onMoveEnd() {
+                Log.d(TAG, "onMoveEnd: " + soundWaveView.getMidIndex());
+            }
+        });
     }
 
     private void startAddData() {
         new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
                 try {
-                    Thread.sleep(250);
+                    Thread.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                final float v = (float) Math.sin(Math.toRadians(i)) * soundWaveView2.getShowMaxData();
+                final float v = (float) Math.abs(Math.sin(Math.toRadians(i))) * soundWaveView2.getShowMaxData();
                 mHandler.post(() -> soundWaveView2.addDataEnd(v));
             }
         }).start();
