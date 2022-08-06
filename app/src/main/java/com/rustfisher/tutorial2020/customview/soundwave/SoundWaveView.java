@@ -37,6 +37,7 @@ public class SoundWaveView extends View {
     private final Paint paint = new Paint();
     private int leftColor = Color.GREEN;
     private int rightColor = Color.LTGRAY;
+    private int middleLineColor = Color.parseColor("#55000000");
 
     public SoundWaveView(Context context) {
         this(context, null);
@@ -98,6 +99,9 @@ public class SoundWaveView extends View {
                 canvas.drawLine(x, bhGap, x, viewHeight - bhGap, paint);
             }
         }
+
+        paint.setColor(middleLineColor);
+        canvas.drawLine(viewWid / 2f, 0, viewWid / 2f, viewHeight, paint);
     }
 
     private void calBarPara() {

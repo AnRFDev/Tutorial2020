@@ -42,6 +42,7 @@ public class SoundWaveAct extends AppCompatActivity {
         });
 
         soundWaveView3.setShowMaxData(200);
+        soundWaveView3.setLeftColor(Color.parseColor("#FFFFA000"));
         findViewById(R.id.rand_data_btn).setOnClickListener(v -> {
             startRandData();
         });
