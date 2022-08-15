@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.MotionEvent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,8 +58,7 @@ public class SoundWaveAct extends AppCompatActivity {
     private void setData1() {
         List<Float> dataList = new ArrayList<>();
         for (int i = 0; i < 1000; i++) {
-            final float v = (float) Math.abs(Math.sin(Math.toRadians(i))) * soundWaveView.getShowMaxData();
-            dataList.add(v);
+            dataList.add((float) (Math.random() * soundWaveView.getShowMaxData()));
         }
         soundWaveView.setDataList(dataList);
         soundWaveView.setMidIndex(0);
@@ -67,6 +67,11 @@ public class SoundWaveAct extends AppCompatActivity {
             @Override
             public void onMoveEnd() {
                 Log.d(TAG, "onMoveEnd: " + soundWaveView.getMidIndex());
+            }
+
+            @Override
+            public void onDragTouchEvent(MotionEvent event) {
+                // 在这里可以收到触摸事件
             }
         });
     }

@@ -17,7 +17,7 @@ public class CustomViewGuideAct extends AbsGuideAct {
         super.onCreate(savedInstanceState);
         mGuideAdapter.setDataList(Arrays.asList(
                 new GuideAdapter.OptionItem("模拟声纹 Sound Wave", true, SoundWaveAct.class),
-                new GuideAdapter.OptionItem("自定义原型进度条", true, CustomView1Act.class)
+                new GuideAdapter.OptionItem("自定义圆形进度条", true, CustomView1Act.class)
         ));
         mGuideAdapter.setOnClzListener(actClz -> startActivity(new Intent(getApplicationContext(), actClz)));
     }

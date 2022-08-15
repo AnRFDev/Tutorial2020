@@ -15,10 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 1. 确定宽高
- * 2. 确定可以显示多少个刻度
- * 3. 确定刻度最大高度
- *
  * @author an.rustfisher.com
  */
 public class SoundWaveView extends View {
@@ -36,9 +32,9 @@ public class SoundWaveView extends View {
 
     private int mode = MODE_PLAY; // 1 播放
     private List<Float> dataList = new ArrayList<>(100);
-    private float showMaxData = 300f; // 能显示的最大数据
+    private float showMaxData = 40f; // 能显示的最大数据
     private int midIndex = 0;   // 在中间显示的数据的下标
-    private float barWidDp = 2f;
+    private float barWidDp = 1.5f;
     private float barWidPx = 3f;
     private float barGapPx = barWidPx / 2;
     private int barCount = 1;       // 当前宽度能绘制多少个柱子
@@ -55,6 +51,8 @@ public class SoundWaveView extends View {
 
     public interface OnEvent {
         void onMoveEnd(); // 停止拖动了
+
+        void onDragTouchEvent(MotionEvent event);
     }
 
     private OnEvent onEventListener;
@@ -87,6 +85,7 @@ public class SoundWaveView extends View {
         super.onDraw(canvas);
         if (dataList == null || dataList.isEmpty()) {
             // draw nothing
+            drawMiddleLine(canvas);
             return;
         }
         float x0 = viewWid / 2.0f;
@@ -114,6 +113,7 @@ public class SoundWaveView extends View {
             } else {
                 paint.setColor(rightColor);
             }
+            paint.setStrokeWidth(barWidPx);
             float bh = (d / showMaxData) * viewHeight;
             bh = Math.max(bh, 4); // 最小也要一点高度
             float bhGap = (viewHeight - bh) / 2f;
@@ -121,8 +121,16 @@ public class SoundWaveView extends View {
         }
 //        }
 
+        drawMiddleLine(canvas);
+    }
+
+    private void drawMiddleLine(Canvas canvas) {
         paint.setColor(middleLineColor);
         canvas.drawLine(viewWid / 2f, 0, viewWid / 2f, viewHeight, paint);
+    }
+
+    public float getMidByPercent() {
+        return midIndex / (float) (dataList.size() - 1);
     }
 
     @Override
@@ -149,6 +157,9 @@ public class SoundWaveView extends View {
                     tellOnMoveEnd();
                     break;
             }
+            if (onEventListener != null) {
+                onEventListener.onDragTouchEvent(event);
+            }
             return true;
         }
         return super.onTouchEvent(event);
@@ -166,13 +177,23 @@ public class SoundWaveView extends View {
         return midIndex;
     }
 
+    public List<Float> getDataList() {
+        return dataList;
+    }
+
     public void setOnEventListener(OnEvent onEventListener) {
         this.onEventListener = onEventListener;
     }
 
+    public void clear() {
+        dataList = new ArrayList<>();
+        midIndex = 0;
+        invalidate();
+    }
+
     private void calBarPara() {
         barWidPx = dp2Px(barWidDp);
-        barGapPx = barWidPx * 0.75f;
+        barGapPx = barWidPx;
         barCount = (int) ((viewWid - barGapPx) / (barWidPx + barGapPx));
         paint.setStrokeWidth(barWidPx);
         Log.d(TAG, "calBarPara: barCount: " + barCount);
@@ -189,9 +210,16 @@ public class SoundWaveView extends View {
         invalidate();
     }
 
+    public void setMidEnd() {
+        setMidIndex(dataList.size() - 1);
+    }
+
     // 设置当前播放进度
     public void setPlayPercent(float percent) {
-
+        midIndex = (int) (percent * (dataList.size() - 1));
+        if (percent >= 1) {
+            midIndex = dataList.size() - 1;
+        }
         invalidate();
     }
 
