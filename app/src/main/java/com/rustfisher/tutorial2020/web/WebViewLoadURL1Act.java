@@ -5,13 +5,14 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.annotation.Nullable;
 
 import com.rustfisher.baselib.AbsActivity;
 import com.rustfisher.tutorial2020.R;
-import com.tencent.smtt.sdk.WebSettings;
-import com.tencent.smtt.sdk.WebView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,13 +31,19 @@ public class WebViewLoadURL1Act extends AbsActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE); // 隐藏标题栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); // 隐藏状态栏
-        setContentView(R.layout.wv_x5_local_1);
+        setContentView(R.layout.wv_1);
 
-        WebView webView = findViewById(R.id.web2);
+        WebView webView = findViewById(R.id.origin_web);
 
-        copy();
-
-        String url = "https://self.an.rustfisher.com/webrtc/capture/video-local-peer/pc.html";
+//        copy();
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
+        String url = "https://self.an.rustfisher.com";
         Log.d(TAG, "url: " + url);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);

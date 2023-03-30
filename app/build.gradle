@@ -10,8 +10,8 @@ android {
         applicationId "com.rustfisher.tutorial2020"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 102
-        versionName "1.0.2"
+        versionCode 103
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
