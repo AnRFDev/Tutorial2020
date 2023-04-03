@@ -16,10 +16,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_4_game"
+        android:icon="@drawable/blue_earth"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/ic_4_game"
+        android:roundIcon="@drawable/blue_earth"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
