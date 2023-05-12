@@ -48,7 +48,6 @@ import com.rustfisher.tutorial2020.lottie.LottieDemo1;
 import com.rustfisher.tutorial2020.ndk.NDKGuide;
 import com.rustfisher.tutorial2020.okhttp.OkHttpGuide;
 import com.rustfisher.tutorial2020.opengles2.GLES2FirstActivity;
-import com.rustfisher.tutorial2020.pinyin.PinyinGuideAct;
 import com.rustfisher.tutorial2020.pm.Pm1Act;
 import com.rustfisher.tutorial2020.recycler.ReGuideAct;
 import com.rustfisher.tutorial2020.relativelayout.RelativeLayoutGuideAct;
@@ -134,7 +133,6 @@ public class MainActivity extends AbsActivity {
                 new MainGuideAdapter.OptionItem("NDK", "环境搭建，访问，调用方法，读写文件", true, NDKGuide.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("pm", "PackageManager", true, Pm1Act.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("Kotlin入门", "一些简单示例", true, KotlinGuideAct.class, R.drawable.ic_round_bangzhu),
-                new MainGuideAdapter.OptionItem("汉字转拼音", "TinyPinyin示例", true, PinyinGuideAct.class, R.drawable.ic_round_liwu),
                 new MainGuideAdapter.OptionItem("DrawerLayout示例", "", true, DLGuideAct.class, R.drawable.ic_round_bangzhu),
                 new MainGuideAdapter.OptionItem("EditText示例", "输入文字", true, EtGuideAct.class, R.drawable.ic_round_liuyan),
                 new MainGuideAdapter.OptionItem("ViewModel", "androidx", true, ViewModelGuideAct.class, R.drawable.ic_round_bangzhu),

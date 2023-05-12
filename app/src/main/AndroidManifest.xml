@@ -113,8 +113,6 @@
         <activity android:name=".animation.frame.FrameAnimationAct1" />
         <activity android:name=".animation.frame.FrameAnimationAct2" />
         <activity android:name=".animation.ComplexAnimResAct" />
-        <activity android:name=".pinyin.PinyinGuideAct" />
-        <activity android:name=".pinyin.TinyPinyinDemo" />
         <activity android:name=".pm.Pm1Act" />
         <activity android:name=".ndk.NDKGuide" />
         <activity android:name=".web.WebViewGuide" />

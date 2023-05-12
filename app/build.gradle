@@ -10,8 +10,8 @@ android {
         applicationId "com.rustfisher.tutorial2020"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 103
-        versionName "1.0.3"
+        versionCode 104
+        versionName "1.0.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
@@ -67,9 +67,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'com.github.promeg:tinypinyin:2.0.3'
-    // TinyPinyin核心包，约80KB
-    implementation 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
     implementation 'com.belerweb:pinyin4j:2.5.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(path: ':baselib')
